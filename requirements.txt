@@ -1,0 +1,6 @@
+Flask>=1.1.2
+neo4j>=1.7.6
+graphene>=2.0
+graphene-file-upload>=1.2.1
+Flask-GraphQL>=2.0.1
+boto3>=1.16
