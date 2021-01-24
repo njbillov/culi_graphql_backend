@@ -308,6 +308,7 @@ class Account(graphene.ObjectType):
         results = get_db().run(query)
         record = results.single()
         meals_made = record.get("meals_made") if not None else 0
+        print(meals_made)
         return meals_made
 
     @staticmethod
@@ -508,6 +509,30 @@ def password_valid(p: str) -> bool:
     return True
 
 
+class CompleteRecipe(graphene.Mutation):
+    class Arguments:
+        recipe_id = graphene.Int(required=True)
+        session = graphene.String(required=True)
+
+    ok = graphene.Boolean(required=True)
+
+    @staticmethod
+    def mutate(root, info, recipe_id, session, **kwargs):
+        params = {'session': session, 'recipe_id': recipe_id}
+        query = '''MATCH (a: Account {session: $session}), (r: Recipe {recipeId: $recipe_id})
+        CREATE (a)-[c:Made {time: datetime.realtime()}]->(r)
+        RETURN c
+        '''
+
+        results = get_db().run(query, parameters=params)
+        record = None
+        for record in results:
+            pass
+        ok = False if record is None else True
+
+        return CompleteRecipe(ok=ok)
+
+
 class CreateAccount(graphene.Mutation):
     class Arguments:
         password_form = PasswordForm(required=True)
@@ -519,6 +544,7 @@ class CreateAccount(graphene.Mutation):
 
     @staticmethod
     def mutate(root, info, password_form):
+        print(password_form)
         email = password_form['email']
         password_input = password_form['password_input']
         name = password_form['name']
@@ -527,7 +553,7 @@ class CreateAccount(graphene.Mutation):
         if not password_valid(password_form['password_input']):
             return CreateAccount(ok=False, code="Error: Invalid password format")
         password_hash = create_password(password_input)
-        # print(f'Name: {name}, Email: {email}, Password: {password}')
+        print(f'Name: {name}, Email: {email}, Password: {password}')
 
         session = uuid.uuid4().hex
         create_account_query = f'CREATE (a:Account {{email: "{email}", name: "{name}", password: "{password_hash}", ' \
@@ -542,10 +568,10 @@ class CreateAccount(graphene.Mutation):
         return CreateAccount(ok=True, code="", session=session, account=account)
 
 
-def upload_to_s3(file: FileStorage, bucket: str = BUCKET) -> Tuple[bool, str, str]:
+def upload_to_s3(file: FileStorage, prefix: str = 'images', bucket: str = BUCKET) -> Tuple[bool, str, str]:
     key, local_file = save_file(file)
 
-    ok, name = upload_file(key=key, filename=local_file, bucket=bucket)
+    ok, name = upload_file(key=f'{prefix}/{key}', filename=local_file, bucket=bucket)
 
     if ok:
         os.remove(local_file)
@@ -567,7 +593,7 @@ class Post(graphene.Mutation):
     def mutate(self, info, file: FileStorage, caption: str, public: bool, session: str, recipe_id, **kwargs):
         # TODO upload file to S3, create a Post node with the image access url and caption,
         #   and then link to the person with the given session
-        ok, key, bucket = upload_to_s3(file)
+        ok, key, bucket = upload_to_s3(file, prefix='social_posts')
         if not ok:
             return Post(ok=False)
 
@@ -603,7 +629,7 @@ class UploadFile(graphene.Mutation):
         #
         # ok, name = upload_file(key=key, filename=local_file)
         #
-        ok, name = upload_to_s3(file)
+        ok, key, bucket = upload_to_s3(file)
         # upload_time = "{date:%Y-%m-%d_%H:%M:%S}".format(date=datetime.datetime.now())
         # file.save(f'{file_hash}-{upload_time}.img')
         # with open(f'{file_hash}-{upload_time}', 'wb') as output_file:
@@ -622,6 +648,12 @@ class UploadSurvey(graphene.Mutation):
     def mutate(parent, info, survey, session, **kwargs):
         print(json.loads(survey))
         # TODO tie this to the user's account somehow
+        now = datetime.now()
+        prefix = f'survey/{now.strftime("%Y-%m-%d")}'
+        survey_dump = json.dumps({'session': session, 'survey': survey, 'time': now.strftime("%Y-%m-%d %H:%M:%S")})
+        survey_hash = hash(survey)
+        key = f'{survey}/{session}/{survey_hash}'
+        upload_object(key=key, content=survey_dump)
         return UploadSurvey(ok=True)
 
 
@@ -651,8 +683,8 @@ class RequestMenu(graphene.Mutation):
     class Arguments:
         recipe_count = graphene.Int()
         menu_count = graphene.Int()
-        session = graphene.String()
-        override = graphene.Boolean(default_value=True)
+        session = graphene.String(required=True)
+        override = graphene.Boolean(default_value=False)
 
     ok = graphene.Boolean()
     menus = graphene.List(Menu)
@@ -660,7 +692,7 @@ class RequestMenu(graphene.Mutation):
     @staticmethod
     def mutate(parent, info, recipe_count, menu_count, session, override, **kwargs):
         # TODO create a request menu mutation
-        params = {"recipe_count": recipe_count, "session": session}
+        params = {"recipe_count": recipe_count, "menu_count": menu_count, "session": session}
         if not override:
             check_menus_query = '''MATCH (a:Account {session: $session})-[]-(m: Menu)
              CALL {
@@ -671,7 +703,7 @@ class RequestMenu(graphene.Mutation):
             menus = []
             for record in results:
                 menu = unpack(record.get('m'))
-                print(record.get('list'))
+                # print(record.get('list'))
                 recipes = [json.loads(recipe['json']) if recipe['json'] is not None else unpack(recipe) for recipe in
                            record.get('list')]
                 # print(recipes)
@@ -679,27 +711,43 @@ class RequestMenu(graphene.Mutation):
                 # print(menu)
                 menus.append(menu)
 
-            print(menus)
+            # print(menus)
             if len(menus) > 0:
                 return RequestMenu(ok=True, menus=menus)
-
-        query = 'MATCH (r:Recipe) WHERE toInteger(r.recipeId) < 5 return r.json as recipe LIMIT $recipe_count;'
+        print(menu_count)
+        query = '''UNWIND range(1, $menu_count) as menu_index
+                WITH menu_index CALL {
+                   MATCH (r:Recipe) WHERE toInteger(r.recipeId) < 1000
+                   RETURN r.json as recipe, r.recipeId as recipe_id ORDER BY rand() LIMIT $recipe_count
+                }
+                WITH menu_index, recipe, recipe_id CALL {
+                    WITH recipe, recipe_id
+                    RETURN collect(recipe) as recipes, collect(recipe_id) as recipe_ids
+                }
+                RETURN menu_index, recipes, recipe_ids'''
         recipes = []
+        recipe_ids = []
         results = get_db().run(query, parameters=params)
         for record in results:
-            recipes.append(record.get('recipe'))
-        print(recipes)
-        recipe_ids = [json.loads(recipe)['recipe_id'] for recipe in recipes]
+            recipes.extend(record.get('recipes'))
+            # print(f'Number of recipe lists: {len(recipes)}')
+            # print(f"Number of recipes in each list: {len(record.get('recipes'))}")
+            recipe_ids.extend(record.get('recipe_ids'))
+            # print(type(recipes[0]))
+            # print(record.get('menu_index'))
+        # print(recipes)
+        # recipe_ids = [json.loads(recipe)['recipe_id'] for recipe in recipes]
 
         menu_params = {'recipe_ids': recipe_ids, 'menu_count': menu_count, 'session': session}
+        print(recipe_ids)
         assign_query = '''MATCH (a: Account {session: $session})
             WITH a
             UNWIND [1, $menu_count] AS menu_index
-            CREATE (m: Menu {menu_index: menu_index}), (a)-[c:HasMenu]->(m)
-            WITH a, m 
+            CREATE (m: Menu {menu_index: menu_index, time: datetime.realtime()}), (a)-[c:HasMenu]->(m)
+            WITH a, m, $recipe_ids[menu_index] as recipe_ids
             CALL {
-                WITH m
-                UNWIND $recipe_ids AS id
+                WITH m, recipe_ids
+                UNWIND recipe_ids AS id
                 OPTIONAL MATCH (r:Recipe {recipeId: toInteger(id)})
                 CREATE (m)-[c:HasRecipe]->(r)
                 RETURN COLLECT(r) AS recipes
@@ -710,10 +758,11 @@ class RequestMenu(graphene.Mutation):
         menus = []
         for record in results:
             menu = unpack(record.get('m'))
-            print(record.get('recipes'))
-            recipes = [json.loads(recipe['json']) if recipe['json'] is not None else unpack(recipe) for recipe in
-                       record.get('recipes')]
-            menu['recipes'] = recipes
+            # print(record.get('recipes'))
+            # recipes = [json.loads(recipe['json']) if recipe['json'] is not None else unpack(recipe) for recipe in
+            #            record.get('recipes')]
+            # print(len(recipes))
+            menu['recipes'] = [json.loads(recipe) for recipe in recipes[len(menus):len(menus) + recipe_count]]
             menus.append(menu)
         return RequestMenu(ok=True, menus=menus)
 
@@ -754,13 +803,14 @@ class UploadFeedback(graphene.Mutation):
         file = Upload(required=True)
         description = graphene.String(required=True)
         tags = graphene.List(graphene.String, default_value=[])
+        feedback_type = graphene.String(required=True)
         state = graphene.String(required=True)
         session = graphene.String()
 
     ok = graphene.Boolean(required=True)
 
     @staticmethod
-    def mutate(parent, info, file, description, tags, state, session, **kwargs):
+    def mutate(parent, info, file, description, tags, feedback_type, state, session, **kwargs):
         # TODO: Upload the screenshot to S3 and then create a json file to represent the
         #       the data that was reported as a result, including the time of upload
         print('Received feedback!')
@@ -773,15 +823,17 @@ class UploadFeedback(graphene.Mutation):
 
         feedback_dict = {'key': key, 'bucket': bucket, 'description': description,
                          'time': now.strftime("%Y-%m-%d %H:%M:%S"), 'tags': tags, 'state': state,
-                         'session': session}
+                         'feedbackType': feedback_type, 'session': session}
 
         suffix = hash(hash(description) + hash(now))
         feedback_json_key = f'{prefix}/{suffix}.json'
         feedback_json = json.dumps(feedback_dict)
-        print(feedback_json)
-        print(feedback_json_key)
+        # print(feedback_json)
+        # print(feedback_json_key)
+        s3_tags = [f'type={feedback_type}']
+        s3_tags.extend(tags)
 
-        ok, key = upload_object(key=feedback_json_key, content=feedback_json, tags=tags)
+        ok, key = upload_object(key=feedback_json_key, content=feedback_json, tags=s3_tags)
 
         return UploadFeedback(ok=ok)
 
@@ -798,6 +850,7 @@ class Mutations(graphene.ObjectType):
     upload_feedback = UploadFeedback.Field()
     post = Post.Field()
     upload_recipe_image = UploadRecipeImage.Field()
+    complete_recipe = CompleteRecipe.Field()
 
 
 # noinspection PyTypeChecker
