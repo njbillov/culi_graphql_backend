@@ -652,9 +652,10 @@ class UploadSurvey(graphene.Mutation):
         prefix = f'survey/{now.strftime("%Y-%m-%d")}'
         survey_dump = json.dumps({'session': session, 'survey': survey, 'time': now.strftime("%Y-%m-%d %H:%M:%S")})
         survey_hash = hash(survey)
-        key = f'{survey}/{session}/{survey_hash}'
-        upload_object(key=key, content=survey_dump)
-        return UploadSurvey(ok=True)
+        key = f'{prefix}/{session}/{survey_hash}'
+        ok, key = upload_object(key=key, content=survey_dump)
+        print(key)
+        return UploadSurvey(ok=ok)
 
 
 class SetFlag(graphene.Mutation):
