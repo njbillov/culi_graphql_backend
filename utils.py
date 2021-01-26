@@ -59,12 +59,12 @@ def upload_file(key: str, filename: str, bucket=BUCKET) -> Tuple[bool, str]:
 
 
 def upload_object(key: str, content: str, tags=None, bucket: str = BUCKET) -> Tuple[bool, str]:
-    tag_param = ''
-    if tags is not None:
-        tag_param = "&".join([f'key{i + 1}={tag}' for i, tag in enumerate(tags)])
+    # tag_param = ''
+    # if tags is not None:
+    #     tag_param = "&".join([f'key{i + 1}={tag}' for i, tag in enumerate(tags)])
     s3_client = boto3.client('s3')
     try:
-        response = s3_client.put_object(Key=key, Bucket=bucket, Body=content, Tagging=tag_param)
+        response = s3_client.put_object(Key=key, Bucket=bucket, Body=content, Tagging=tags)
     except ClientError as e:
         print(e)
         return False, key
