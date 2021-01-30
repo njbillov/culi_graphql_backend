@@ -58,7 +58,7 @@ def upload_file(key: str, filename: str, bucket=BUCKET) -> Tuple[bool, str]:
     return True, key
 
 
-def upload_object(key: str, content: str, tags=None, bucket: str = BUCKET) -> Tuple[bool, str]:
+def upload_object(key: str, content: str, tags="", bucket: str = BUCKET) -> Tuple[bool, str]:
     # tag_param = ''
     # if tags is not None:
     #     tag_param = "&".join([f'key{i + 1}={tag}' for i, tag in enumerate(tags)])

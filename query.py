@@ -277,19 +277,27 @@ class Account(graphene.ObjectType):
 
     @staticmethod
     def resolve_menus(parent, info):
-        session = parent['session']
-        query = f'MATCH (a:Account {{session: "{session}"}})-[:MenuIn]-(m:Menu)-[c:HasRecipe]-(r:Recipe) ' \
-                f'RETURN m, c, r'
-        results = get_db().run(query)
-        menus = {}
+        params = {'session': parent['session']}
+        check_menus_query = '''MATCH (a:Account {session: $session})-[]-(m: Menu)
+                     CALL {
+                        WITH m MATCH (m)-[]-(r:Recipe) RETURN COLLECT(r) as list
+                     }
+                     RETURN m, list'''
+        results: neo4j.Result = get_db().run(check_menus_query, parameters=params)
+        menus = []
         for record in results:
-            key = record.get("m")["menu_index"]
-            recipe = unpack(record.get("r"))
-            if key not in menus:
-                menus[key] = []
-            menus[key].append(recipe)
-        return sorted([dict(recipes=sorted(recipe_list, key=lambda r: r["recipe_id"]), menu_index=key) for
-                       key, recipe_list in menus.items()], key=lambda x: x["menu_index"])
+            menu = unpack(record.get('m'))
+            # print(record.get('list'))
+            recipes = [json.loads(recipe['json']) if recipe['json'] is not None else unpack(recipe) for recipe in
+                       record.get('list')]
+            # print(recipes)
+            menu['recipes'] = recipes
+            # print(menu)
+            menus.append(menu)
+
+        # print(menus)
+        if len(menus) > 0:
+            return RequestMenu(ok=True, menus=menus)
 
     @staticmethod
     def resolve_mastered_skills(parent, info):
