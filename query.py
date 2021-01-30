@@ -466,9 +466,11 @@ class Login(graphene.Mutation):
         for record in results:
             account = unpack(record.get("a"))
         if account is None:
+            print("Account doesn't exist")
             return Login(ok=False)
 
         if not compare_password(account['password'], password_input):
+            print("Password does not match")
             return Login(ok=False)
 
         session = uuid.uuid4().hex
@@ -479,8 +481,9 @@ class Login(graphene.Mutation):
         for record in results:
             account = unpack(record.get("a"))
             account['accountFlags'] = unpack(record.get("f"))
-            print(unpack(record.get('f')))
+            print(f"flags: {unpack(record.get('f'))}")
 
+        print(f'Logged in account {account}')
         return Login(account=account, ok=True, session=session)
 
 
