@@ -21,6 +21,21 @@ def clear_recipes():
     results = neo4j_db.run(query)
 
 
+def clear_one_recipe(recipe_id: int) -> bool:
+    parameters = {'recipeId': recipe_id}
+    query = '''
+    MATCH (r:Recipe {recipeId: $recipeId}) DETACH DELETE r RETURN r
+    '''
+    results = neo4j_db.run(query, parameters=parameters)
+    count: int = 0
+    deleted: bool = False
+    for record in results:
+        deleted |= True
+        count += 1
+    print(f"Delete {count} recipe duplicate(s) from the database")
+    return deleted
+
+
 def load_recipe(json_string: str):
     j = json.loads(json_string)
     recipe_id = j['recipe_id']
@@ -47,16 +62,56 @@ def load_recipe(json_string: str):
 
 
 def main():
-    directory = sys.argv[1]
-    print(str(sys.argv))
+    if len(sys.argv) != 3:
+        print('Usage: ./recipe_loader clear|add recipe_directory')
+        return
+    command = sys.argv[1]
+    directory = sys.argv[2]
+    if command.lower() == 'clear':
+        print(f'Deleting recipe(s): {directory}')
+        if os.path.isfile(directory):
+            with open(directory, 'r') as file:
+                json_string = file.read()
+                d = json.loads(json_string)
+                recipe_id = int(d["recipe_id"])
+                print(f'Deleting {d["recipe_name"]} (recipeId: {recipe_id})')
+                clear_one_recipe(recipe_id)
+            return
+        else:
+            abs_directory: str = os.path.abspath(directory)
+            _, _, filenames = next(os.walk(abs_directory))
+            # clear_recipes()
+            print('Deleting all recipes in directory')
+            for filename in filenames:
+                with open(directory, 'r') as file:
+                    json_string = file.read()
+                    d = json.loads(json_string)
+                    recipe_id = d["recipeId"]
+                    print(f'Deleting {d["recipeName"]} (recipeId: {recipe_id}')
+                    clear_one_recipe(recipe_id)
 
-    abs_directory: str = os.path.abspath(directory)
-    _, _, filenames = next(os.walk(abs_directory))
-    clear_recipes()
-    for filename in filenames:
-        with open(os.path.join(directory, filename), 'r') as file:
-            json_string = file.read()
-            load_recipe(json_string)
+
+    elif command.lower() == 'add':
+        # print(f'Adding recipe(s): {directory}')
+        if os.path.isfile(directory):
+            print(f'Adding {"".join(os.path.splitext(directory)[-2:])}')
+            with open(directory, 'r') as file:
+                json_string = file.read()
+                load_recipe(json_string)
+            return
+        else:
+            abs_directory: str = os.path.abspath(directory)
+            _, _, filenames = next(os.walk(abs_directory))
+            # clear_recipes()
+            print(f'Adding all recipes in {directory}')
+            for filename in filenames:
+                with open(os.path.join(directory, filename), 'r') as file:
+                    json_string = file.read()
+                    load_recipe(json_string)
+
+    else:
+        print('Usage: ./recipe_loader clear|add recipe_directory')
+        return
 
 
 if __name__ == '__main__':
