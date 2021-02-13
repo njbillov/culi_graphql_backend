@@ -5,5 +5,7 @@ then
 	echo "Server already running"
 else
 	echo "Starting up server"
-	./graph.py > /dev/null &
+	export FLASK_DEBUG=False
+	export FLASK_APP=graph
+	flask run --host 0.0.0.0 --port 8080 &
 fi

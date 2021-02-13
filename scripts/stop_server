@@ -1,9 +1,9 @@
 #!/bin/bash
 
 echo "Attempting to stop server by terminating."
-f curl -s localhost:8080/ | grep "Hello World" > /dev/null
+if curl -s localhost:8080/ | grep "Hello World" > /dev/null
 then
-  pkill -SIGTERM -f graph.py
+  pkill -SIGTERM -f flask
   echo "Sent termination signal to the server."
 else
 	echo "Server is not running"
