@@ -9,4 +9,4 @@ aws deploy create-deployment \
   --deployment-config-name CodeDeployDefault.OneAtATime \
   --deployment-group-name group1 \
   --description "CLI from most recent commit" \
-  --github-location repository=njbillov/graphql_backend,commitId="79d45786e4a87563efd6377eb05db3e1c75e17eb"
+  --github-location repository=njbillov/graphql_backend,commitId=$LAST_COMMIT

@@ -1,2 +1,10 @@
 #!/bin/bash
-pkill -SIGTERM -f graph.py
+
+echo "Attempting to stop server by terminating."
+f curl -s localhost:8080/ | grep "Hello World" > /dev/null
+then
+  pkill -SIGTERM -f graph.py
+  echo "Sent termination signal to the server."
+else
+	echo "Server is not running"
+fi
