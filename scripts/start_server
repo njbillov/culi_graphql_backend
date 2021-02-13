@@ -1,0 +1,9 @@
+#!/bin/bash
+
+if curl -s localhost:8080/ | grep "Hello World" > /dev/null
+then
+	echo "Server already running"
+else
+	echo "Starting up server"
+	./graph.py > /dev/null &
+fi
