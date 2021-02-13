@@ -6,8 +6,16 @@ import sys
 
 from neo4j import GraphDatabase, basic_auth
 
-url = "bolt://localhost"
-password = 'memphis-place-optimal-velvet-phantom-127'
+if not os.path.exists('.dev'):
+    if os.path.exists('.db_uri'):
+        with open('.db_uri', 'r') as file:
+            os.environ['DB_URI'] = file.read().strip()
+    if os.path.exists('.db_password'):
+        with open('.db_password', 'r') as file:
+            os.environ['DB_PASSWORD'] = file.read().strip()
+
+url = os.getenv('DB_URI') if os.getenv('DB_URI') is not None else "bolt://localhost"
+password = os.getenv('DB_PASSWORD') if os.getenv('DB_PASSWORD') is not None else 'memphis-place-optimal-velvet-phantom-127'
 
 driver = GraphDatabase.driver(url, auth=basic_auth("neo4j", password), encrypted=False)
 
@@ -54,7 +62,7 @@ def load_recipe(json_string: str):
     query = "CREATE (r:Recipe {recipeId: $recipe_id, recipeName: $recipe_name, skills: $skills, json: $json}) RETURN r;"
     results = neo4j_db.run(query, parameters=params)
 
-    create_skills_query = '''UNWIND $skills AS skill 
+    create_skills_query = '''UNWIND $skills AS skill
     MERGE (s:Skill {name: skill})
     RETURN s
     '''

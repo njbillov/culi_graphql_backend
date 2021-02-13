@@ -1,0 +1,14 @@
+#!/bin/bash
+LAST_COMMIT= git log | grep -oE -m 1 "[[:xdigit:]]{40,}"
+
+echo ${last_commit}
+
+aws s3 cp .db_uri s3://cookwithculi-appdata/db_uri
+aws s3 cp .db_password s3://cookwithculi-appdata/db_password
+
+aws deploy create-deployment \
+  --application-name culi_graphql_backend \
+  --deployment-config-name CodeDeployDefault.OneAtATime \
+  --deployment-group-name group1 \
+  --description "CLI from most recent commit" \
+  --github-location repository=graphql_backend,commitId=$LAST_COMMIT

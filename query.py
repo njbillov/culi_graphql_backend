@@ -17,8 +17,8 @@ from werkzeug.datastructures import FileStorage
 from config import BUCKET
 from utils import create_password, compare_password, presign_object, save_file, upload_file, upload_object
 
-url = "bolt://localhost"
-password = 'memphis-place-optimal-velvet-phantom-127'
+url = os.getenv('DB_URI') if os.getenv('DB_URI') is not None else "bolt://localhost"
+password = os.getenv('DB_PASSWORD') if os.getenv('DB_PASSWORD') is not None else 'memphis-place-optimal-velvet-phantom-127'
 
 driver = GraphDatabase.driver(url, auth=basic_auth("neo4j", password), encrypted=False)
 
@@ -611,7 +611,7 @@ class Post(graphene.Mutation):
         params = {'session': session, 'caption': caption, 'public': public, 'key': key, 'bucket': bucket,
                   'recipe_id': recipe_id}
         query = '''MATCH (a: Account {session: $session}), (r: Recipe {recipeId: $recipe_id})
-        CREATE (p: Post {caption: $caption, key: $key, bucket: $bucket, public: $public, time: datetime.realtime()}), 
+        CREATE (p: Post {caption: $caption, key: $key, bucket: $bucket, public: $public, time: datetime.realtime()}),
         (a)-[c1:MadePost {time: datetime.realtime(), public: $public}]->(p),
         (p)-[c2:AboutRecipe]->(r)
         RETURN p
@@ -795,10 +795,10 @@ class UploadRecipeImage(graphene.Mutation):
 
         params = {'bucket': bucket, 'key': key, 'recipe_id': recipe_id, 'session': session}
         query = '''MATCH (a: Account {session: $session}), (r: Recipe {recipeId: $recipe_id})
-        CREATE (node: RecipeImage {key: $key, bucket: $bucket}), 
+        CREATE (node: RecipeImage {key: $key, bucket: $bucket}),
         (a)-[c1:TookPicture{time: datetime.realtime()}]->(node),
         (node)-[c2:PictureOf]->(r)
-        RETURN node; 
+        RETURN node;
         '''
         results = get_db().run(query, parameters=params)
 
