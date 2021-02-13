@@ -1,7 +1,5 @@
 #!/bin/bash
-LAST_COMMIT= git log | grep -oE -m 1 "[[:xdigit:]]{40,}"
-
-echo ${last_commit}
+LAST_COMMIT=$(git log | grep -oE -m 1 "[[:xdigit:]]{40,}")
 
 aws s3 cp .db_uri s3://cookwithculi-appdata/db_uri
 aws s3 cp .db_password s3://cookwithculi-appdata/db_password
@@ -11,4 +9,4 @@ aws deploy create-deployment \
   --deployment-config-name CodeDeployDefault.OneAtATime \
   --deployment-group-name group1 \
   --description "CLI from most recent commit" \
-  --github-location repository=graphql_backend,commitId=$LAST_COMMIT
+  --github-location repository=njbillov/graphql_backend,commitId="79d45786e4a87563efd6377eb05db3e1c75e17eb"
