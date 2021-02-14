@@ -1,0 +1,210 @@
+{
+  "description": "Who doesn't love a restaurant-style chicken caesar salad? Such a craveable dish. So make it at home! Get in your lean protein and your greens, and dress it all in a quick version of caesar dressing that captures everything you love about the restaurant versions. ",
+  "equipment": [
+    {
+      "name": "rolling pin",
+      "quantity": "1"
+    },
+    {
+      "name": "plastic wrap",
+      "quantity": "1"
+    },
+    {
+      "name": "pan",
+      "quantity": "1"
+    }
+  ],
+  "ingredients": [
+    {
+      "name": "Romaine",
+      "quantity": "1",
+      "unit": "head"
+    },
+    {
+      "name": "mayo",
+      "quantity": "1",
+      "unit": "tbsp"
+    },
+    {
+      "name": "dijon mustard",
+      "quantity": "1",
+      "unit": "tsp"
+    },
+    {
+      "name": "lemon",
+      "quantity": ".5",
+      "unit": "lemon"
+    },
+    {
+      "name": "parmesan",
+      "quantity": "1",
+      "unit": "tbsp"
+    },
+    {
+      "name": "chicken breast",
+      "quantity": "1",
+      "unit": "breast"
+    },
+    {
+      "name": "garlic powder",
+      "quantity": "1",
+      "unit": "tsp"
+    }
+  ],
+  "recipe_id": "14",
+  "recipe_name": "Classic Chicken Caesar",
+  "steps": [
+    {
+      "name": "",
+      "steps": [
+        {
+          "equipment": [],
+          "flavor_text": "Wash your lettuce, girl! Don't be gross. If you have a salad spinner, that's ideal, but no worries if not. Traditionally, a caesar salad uses {i, romaine, 1}, but we've tried this salad with all kinds of greens and it works with anything!",
+          "ingredients": [
+            {
+              "name": "Romaine",
+              "quantity": "1",
+              "unit": "head"
+            }
+          ],
+          "skills": [],
+          "text": "Wash your lettuce, girl! Don't be gross. If you have a salad spinner, that's ideal, but no worries if not. Traditionally, a caesar salad uses romaine, but we've tried this salad with all kinds of greens and it works with anything!",
+          "time_estimate": null
+        },
+        {
+          "equipment": [],
+          "flavor_text": "For one serving of the caesar dressing, combine 1 tbsp {i, mayo, 1}, 1 tsp of {i, dijon mustard, 2}, the juice of half a {i, lemon, 3}, and 1 tbsp of chopped or grated {i, parmesan, 4}. If you have worcestershire sauce, add a splash to the dressing as well. Mix together then taste! Make sure it has the flavor and consistency that YOU like.",
+          "ingredients": [
+            {
+              "name": "mayo",
+              "quantity": "1",
+              "unit": "tbsp"
+            },
+            {
+              "name": "dijon mustard",
+              "quantity": "1",
+              "unit": "tsp"
+            },
+            {
+              "name": "lemon",
+              "quantity": ".5",
+              "unit": "lemon"
+            },
+            {
+              "name": "parmesan",
+              "quantity": "1",
+              "unit": "tbsp"
+            }
+          ],
+          "skills": [
+            {
+              "name": "Salad Dressing"
+            }
+          ],
+          "text": "For one serving of the caesar dressing, combine 1 tbsp mayo, 1 tsp of dijon mustard, the juice of half a lemon, and 1 tbsp of chopped or grated parmesan. If you have worcestershire sauce, add a splash to the dressing as well. Mix together then taste! Make sure it has the flavor and consistency that YOU like.",
+          "time_estimate": null
+        }
+      ]
+    },
+    {
+      "name": "",
+      "steps": [
+        {
+          "equipment": [
+            {
+              "name": "rolling pin",
+              "quantity": "1"
+            },
+            {
+              "name": "plastic wrap",
+              "quantity": "1"
+            }
+          ],
+          "flavor_text": "Okay, now for the chicky. We're going to cook it in a pan, which could take forever if it's too thick. So, pretend that the {i, chicken breast, 1} is that annoying coworker that always throws you under the bus for stuff, cover them with a layer of {e, plastic wrap, 2}, then use a wine bottle or {e, rolling pin, 1} to beat the hell out of them until they are about 1 inch thick.",
+          "ingredients": [
+            {
+              "name": "chicken breast",
+              "quantity": "1",
+              "unit": "breast"
+            }
+          ],
+          "skills": [
+            {
+              "name": "Tenderizing"
+            }
+          ],
+          "text": "Okay, now for the chicky. We're going to cook it in a pan, which could take forever if it's too thick. So, pretend that the chicken breast is that annoying coworker that always throws you under the bus for stuff, cover them with a layer of plastic wrap, then use a wine bottle or rolling pin to beat the hell out of them until they are about 1 inch thick.",
+          "time_estimate": null
+        },
+        {
+          "equipment": [],
+          "flavor_text": "Season your boneless, skinless chicken breast on both sides with salt, pepper, and garlic powder. Add some paprika or chili powder if you're feeling crazy!",
+          "ingredients": [
+            {
+              "name": "garlic powder",
+              "quantity": "1",
+              "unit": "tsp"
+            }
+          ],
+          "skills": [
+            {
+              "name": "Seasoning"
+            }
+          ],
+          "text": "Season your boneless, skinless chicken breast on both sides with salt, pepper, and garlic powder. Add some paprika or chili powder if you're feeling crazy!",
+          "time_estimate": null
+        },
+        {
+          "equipment": [
+            {
+              "name": "pan",
+              "quantity": "1"
+            }
+          ],
+          "flavor_text": "Heat up a {e, pan, 1} with a splash of olive oil over medium-high heat. Wait for the oil to heat up (about 2 minutes) -- this is especially important when cooking meat, because we want to get a nice hard sear on both sides to add texture and lock in the juices.",
+          "ingredients": [],
+          "skills": [],
+          "text": "Heat up a pan with a splash of olive oil over medium-high heat. Wait for the oil to heat up (about 2 minutes) -- this is especially important when cooking meat, because we want to get a nice hard sear on both sides to add texture and lock in the juices.",
+          "time_estimate": null
+        },
+        {
+          "equipment": [],
+          "flavor_text": "Add your chicken breast into the pan and try not to move it around so it can develop that crust. You should hear a sizzle. Cook for about 4-5 minutes on both sides, depending on how thick is.",
+          "ingredients": [],
+          "skills": [
+            {
+              "name": "Searing"
+            }
+          ],
+          "text": "Add your chicken breast into the pan and try not to move it around so it can develop that crust. You should hear a sizzle. Cook for about 4-5 minutes on both sides, depending on how thick is.",
+          "time_estimate": null
+        }
+      ]
+    },
+    {
+      "name": "",
+      "steps": [
+        {
+          "equipment": [],
+          "flavor_text": "Remove the chicken and cut into the thickest part to make sure it's cooked through. If it's still pink inside, don't panic! Just throw it back into the pan until it's cooked. Slice up your chicken and throw it on top of the salad.",
+          "ingredients": [],
+          "skills": [
+            {
+              "name": "Checking Doneness"
+            }
+          ],
+          "text": "Remove the chicken and cut into the thickest part to make sure it's cooked through. If it's still pink inside, don't panic! Just throw it back into the pan until it's cooked. Slice up your chicken and throw it on top of the salad.",
+          "time_estimate": null
+        },
+        {
+          "equipment": [],
+          "flavor_text": "Hit the salad with some more parm, cracked black pepper, pickled red onions, or whatever you want really. This quick version of a caesar really delivers on the same creamy and tangy qualities you'd get from a restaurant version, and the chicken makes it a light but filling meal.",
+          "ingredients": [],
+          "skills": [],
+          "text": "Hit the salad with some more parm, cracked black pepper, pickled red onions, or whatever you want really. This quick version of a caesar really delivers on the same creamy and tangy qualities you'd get from a restaurant version, and the chicken makes it a light but filling meal.",
+          "time_estimate": null
+        }
+      ]
+    }
+  ]
+}

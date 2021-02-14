@@ -1,0 +1,192 @@
+{
+  "description": "Eggs are one of our absolute favorite ingredients. For these tacos we're going to try a quick scramble so that the eggs hold onto some texture. Adding the charred scallions to the mix deepens their flavor, and when you top it with the fresh, acidic pico, it really takes them up a notch. The pico keeps great in the fridge, and works wonders as a condiment on meats or as a salsa. ",
+  "equipment": [
+    {
+      "name": "silicone spatula",
+      "quantity": "1"
+    },
+    {
+      "name": "small bowl",
+      "quantity": "1"
+    },
+    {
+      "name": "non-stick pan",
+      "quantity": "1"
+    },
+    {
+      "name": "gas burner",
+      "quantity": "1"
+    },
+    {
+      "name": "tongs",
+      "quantity": "1"
+    }
+  ],
+  "ingredients": [
+    {
+      "name": "eggs",
+      "quantity": "4",
+      "unit": "eggs"
+    },
+    {
+      "name": "scallions",
+      "quantity": "2",
+      "unit": "stalks"
+    },
+    {
+      "name": "tortillas",
+      "quantity": "3",
+      "unit": "shells"
+    }
+  ],
+  "recipe_id": "13",
+  "recipe_name": "Breakfast Tacos with Pico",
+  "steps": [
+    {
+      "name": "",
+      "steps": [
+        {
+          "equipment": [
+            {
+              "name": "silicone spatula",
+              "quantity": "1"
+            }
+          ],
+          "flavor_text": "For the eggs, we're doing a quick scramble, but we're NOT going to overcook them. We're talking on the heat for no more than 30 seconds. for cooking them we highly recommend using a {e, silicone spatula, 1}, but a wooden spoon can work.",
+          "ingredients": [],
+          "skills": [],
+          "text": "For the eggs, we're doing a quick scramble, but we're NOT going to overcook them. We're talking on the heat for no more than 30 seconds. for cooking them we highly recommend using a silicone spatula, but a wooden spoon can work.",
+          "time_estimate": null
+        },
+        {
+          "equipment": [
+            {
+              "name": "small bowl",
+              "quantity": "1"
+            }
+          ],
+          "flavor_text": "Whisk together 2-4 {i, eggs, 1} (we don't know how hungry you are) in a {e, small bowl, 1} with a big pinch of salt and pepper until homogenous.",
+          "ingredients": [
+            {
+              "name": "eggs",
+              "quantity": "4",
+              "unit": "eggs"
+            }
+          ],
+          "skills": [],
+          "text": "Whisk together 2-4 eggs (we don't know how hungry you are) in a small bowl with a big pinch of salt and pepper until homogenous.",
+          "time_estimate": null
+        },
+        {
+          "equipment": [],
+          "flavor_text": "Slice two {i, scallions, 1} into pieces that are about 1/2 an inch long.",
+          "ingredients": [
+            {
+              "name": "scallions",
+              "quantity": "2",
+              "unit": "stalks"
+            }
+          ],
+          "skills": [
+            {
+              "name": "Slicing"
+            }
+          ],
+          "text": "Slice two scallions into pieces that are about 1/2 an inch long.",
+          "time_estimate": null
+        },
+        {
+          "equipment": [
+            {
+              "name": "non-stick pan",
+              "quantity": "1"
+            }
+          ],
+          "flavor_text": "Heat up a {e, non-stick pan, 1} over medium heat with a splash of olive oil. Once the oil is hot, add your sliced scallions to the pan and season with a bit of salt.",
+          "ingredients": [],
+          "skills": [
+            {
+              "name": "Sauteing"
+            }
+          ],
+          "text": "Heat up a non-stick pan over medium heat with a splash of olive oil. Once the oil is hot, add your sliced scallions to the pan and season with a bit of salt.",
+          "time_estimate": null
+        },
+        {
+          "equipment": [],
+          "flavor_text": "When the scallions are nicely browned (2 minutes ish), get ready to add your eggs. Once they hit the pan, you're going to continually push them around with the edge of your spatula so nothing stays on the bottom for more than a couple seconds. The whole process should take no more than 30 seconds.",
+          "ingredients": [],
+          "skills": [
+            {
+              "name": "Quick Scramble"
+            }
+          ],
+          "text": "When the scallions are nicely browned (2 minutes ish), get ready to add your eggs. Once they hit the pan, you're going to continually push them around with the edge of your spatula so nothing stays on the bottom for more than a couple seconds. The whole process should take no more than 30 seconds.",
+          "time_estimate": null
+        },
+        {
+          "equipment": [],
+          "flavor_text": "As soon as the eggs solidify, take them off the heat and slide them onto a plate so they avoid cooking in the residual heat from the pan.",
+          "ingredients": [],
+          "skills": [],
+          "text": "As soon as the eggs solidify, take them off the heat and slide them onto a plate so they avoid cooking in the residual heat from the pan.",
+          "time_estimate": null
+        }
+      ]
+    },
+    {
+      "name": "",
+      "steps": [
+        {
+          "equipment": [],
+          "flavor_text": "Just before serving, heat up your {i, tortillas, 1}. We recommend you place them directly onto your stovetop if you have a gas burner. It gives them a nice char and grilled flavor.",
+          "ingredients": [
+            {
+              "name": "tortillas",
+              "quantity": "3",
+              "unit": "shells"
+            }
+          ],
+          "skills": [],
+          "text": "Just before serving, heat up your tortillas. We recommend you place them directly onto your stovetop if you have a gas burner. It gives them a nice char and grilled flavor.",
+          "time_estimate": null
+        },
+        {
+          "equipment": [
+            {
+              "name": "gas burner",
+              "quantity": "1"
+            },
+            {
+              "name": "tongs",
+              "quantity": "1"
+            }
+          ],
+          "flavor_text": "Turn your smallest {e, gas burner, 1} to medium heat. Place a {i, tortilla, 1} directly on top of the flame (it won't catch on fire, we promise). Use the pair of {e, tongs, 1} to flip once it picks up the amount of color/char that you want. Repeat for all tortillas.",
+          "ingredients": [
+            {
+              "name": "tortillas",
+              "quantity": "3",
+              "unit": "shells"
+            }
+          ],
+          "skills": [
+            {
+              "name": "Char"
+            }
+          ],
+          "text": "Turn your smallest gas burner to medium heat. Place a tortilla directly on top of the flame (it won't catch on fire, we promise). Use the pair of tongs to flip once it picks up the amount of color/char that you want. Repeat for all tortillas.",
+          "time_estimate": null
+        },
+        {
+          "equipment": [],
+          "flavor_text": "Serve with avocado if you have it! Aren't breakfast tacos comforting?",
+          "ingredients": [],
+          "skills": [],
+          "text": "Serve with avocado if you have it! Aren't breakfast tacos comforting?",
+          "time_estimate": null
+        }
+      ]
+    }
+  ]
+}

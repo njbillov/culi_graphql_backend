@@ -138,7 +138,7 @@
               "quantity": "1"
             }
           ],
-          "flavor_text": "In a {e, pan, 1} or skillet, heat up about 4 tbsp or 1/4 a cup of {i, olive oil, 1} over medium heat.",
+          "flavor_text": "In a {e, pan, 1} or skillet, heat up about 4 tbsp or 1/4 a cup of {i, olive oil, 1} over medium-low heat.",
           "ingredients": [
             {
               "name": "olive oil",
@@ -147,7 +147,7 @@
             }
           ],
           "skills": [],
-          "text": "In a pan or skillet, heat up about 4 tbsp or 1/4 a cup of olive oil over medium heat.",
+          "text": "In a pan or skillet, heat up about 4 tbsp or 1/4 a cup of olive oil over medium-low heat.",
           "time_estimate": null
         }
       ]
@@ -185,7 +185,7 @@
         },
         {
           "equipment": [],
-          "flavor_text": "Cook the garlic until you start to see the edges of your slices brown a little bit. At this point, turn off the heat and add about 1/4tsp of {i, chili flakes, 1} to the oil and garlic and stir it in.",
+          "flavor_text": "Gently cook the garlic until you start to see the edges of your slices brown a little bit. At this point, turn off the heat and add about 1/4tsp of {i, chili flakes, 1} to the oil and garlic and stir it in.",
           "ingredients": [
             {
               "name": "chili flakes",
@@ -198,7 +198,7 @@
               "name": "Saute"
             }
           ],
-          "text": "Cook the garlic until you start to see the edges of your slices brown a little bit. At this point, turn off the heat and add about 1/4tsp of chili flakes to the oil and garlic and stir it in.",
+          "text": "Gently cook the garlic until you start to see the edges of your slices brown a little bit. At this point, turn off the heat and add about 1/4tsp of chili flakes to the oil and garlic and stir it in.",
           "time_estimate": null
         }
       ]
@@ -221,7 +221,7 @@
         },
         {
           "equipment": [],
-          "flavor_text": "Trasnfer the pasta into your oil, garlic, and chili flake mixture. Add your fresh squeeze of {i, lemon, 1} and another sprinkle of salt and black pepper.",
+          "flavor_text": "Transfer the pasta into your oil, garlic, and chili flake mixture. Add your fresh squeeze of {i, lemon, 1} and another sprinkle of salt and black pepper.",
           "ingredients": [
             {
               "name": "lemon",
@@ -230,7 +230,7 @@
             }
           ],
           "skills": [],
-          "text": "Trasnfer the pasta into your oil, garlic, and chili flake mixture. Add your fresh squeeze of lemon and another sprinkle of salt and black pepper.",
+          "text": "Transfer the pasta into your oil, garlic, and chili flake mixture. Add your fresh squeeze of lemon and another sprinkle of salt and black pepper.",
           "time_estimate": null
         },
         {

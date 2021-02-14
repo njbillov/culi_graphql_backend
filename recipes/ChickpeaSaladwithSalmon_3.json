@@ -203,7 +203,7 @@
               "quantity": "1"
             }
           ],
-          "flavor_text": "Finely dice half of your {i, shallot, 1}. Add however much shallot you'd like in your salad to the bowl with the chickpeas. Discard the rest.",
+          "flavor_text": "Finely dice your {i, shallot, 1}. Add however much shallot you'd like in your salad to the bowl with the chickpeas. Discard the rest.",
           "ingredients": [
             {
               "name": "shallot",
@@ -216,7 +216,7 @@
               "name": "Dice"
             }
           ],
-          "text": "Finely dice half of your shallot. Add however much shallot you'd like in your salad to the bowl with the chickpeas. Discard the rest.",
+          "text": "Finely dice your shallot. Add however much shallot you'd like in your salad to the bowl with the chickpeas. Discard the rest.",
           "time_estimate": null
         },
         {

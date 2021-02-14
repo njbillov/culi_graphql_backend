@@ -1,0 +1,155 @@
+{
+  "description": "Fish can be scary to cook, but you want to know a secret? It's actually easier to cook than meat. This salmon gets cooked int he broiler to give it some nice color and speed up the cooking process. What's more wholesome and satisfying than quickly-prepared fish, veggies, and greens?",
+  "equipment": [
+    {
+      "name": "oven",
+      "quantity": "1"
+    },
+    {
+      "name": "sheet tray",
+      "quantity": "1"
+    },
+    {
+      "name": "bowl",
+      "quantity": "1"
+    }
+  ],
+  "ingredients": [
+    {
+      "name": "lemon",
+      "quantity": ".5",
+      "unit": "lemon"
+    },
+    {
+      "name": "asparagus",
+      "quantity": "8",
+      "unit": "stalks"
+    },
+    {
+      "name": "salmon",
+      "quantity": "1",
+      "unit": "fillet"
+    }
+  ],
+  "recipe_id": "10",
+  "recipe_name": "Broiled Salmon with Balsamic Vinaigrette ",
+  "steps": [
+    {
+      "name": "",
+      "steps": [
+        {
+          "equipment": [
+            {
+              "name": "oven",
+              "quantity": "1"
+            }
+          ],
+          "flavor_text": "Preheat your {e, oven, 1} to the broiler setting. Ikr? Rare ask, but it helps mimic the direct heat of a grill!",
+          "ingredients": [],
+          "skills": [],
+          "text": "Preheat your oven to the broiler setting. Ikr? Rare ask, but it helps mimic the direct heat of a grill!",
+          "time_estimate": null
+        },
+        {
+          "equipment": [
+            {
+              "name": "sheet tray",
+              "quantity": "1"
+            }
+          ],
+          "flavor_text": "Get out a {e, sheet tray, 1} and optionally cover it with foil or parchment paper to make for easier cleanup.",
+          "ingredients": [],
+          "skills": [],
+          "text": "Get out a sheet tray and optionally cover it with foil or parchment paper to make for easier cleanup.",
+          "time_estimate": null
+        },
+        {
+          "equipment": [],
+          "flavor_text": "Cut your {i, lemon, 1} in half, then slice off a few thin rounds to top the salmon later.",
+          "ingredients": [
+            {
+              "name": "lemon",
+              "quantity": "1",
+              "unit": "lemon"
+            }
+          ],
+          "skills": [
+            {
+              "name": "Slicing"
+            }
+          ],
+          "text": "Cut your lemon in half, then slice off a few thin rounds to top the salmon later.",
+          "time_estimate": null
+        },
+        {
+          "equipment": [],
+          "flavor_text": "Get out about 7-8 stalks of {i, asparagus, 1} (or however many you want) and cut off the bottom 1-2 inches from the stalks. This part is hard and fibrous. It's unpleasant to eat and stupid for being there. Place the trimmed asparagus on the baking sheet and drizzle about a tbsp of olive oil onto them. Season heavily with salt, pepper, and garlic powder. Toss to coat each piece with oil and seasoning. (If you have any other veg you're looking to cook up, give it the same treatment and add it to the party!).",
+          "ingredients": [
+            {
+              "name": "asparagus",
+              "quantity": "8",
+              "unit": "stalks"
+            }
+          ],
+          "skills": [
+            {
+              "name": "Seasoning"
+            }
+          ],
+          "text": "Get out about 7-8 stalks of asparagus (or however many you want) and cut off the bottom 1-2 inches from the stalks. This part is hard and fibrous. It's unpleasant to eat and stupid for being there. Place the trimmed asparagus on the baking sheet and drizzle about a tbsp of olive oil onto them. Season heavily with salt, pepper, and garlic powder. Toss to coat each piece with oil and seasoning. (If you have any other veg you're looking to cook up, give it the same treatment and add it to the party!).",
+          "time_estimate": null
+        },
+        {
+          "equipment": [],
+          "flavor_text": "Season one side of your {i, salmon, 1} fillet(s) liberally with salt, pepper, and anything else you're feeling! Chili flakes? Sure. Gar pow? (New abbrev.) Sure! Experiment a bit. Add a baby splash of olive oil to the baking sheet and place the seasoned side of your salmon on top of it. Drizzle the unseasoned side with another baby splash and repeat with your seasonings.",
+          "ingredients": [
+            {
+              "name": "salmon",
+              "quantity": "1",
+              "unit": "fillet"
+            }
+          ],
+          "skills": [
+            {
+              "name": "Seasoning"
+            }
+          ],
+          "text": "Season one side of your salmon fillet(s) liberally with salt, pepper, and anything else you're feeling! Chili flakes? Sure. Gar pow? (New abbrev.) Sure! Experiment a bit. Add a baby splash of olive oil to the baking sheet and place the seasoned side of your salmon on top of it. Drizzle the unseasoned side with another baby splash and repeat with your seasonings.",
+          "time_estimate": null
+        },
+        {
+          "equipment": [],
+          "flavor_text": "Lay your {i, lemon, 1} slices atop the salmon then place in the oven on the top rack for about 8-10 minutes or until the salmon is cooked through.",
+          "ingredients": [
+            {
+              "name": "lemon",
+              "quantity": ".5",
+              "unit": "lemon"
+            }
+          ],
+          "skills": [],
+          "text": "Lay your lemon slices atop the salmon then place in the oven on the top rack for about 8-10 minutes or until the salmon is cooked through.",
+          "time_estimate": null
+        }
+      ]
+    },
+    {
+      "name": "",
+      "steps": [
+        {
+          "equipment": [
+            {
+              "name": "bowl",
+              "quantity": "1"
+            }
+          ],
+          "flavor_text": "In the meantime, let's make a quick vinaigrette. So bust out a {e, bowl, 1} jar, or measuring cup.",
+          "ingredients": [],
+          "skills": [],
+          "text": "In the meantime, let's make a quick vinaigrette. So bust out a bowl jar, or measuring cup.",
+          "time_estimate": null
+        }
+      ]
+    }
+  ]
+}
