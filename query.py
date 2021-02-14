@@ -17,6 +17,15 @@ from werkzeug.datastructures import FileStorage
 from config import BUCKET
 from utils import create_password, compare_password, presign_object, save_file, upload_file, upload_object
 
+if not os.path.exists('.dev'):
+    if os.path.exists('.db_uri'):
+        with open('.db_uri', 'r') as file:
+            os.environ['DB_URI'] = file.read().strip()
+    if os.path.exists('.db_password'):
+        with open('.db_password', 'r') as file:
+            os.environ['DB_PASSWORD'] = file.read().strip()
+
+
 url = os.getenv('DB_URI') if os.getenv('DB_URI') is not None else "bolt://localhost"
 password = os.getenv('DB_PASSWORD') if os.getenv('DB_PASSWORD') is not None else 'memphis-place-optimal-velvet-phantom-127'
 

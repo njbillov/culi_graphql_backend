@@ -44,12 +44,4 @@ app.add_url_rule(
 if __name__ == '__main__':
     # print(utils.upload_object())
     # utils.test_get_object()
-    if not os.path.exists('.dev'):
-        if os.path.exists('.db_uri'):
-            with open('.db_uri', 'r') as file:
-                os.environ['DB_URI'] = file.read().strip()
-        if os.path.exists('.db_password'):
-            with open('.db_password', 'r') as file:
-                os.environ['DB_PASSWORD'] = file.read().strip()
-                
     app.run(host='0.0.0.0', port=8080)
