@@ -69,6 +69,58 @@ def load_recipe(json_string: str):
     results = neo4j_db.run(create_skills_query, parameters={'skills': skills})
 
 
+def update_recipe(json_string):
+        j = json.loads(json_string)
+
+        params = {'recipe_id': int(j["recipe_id"])}
+        equality_query = "MATCH (r:Recipe {recipeId: $recipe_id}) return r as previous_r, r.json as recipe_json"
+
+        results = neo4j_db.run(equality_query, parameters=params)
+
+        recipe_json = None
+        previous_r = None
+        for record in results:
+            recipe_json = record.get("recipe_json")
+            previous_r = record.get("previous_r")
+
+        if json_string == recipe_json:
+            print(f"{j['recipe_name']} in database is already up-to-date")
+            return
+        elif previous_r is None:
+            print(f"{j['recipe_name']} not in the database yet, adding it in now")
+            load_recipe(json_string)
+            return
+        recipe_id = j['recipe_id']
+        recipe_name = j['recipe_name']
+        skills = set()
+        for macro_step in j['steps']:
+            for micro_step in macro_step['steps']:
+                for skill in micro_step['skills']:
+                    skills.add(skill['name'].lower())
+        skills = list(skills)
+        params = {}
+        params["recipe_id"] = int(recipe_id)
+        params["recipe_name"] = recipe_name
+        params["json"] = json_string
+        params["skills"] = skills
+        query = '''MATCH (r:Recipe {recipeId: $recipe_id})
+                   SET r = {recipeId: $recipe_id, recipeName: $recipe_name, skills: $skills, json: $json}
+                   RETURN r
+                '''
+        results = neo4j_db.run(query, parameters=params)
+
+        r = None
+        for record in results:
+            r = record.get('r')
+
+        create_skills_query = '''UNWIND $skills AS skill
+        MERGE (s:Skill {name: skill})
+        RETURN s
+        '''
+        results = neo4j_db.run(create_skills_query, parameters={'skills': skills})
+        print(f'Updated the {params["recipe_name"]}')
+
+
 def main():
     if len(sys.argv) != 3:
         print('Usage: ./recipe_loader clear|add recipe_directory')
@@ -98,7 +150,6 @@ def main():
                     print(f'Deleting {d["recipeName"]} (recipeId: {recipe_id}')
                     clear_one_recipe(recipe_id)
 
-
     elif command.lower() == 'add':
         # print(f'Adding recipe(s): {directory}')
         if os.path.isfile(directory):
@@ -117,6 +168,23 @@ def main():
                     json_string = file.read()
                     load_recipe(json_string)
 
+    elif command.lower() == 'update':
+        if os.path.isfile(directory):
+            print(f'Updating {"".join(os.path.splitext(directory)[-2:])}')
+            with open(directory, 'r') as file:
+                json_string = file.read()
+                update_recipe(json_string)
+            return
+
+        else:
+            abs_directory = os.path.abspath(directory)
+            _, _, filenames = next(os.walk(abs_directory))
+
+            print('Updating all recipes in {directory}')
+            for filename in filenames:
+                with open(os.path.join(directory, filename), 'r') as file:
+                    json_string = file.read()
+                    update_recipe(json_string)
     else:
         print('Usage: ./recipe_loader clear|add recipe_directory')
         return
