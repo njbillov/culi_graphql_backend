@@ -699,6 +699,72 @@ class SetFlag(graphene.Mutation):
             ok = False
         return SetFlag(ok=ok, flags=flags)
 
+#
+# class RequestMenuTest(graphene.Mutation):
+#         class Arguments:
+#             recipe_count = graphene.Int()
+#             menu_count = graphene.Int()
+#
+#         ok = graphene.Boolean()
+#         menus = graphene.List(graphene.List(graphene.Int))
+#
+#         @staticmethod
+#         def mutate(parent, info, recipe_count, menu_count, **kwargs):
+#             params = {"recipe_count": recipe_count, "menu_count": menu_count,}
+#             query = '''UNWIND range(1, $menu_count) as menu_index
+#                 WITH menu_index CALL {
+#                    MATCH (r:Recipe) WHERE toInteger(r.recipeId) < 1000
+#                    RETURN r.json as recipe, r.recipeId as recipe_id ORDER BY rand() LIMIT $recipe_count
+#                 }
+#                 WITH menu_index, recipe, recipe_id CALL {
+#                     WITH recipe, recipe_id
+#                     RETURN collect(recipe) as recipes, collect(recipe_id) as recipe_ids
+#                 }
+#                 RETURN menu_index, recipes, recipe_ids'''
+#             recipes = []
+#             recipe_ids = []
+#             results = get_db().run(query, parameters=params)
+#             for record in results:
+#                 recipes.extend(record.get('recipes'))
+#                 # print(f'Number of recipe lists: {len(recipes)}')
+#                 # print(f"Number of recipes in each list: {len(record.get('recipes'))}")
+#                 recipe_ids.extend(record.get('recipe_ids'))
+#                 # print(type(recipes[0]))
+#                 # print(record.get('menu_index'))
+#             # print(recipes)
+#             # recipe_ids = [json.loads(recipe)['recipe_id'] for recipe in recipes]
+#
+#             menu_params = {'recipe_ids': recipe_ids, 'menu_count': menu_count}
+#             print(recipe_ids)
+#             assign_query = '''
+#                 UNWIND range(1, $menu_count) AS menu_index
+#                 WITH $recipe_ids[menu_index] as recipe_ids, menu_index
+#                 CALL {
+#                     WITH recipe_ids
+#                     UNWIND recipe_ids AS id
+#                     OPTIONAL MATCH (r:Recipe {recipeId: toInteger(id)})
+#                     RETURN COLLECT(r) AS recipes
+#                 }
+#                 WITH recipes, menu_index
+#                 RETURN recipes, menu_index
+#             '''
+#             print(menu_params)
+#             results = get_db().run(assign_query, parameters=menu_params)
+#             menus = []
+#             for record in results:
+#                 menu = {}
+#                 print(record.get('menu_index'))
+#                 # print(record.get('recipes'))
+#                 # recipes = [json.loads(recipe['json']) if recipe['json'] is not None else unpack(recipe) for recipe in
+#                 #            record.get('recipes')]
+#                 # print(len(recipes))
+#                 # menu['recipes'] = [json.loads(recipe) for recipe in recipes[len(menus):len(menus) + recipe_count]]
+#                 menu['recipe_ids'] = [json.loads(recipe)['recipe_id'] for recipe in recipes[len(menus) * recipe_count:(len(menus) + 1) * recipe_count]]
+#                 menus.append(menu)
+#             print(menus)
+#             return RequestMenuTest(ok=True, menus=menus)
+#
+
 
 class RequestMenu(graphene.Mutation):
     class Arguments:
@@ -763,7 +829,7 @@ class RequestMenu(graphene.Mutation):
         print(recipe_ids)
         assign_query = '''MATCH (a: Account {session: $session})
             WITH a
-            UNWIND [1, $menu_count] AS menu_index
+            UNWIND range(1, $menu_count) AS menu_index
             CREATE (m: Menu {menu_index: menu_index, time: datetime.realtime()}), (a)-[c:HasMenu]->(m)
             WITH a, m, $recipe_ids[menu_index] as recipe_ids
             CALL {
@@ -783,7 +849,7 @@ class RequestMenu(graphene.Mutation):
             # recipes = [json.loads(recipe['json']) if recipe['json'] is not None else unpack(recipe) for recipe in
             #            record.get('recipes')]
             # print(len(recipes))
-            menu['recipes'] = [json.loads(recipe) for recipe in recipes[len(menus):len(menus) + recipe_count]]
+            menu['recipes'] = [json.loads(recipe) for recipe in recipes[len(menus) * recipe_count:(len(menus) + 1) * recipe_count]]
             menus.append(menu)
         return RequestMenu(ok=True, menus=menus)
 
@@ -868,6 +934,7 @@ class Mutations(graphene.ObjectType):
     upload_survey = UploadSurvey.Field()
     set_flag = SetFlag.Field()
     request_menus = RequestMenu.Field()
+
     upload_feedback = UploadFeedback.Field()
     post = Post.Field()
     upload_recipe_image = UploadRecipeImage.Field()
