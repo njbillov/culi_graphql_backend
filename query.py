@@ -573,7 +573,7 @@ class CreateAccount(graphene.Mutation):
         if not password_valid(password_form['password_input']):
             return CreateAccount(ok=False, code="Error: Invalid password format")
         password_hash = create_password(password_input)
-        print(f'Name: {name}, Email: {email}, Password: {password}')
+        # print(f'Name: {name}, Email: {email}, Password: {password}')
 
         session = uuid.uuid4().hex
         create_account_query = f'CREATE (a:Account {{email: "{email}", name: "{name}", password: "{password_hash}", ' \
@@ -771,7 +771,7 @@ class RequestMenu(graphene.Mutation):
         recipe_count = graphene.Int()
         menu_count = graphene.Int()
         session = graphene.String(required=True)
-        override = graphene.Boolean(default_value=False)
+        override = graphene.Boolean()
 
     ok = graphene.Boolean()
     menus = graphene.List(Menu)
