@@ -21,57 +21,67 @@
   "ingredients": [
     {
       "name": "soy sauce",
+      "new": false,
       "quantity": "1",
       "unit": "tbsp"
     },
     {
       "name": "rice wine vinegar",
-      "quantity": ".5",
+      "new": false,
+      "quantity": "0.5",
       "unit": "tbsp"
     },
     {
       "name": "sesame oil",
+      "new": false,
       "quantity": "1",
       "unit": "tsp"
     },
     {
       "name": "sriracha",
-      "quantity": ".5",
+      "new": false,
+      "quantity": "0.5",
       "unit": "tbsp"
     },
     {
       "name": "honey",
+      "new": false,
       "quantity": "1",
       "unit": "tbsp"
     },
     {
       "name": "ginger",
+      "new": false,
       "quantity": "1",
       "unit": "tsp"
     },
     {
       "name": "ramen",
+      "new": false,
       "quantity": "1",
       "unit": "packet"
     },
     {
       "name": "white button mushrooms",
+      "new": false,
       "quantity": "4",
       "unit": "mushrooms"
     },
     {
       "name": "broccoli",
+      "new": false,
       "quantity": "1",
       "unit": "head"
     },
     {
       "name": "green onions",
+      "new": false,
       "quantity": "1",
       "unit": "stalk"
     }
   ],
   "recipe_id": "9",
-  "recipe_name": "Ramen noodle stir fry",
+  "recipe_name": "RamenNoodleStirFry",
   "steps": [
     {
       "name": "",
@@ -95,26 +105,31 @@
           "ingredients": [
             {
               "name": "soy sauce",
+              "new": false,
               "quantity": "1",
               "unit": "tbsp"
             },
             {
               "name": "rice wine vinegar",
-              "quantity": ".5",
+              "new": false,
+              "quantity": "0.5",
               "unit": "tbsp"
             },
             {
               "name": "sesame oil",
+              "new": false,
               "quantity": "1",
               "unit": "tsp"
             },
             {
               "name": "sriracha",
-              "quantity": ".5",
+              "new": false,
+              "quantity": "0.5",
               "unit": "tbsp"
             },
             {
               "name": "honey",
+              "new": false,
               "quantity": "1",
               "unit": "tbsp"
             }
@@ -134,6 +149,7 @@
           "ingredients": [
             {
               "name": "ginger",
+              "new": false,
               "quantity": "1",
               "unit": "tsp"
             }
@@ -148,7 +164,8 @@
           "ingredients": [
             {
               "name": "ramen",
-              "quantity": "1",
+              "new": false,
+              "quantity": 1.0,
               "unit": "pack"
             }
           ],
@@ -158,20 +175,23 @@
         },
         {
           "equipment": [],
-          "flavor_text": "Next, slice your {i, white button mushroooms, 1} (use however many you'd like), and cut of a few pieces of {i, broccoli, 2} and cut them into small florets since we'll be cooking them quickly in the pan. Slice 1 stalk of your {i, green onions, 3} (the green and white part, avoiding the very end with the root) into pieces about half an inch long.",
+          "flavor_text": "Next, slice your {i, white button mushrooms, 1} (use however many you'd like), and cut of a few pieces of {i, broccoli, 2} and cut them into small florets since we'll be cooking them quickly in the pan. Slice 1 stalk of your {i, green onions, 3} (the green and white part, avoiding the very end with the root) into pieces about half an inch long.",
           "ingredients": [
             {
               "name": "white button mushrooms",
+              "new": false,
               "quantity": "4",
               "unit": "mushrooms"
             },
             {
               "name": "broccoli",
+              "new": false,
               "quantity": "1",
               "unit": "head"
             },
             {
               "name": "green onions",
+              "new": false,
               "quantity": "1",
               "unit": "stalk"
             }
@@ -181,7 +201,7 @@
               "name": "Slicing"
             }
           ],
-          "text": "Next, slice your white button mushroooms (use however many you'd like), and cut of a few pieces of broccoli and cut them into small florets since we'll be cooking them quickly in the pan. Slice 1 stalk of your green onions (the green and white part, avoiding the very end with the root) into pieces about half an inch long.",
+          "text": "Next, slice your white button mushrooms (use however many you'd like), and cut of a few pieces of broccoli and cut them into small florets since we'll be cooking them quickly in the pan. Slice 1 stalk of your green onions (the green and white part, avoiding the very end with the root) into pieces about half an inch long.",
           "time_estimate": null
         }
       ]
@@ -196,23 +216,23 @@
               "quantity": "1"
             }
           ],
-          "flavor_text": "Place a {e, large pan, 1} or skillet over medium-high heat with a splash of oil and wait for them to heat up (1-2 mins). In the meantime, gather all of your veggies together (and your minced ginger if you didn't have a microplane.), 0}",
+          "flavor_text": "Place a {e, large pan, 1} or skillet over medium-high heat with a splash of oil and wait for them to heat up (1-2 mins). In the meantime, gather all of your veggies together (and your minced ginger if you didn't have a microplane.)",
           "ingredients": [],
           "skills": [],
-          "text": "Place a large pan or skillet over medium-high heat with a splash of oil and wait for them to heat up (1-2 mins). In the meantime, gather all of your veggies together (and your minced ginger if you didn't have a microplane.), 0}",
-          "time_estimate": " (Place a {e, large pan, 1} or skillet over medium-high heat with a splash of oil and wait for them to heat up (1-2 mins). In the meantime, gather all of your veggies together (and your minced ginger if you didn't have a microplane.), 0}"
+          "text": "Place a large pan or skillet over medium-high heat with a splash of oil and wait for them to heat up (1-2 mins). In the meantime, gather all of your veggies together (and your minced ginger if you didn't have a microplane.)",
+          "time_estimate": null
         },
         {
           "equipment": [],
-          "flavor_text": "When the oil is hot, add all of your chopped veggies (and ginger if applicable) and season them with salt and pep. Stir them frequently, making sure nothings sticks or burns. Cook to your liking (probably about 6 minutes for softer, 3 minutes for firmer. Don't be afraid of a little color on the veg!), 0}",
+          "flavor_text": "When the oil is hot, add all of your chopped veggies (and ginger if applicable) and season them with salt and pep. Stir them frequently, making sure nothings sticks or burns. Cook to your liking (probably about 6 minutes for softer, 3 minutes for firmer. Don't be afraid of a little color on the veg!)",
           "ingredients": [],
           "skills": [
             {
-              "name": "Saute"
+              "name": "Sauteing"
             }
           ],
-          "text": "When the oil is hot, add all of your chopped veggies (and ginger if applicable) and season them with salt and pep. Stir them frequently, making sure nothings sticks or burns. Cook to your liking (probably about 6 minutes for softer, 3 minutes for firmer. Don't be afraid of a little color on the veg!), 0}",
-          "time_estimate": " (When the oil is hot, add all of your chopped veggies (and ginger if applicable) and season them with salt and pep. Stir them frequently, making sure nothings sticks or burns. Cook to your liking (probably about 6 minutes for softer, 3 minutes for firmer. Don't be afraid of a little color on the veg!), 0}"
+          "text": "When the oil is hot, add all of your chopped veggies (and ginger if applicable) and season them with salt and pep. Stir them frequently, making sure nothings sticks or burns. Cook to your liking (probably about 6 minutes for softer, 3 minutes for firmer. Don't be afraid of a little color on the veg!)",
+          "time_estimate": null
         },
         {
           "equipment": [],
@@ -220,6 +240,7 @@
           "ingredients": [
             {
               "name": "ramen",
+              "new": false,
               "quantity": "1",
               "unit": "packet"
             }

@@ -1,8 +1,10 @@
 #!venv/bin/python
 import json
 import os
+import re
 import shutil
 import sys
+from textblob import TextBlob, Word, tokenizers
 
 from neo4j import GraphDatabase, basic_auth
 
@@ -98,11 +100,7 @@ def update_recipe(json_string):
                 for skill in micro_step['skills']:
                     skills.add(skill['name'].lower())
         skills = list(skills)
-        params = {}
-        params["recipe_id"] = int(recipe_id)
-        params["recipe_name"] = recipe_name
-        params["json"] = json_string
-        params["skills"] = skills
+        params = {"recipe_id": int(recipe_id), "recipe_name": recipe_name, "json": json_string, "skills": skills}
         query = '''MATCH (r:Recipe {recipeId: $recipe_id})
                    SET r = {recipeId: $recipe_id, recipeName: $recipe_name, skills: $skills, json: $json}
                    RETURN r
@@ -121,9 +119,70 @@ def update_recipe(json_string):
         print(f'Updated the {params["recipe_name"]}')
 
 
+def check_unusual_characters(recipe_text):
+    error_locations = []
+    for key, text in recipe_text.items():
+        if re.search('[^a-zA-Z0-9-():;\.!\?\s,\'/"]', text):
+            print(f"There was likely an error in {key}")
+            error_locations.append(key)
+            print(text)
+        # if text.contains('{'):
+        #     print("text contains open braces")
+        # if text.contains('}'):
+            # print("text contains close braces")
+
+
+    return len(error_locations) == 0
+
+
+def check_spelling(recipe_text):
+    error_locations = []
+    for key, text in recipe_text.items():
+        for i, word in enumerate(TextBlob(text).words):
+
+            checker_list = Word(word).spellcheck()
+            words_list = [pair[0] for pair in checker_list]
+            word_prob = checker_list[words_list.index(word)][1] if word in words_list else -1
+            if word_prob != -1 or "'" in word:
+                continue
+            else:
+                error_locations.append(f'{key}: Confidence in {word} at index {i} too low, could be {checker_list[:3]}')
+                print(error_locations[-1])
+
+    return len(error_locations) == 0, error_locations
+
+
+
+def check_recipe(recipe_json):
+    j = json.loads(recipe_json)
+    valid = True
+
+    recipe_text = {}
+    for i, macro_step in enumerate(j['steps']):
+        for k, micro_step in enumerate(macro_step['steps']):
+            recipe_text[f'step {i + 1}.{k + 1}'] =  micro_step['text']
+
+    recipe_text['description'] = j['description']
+    recipe_name = j['recipe_name']
+
+    if not check_unusual_characters(recipe_text):
+        print(f"{recipe_name} seemed to have unusual characters in it")
+        valid = False
+
+    ok, spelling_errors = check_spelling(recipe_text)
+    if not ok:
+        print(f"{recipe_name} seems to have spelling errors in it")
+        valid = False
+
+    if valid:
+        print(f"{recipe_name} is ready to add to the database")
+    else:
+        print(f"{recipe_name} is not ready to add to the database")
+
+
 def main():
     if len(sys.argv) != 3:
-        print('Usage: ./recipe_loader clear|add recipe_directory')
+        print('Usage: ./recipe_loader clear|update|add|check recipe_directory')
         return
     command = sys.argv[1]
     directory = sys.argv[2]
@@ -180,13 +239,30 @@ def main():
             abs_directory = os.path.abspath(directory)
             _, _, filenames = next(os.walk(abs_directory))
 
-            print('Updating all recipes in {directory}')
+            print(f'Updating all recipes in {directory}')
             for filename in filenames:
                 with open(os.path.join(directory, filename), 'r') as file:
                     json_string = file.read()
                     update_recipe(json_string)
+    elif command.lower() == 'check':
+        if os.path.isfile(directory):
+            print(f'Checking {"".join(os.path.splitext(directory)[-2:])}')
+            with open(directory, 'r') as file:
+                json_string = file.read()
+                check_recipe(json_string)
+            return
+
+        else:
+            abs_directory = os.path.abspath(directory)
+            _, _, filenames = next(os.walk(abs_directory))
+
+            print(f'Checking all recipes in {directory}')
+            for filename in filenames:
+                with open(os.path.join(directory, filename), 'r') as file:
+                    json_string = file.read()
+                    check_recipe(json_string)
     else:
-        print('Usage: ./recipe_loader clear|add recipe_directory')
+        print('Usage: ./recipe_loader clear|update|add|check recipe_directory')
         return
 
 

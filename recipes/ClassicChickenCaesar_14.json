@@ -17,42 +17,49 @@
   "ingredients": [
     {
       "name": "Romaine",
+      "new": false,
       "quantity": "1",
       "unit": "head"
     },
     {
       "name": "mayo",
+      "new": false,
       "quantity": "1",
       "unit": "tbsp"
     },
     {
-      "name": "dijon mustard",
+      "name": "Dijon mustard",
+      "new": false,
       "quantity": "1",
       "unit": "tsp"
     },
     {
       "name": "lemon",
-      "quantity": ".5",
+      "new": false,
+      "quantity": "0.5",
       "unit": "lemon"
     },
     {
       "name": "parmesan",
+      "new": false,
       "quantity": "1",
       "unit": "tbsp"
     },
     {
       "name": "chicken breast",
+      "new": false,
       "quantity": "1",
       "unit": "breast"
     },
     {
       "name": "garlic powder",
+      "new": false,
       "quantity": "1",
       "unit": "tsp"
     }
   ],
   "recipe_id": "14",
-  "recipe_name": "Classic Chicken Caesar",
+  "recipe_name": "ClassicChickenCaesar",
   "steps": [
     {
       "name": "",
@@ -63,6 +70,7 @@
           "ingredients": [
             {
               "name": "Romaine",
+              "new": false,
               "quantity": "1",
               "unit": "head"
             }
@@ -73,25 +81,29 @@
         },
         {
           "equipment": [],
-          "flavor_text": "For one serving of the caesar dressing, combine 1 tbsp {i, mayo, 1}, 1 tsp of {i, dijon mustard, 2}, the juice of half a {i, lemon, 3}, and 1 tbsp of chopped or grated {i, parmesan, 4}. If you have worcestershire sauce, add a splash to the dressing as well. Mix together then taste! Make sure it has the flavor and consistency that YOU like.",
+          "flavor_text": "For one serving of the caesar dressing, combine 1 tbsp {i, mayo, 1}, 1 tsp of {i, Dijon mustard, 2}, the juice of half a {i, lemon, 3}, and 1 tbsp of chopped or grated {i, parmesan, 4}. If you have Worcestershire sauce, add a splash to the dressing as well. Mix together then taste! Make sure it has the flavor and consistency that YOU like.",
           "ingredients": [
             {
               "name": "mayo",
+              "new": false,
               "quantity": "1",
               "unit": "tbsp"
             },
             {
-              "name": "dijon mustard",
+              "name": "Dijon mustard",
+              "new": false,
               "quantity": "1",
               "unit": "tsp"
             },
             {
               "name": "lemon",
-              "quantity": ".5",
+              "new": false,
+              "quantity": "0.5",
               "unit": "lemon"
             },
             {
               "name": "parmesan",
+              "new": false,
               "quantity": "1",
               "unit": "tbsp"
             }
@@ -101,7 +113,7 @@
               "name": "Salad Dressing"
             }
           ],
-          "text": "For one serving of the caesar dressing, combine 1 tbsp mayo, 1 tsp of dijon mustard, the juice of half a lemon, and 1 tbsp of chopped or grated parmesan. If you have worcestershire sauce, add a splash to the dressing as well. Mix together then taste! Make sure it has the flavor and consistency that YOU like.",
+          "text": "For one serving of the caesar dressing, combine 1 tbsp mayo, 1 tsp of Dijon mustard, the juice of half a lemon, and 1 tbsp of chopped or grated parmesan. If you have Worcestershire sauce, add a splash to the dressing as well. Mix together then taste! Make sure it has the flavor and consistency that YOU like.",
           "time_estimate": null
         }
       ]
@@ -124,6 +136,7 @@
           "ingredients": [
             {
               "name": "chicken breast",
+              "new": false,
               "quantity": "1",
               "unit": "breast"
             }
@@ -142,6 +155,7 @@
           "ingredients": [
             {
               "name": "garlic powder",
+              "new": false,
               "quantity": "1",
               "unit": "tsp"
             }

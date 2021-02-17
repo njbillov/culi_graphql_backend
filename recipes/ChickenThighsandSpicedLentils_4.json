@@ -29,42 +29,49 @@
   "ingredients": [
     {
       "name": "chicken thighs",
+      "new": false,
       "quantity": "2",
       "unit": "thighs"
     },
     {
       "name": "brown lentils",
-      "quantity": ".5",
+      "new": false,
+      "quantity": "0.5",
       "unit": "cups"
     },
     {
       "name": "yellow onion",
-      "quantity": ".5",
+      "new": false,
+      "quantity": "0.5",
       "unit": "onion"
     },
     {
       "name": "chicken broth",
+      "new": false,
       "quantity": "1.5",
       "unit": "cups"
     },
     {
       "name": "cumin",
-      "quantity": ".5",
+      "new": false,
+      "quantity": "0.5",
       "unit": "tsp"
     },
     {
       "name": "turmeric",
-      "quantity": ".5",
+      "new": false,
+      "quantity": "0.5",
       "unit": "tsp"
     },
     {
       "name": "chili powder",
-      "quantity": ".5",
+      "new": false,
+      "quantity": "0.5",
       "unit": "tsp"
     }
   ],
   "recipe_id": "4",
-  "recipe_name": "Chicken Thighs and Spiced Lentils",
+  "recipe_name": "ChickenThighsandSpicedLentils",
   "steps": [
     {
       "name": "",
@@ -83,6 +90,7 @@
           "ingredients": [
             {
               "name": "chicken thighs",
+              "new": false,
               "quantity": "2",
               "unit": "thighs"
             }
@@ -157,7 +165,8 @@
           "ingredients": [
             {
               "name": "brown lentils",
-              "quantity": ".5",
+              "new": false,
+              "quantity": 0.5,
               "unit": "cup"
             }
           ],
@@ -180,12 +189,14 @@
           "ingredients": [
             {
               "name": "yellow onion",
-              "quantity": ".5",
+              "new": false,
+              "quantity": "0.5",
               "unit": "onion"
             },
             {
               "name": "chicken broth",
-              "quantity": "1.5",
+              "new": false,
+              "quantity": 1.5,
               "unit": "cups"
             }
           ],
@@ -216,7 +227,7 @@
           "ingredients": [],
           "skills": [
             {
-              "name": "Saute"
+              "name": "Sauteing"
             }
           ],
           "text": "Once your oil is hot, add your diced yellow onion. Cook for about 3-4 minutes until they soften. Try not to let them get too brown around the edges.",
@@ -228,17 +239,20 @@
           "ingredients": [
             {
               "name": "cumin",
-              "quantity": ".5",
+              "new": false,
+              "quantity": "0.5",
               "unit": "tsp"
             },
             {
               "name": "turmeric",
-              "quantity": ".5",
+              "new": false,
+              "quantity": "0.5",
               "unit": "tsp"
             },
             {
               "name": "chili powder",
-              "quantity": ".5",
+              "new": false,
+              "quantity": "0.5",
               "unit": "tsp"
             }
           ],
@@ -256,6 +270,7 @@
           "ingredients": [
             {
               "name": "chicken broth",
+              "new": false,
               "quantity": "1.5",
               "unit": "cups"
             }
@@ -275,7 +290,8 @@
           "ingredients": [
             {
               "name": "brown lentils",
-              "quantity": ".5",
+              "new": false,
+              "quantity": "0.5",
               "unit": "cups"
             }
           ],
@@ -310,34 +326,34 @@
       "steps": [
         {
           "equipment": [],
-          "flavor_text": "To check on the chicken, take out a thigh and cut into the largest part to see if it's done. Other than a theromemeter (which should read 165F), there is really not a more reliable way!",
+          "flavor_text": "To check on the chicken, take out a thigh and cut into the largest part to see if it's done. Other than a thermometer (which should read 165F), there is really not a more reliable way!",
           "ingredients": [],
           "skills": [],
-          "text": "To check on the chicken, take out a thigh and cut into the largest part to see if it's done. Other than a theromemeter (which should read 165F), there is really not a more reliable way!",
+          "text": "To check on the chicken, take out a thigh and cut into the largest part to see if it's done. Other than a thermometer (which should read 165F), there is really not a more reliable way!",
           "time_estimate": null
         },
         {
           "equipment": [],
-          "flavor_text": "Check on the lentils. Almost all of the liquid should be absorbed and the lentils should hold their shape but not be hard. If there's still liquid, let them continue to cook until it's mostly absorbed. Try one for seasoning and add salt to taste (it will depend on the salinity of your chicken broth, but you're definitely going to want to add a good amount of salt.), 0}",
+          "flavor_text": "Check on the lentils. Almost all of the liquid should be absorbed and the lentils should hold their shape but not be hard. If there's still liquid, let them continue to cook until it's mostly absorbed. Try one for seasoning and add salt to taste (it will depend on the salinity of your chicken broth, but you're definitely going to want to add a good amount of salt.)",
           "ingredients": [],
           "skills": [
             {
               "name": "Seasoning"
             }
           ],
-          "text": "Check on the lentils. Almost all of the liquid should be absorbed and the lentils should hold their shape but not be hard. If there's still liquid, let them continue to cook until it's mostly absorbed. Try one for seasoning and add salt to taste (it will depend on the salinity of your chicken broth, but you're definitely going to want to add a good amount of salt.), 0}",
-          "time_estimate": " (Check on the lentils. Almost all of the liquid should be absorbed and the lentils should hold their shape but not be hard. If there's still liquid, let them continue to cook until it's mostly absorbed. Try one for seasoning and add salt to taste (it will depend on the salinity of your chicken broth, but you're definitely going to want to add a good amount of salt.), 0}"
+          "text": "Check on the lentils. Almost all of the liquid should be absorbed and the lentils should hold their shape but not be hard. If there's still liquid, let them continue to cook until it's mostly absorbed. Try one for seasoning and add salt to taste (it will depend on the salinity of your chicken broth, but you're definitely going to want to add a good amount of salt.)",
+          "time_estimate": null
         },
         {
           "equipment": [],
-          "flavor_text": "Plate up and optionally garnish the lentils with a dollop of greek yogurt and a squeeze of lemon juice. Enjoy!",
+          "flavor_text": "Plate up and optionally garnish the lentils with a dollop of Greek yogurt and a squeeze of lemon juice. Enjoy!",
           "ingredients": [],
           "skills": [
             {
               "name": "Garnishing"
             }
           ],
-          "text": "Plate up and optionally garnish the lentils with a dollop of greek yogurt and a squeeze of lemon juice. Enjoy!",
+          "text": "Plate up and optionally garnish the lentils with a dollop of Greek yogurt and a squeeze of lemon juice. Enjoy!",
           "time_estimate": null
         }
       ]

@@ -1,5 +1,5 @@
 {
-  "description": "This dish is really customizeable and comes together in 1 pot. It is the antithesis to boring rice. Add as much or as little chicken as you want, because it makes for great luncthime leftovers.",
+  "description": "This dish is really customizable and comes together in 1 pot. It is the antithesis to boring rice. Add as much or as little chicken as you want, because it makes for great luncthime leftovers.",
   "equipment": [
     {
       "name": "high-walled skillet",
@@ -9,72 +9,85 @@
   "ingredients": [
     {
       "name": "paprika",
+      "new": false,
       "quantity": "1",
       "unit": "tsp"
     },
     {
       "name": "garlic powder",
+      "new": false,
       "quantity": "1",
       "unit": "tsp"
     },
     {
       "name": "cumin",
+      "new": false,
       "quantity": "1",
       "unit": "tsp"
     },
     {
       "name": "dried oregano",
+      "new": false,
       "quantity": "1",
       "unit": "tsp"
     },
     {
       "name": "asparagus",
+      "new": false,
       "quantity": "6",
       "unit": "stalks"
     },
     {
       "name": "red onion",
-      "quantity": ".5",
+      "new": false,
+      "quantity": "0.5",
       "unit": "onion"
     },
     {
       "name": "garlic",
+      "new": false,
       "quantity": "2",
       "unit": "cloves"
     },
     {
       "name": "boneless skinless chicken thighs",
+      "new": false,
       "quantity": "3",
-      "unit": "1"
+      "unit": "thighs"
     },
     {
       "name": "white rice",
-      "quantity": ".75",
+      "new": false,
+      "quantity": "0.75",
       "unit": "cups"
     },
     {
       "name": "chicken stock",
+      "new": false,
       "quantity": "1.5",
       "unit": "cups"
     },
     {
       "name": "tomato paste",
+      "new": false,
       "quantity": "1",
       "unit": "tbsp"
     },
     {
       "name": "fresh parlsey",
+      "new": false,
       "quantity": "1",
       "unit": "bunch"
     },
     {
       "name": "lemon",
-      "quantity": ".5",
+      "new": false,
+      "quantity": "0.5",
       "unit": "lemon"
     }
   ],
   "recipe_id": "8",
-  "recipe_name": "One Pot Chicken and Spanish Rice",
+  "recipe_name": "OnePotChickenandSpanishRice",
   "steps": [
     {
       "name": "",
@@ -85,21 +98,25 @@
           "ingredients": [
             {
               "name": "paprika",
+              "new": false,
               "quantity": "1",
               "unit": "tsp"
             },
             {
               "name": "garlic powder",
+              "new": false,
               "quantity": "1",
               "unit": "tsp"
             },
             {
               "name": "cumin",
+              "new": false,
               "quantity": "1",
               "unit": "tsp"
             },
             {
               "name": "dried oregano",
+              "new": false,
               "quantity": "1",
               "unit": "tsp"
             }
@@ -114,23 +131,26 @@
           "ingredients": [
             {
               "name": "asparagus",
+              "new": false,
               "quantity": "6",
               "unit": "stalks"
             },
             {
               "name": "red onion",
-              "quantity": ".5",
+              "new": false,
+              "quantity": "0.5",
               "unit": "onion"
             },
             {
               "name": "garlic",
+              "new": false,
               "quantity": "2",
               "unit": "cloves"
             }
           ],
           "skills": [
             {
-              "name": "Dice"
+              "name": "Dicing"
             }
           ],
           "text": "Chop your asparagus into pieces that are about 1 inch long, making sure to remove and discard about the bottom 1-2 inches of each stalk. The bottom of asparagus is fibrous and not pleasant to eat. Roughly dice half of your red onion and slice your cloves of garlic into rounds. Set all the veg aside for now. If you have other veggies you'd like to use too, don't hold back!",
@@ -142,7 +162,8 @@
           "ingredients": [
             {
               "name": "boneless skinless chicken thighs",
-              "quantity": "3",
+              "new": false,
+              "quantity": 3.0,
               "unit": "thighs"
             }
           ],
@@ -160,11 +181,13 @@
           "ingredients": [
             {
               "name": "white rice",
-              "quantity": ".75",
+              "new": false,
+              "quantity": "0.75",
               "unit": "cups"
             },
             {
               "name": "chicken stock",
+              "new": false,
               "quantity": "1.5",
               "unit": "cups"
             }
@@ -197,8 +220,9 @@
           "ingredients": [
             {
               "name": "boneless skinless chicken thighs",
+              "new": false,
               "quantity": "3",
-              "unit": "1"
+              "unit": "thighs"
             }
           ],
           "skills": [
@@ -215,10 +239,10 @@
           "ingredients": [],
           "skills": [
             {
-              "name": "{Sauteeing}"
+              "name": "Sauteing"
             },
             {
-              "name": "{Deglazing}"
+              "name": "Deglazing"
             }
           ],
           "text": "Add all your veggies and garlic to the pan along with a tiny splash of your chicken stock, and mix cook the veggies while you scrape up all of the brown (or slightly black) bits stuck to the bottom of the pan. You just used the stock to \"deglaze\" the pan, nice! Season with salt and pepper and cook the veggies until they've softened (about 4 minutes).",
@@ -230,6 +254,7 @@
           "ingredients": [
             {
               "name": "tomato paste",
+              "new": false,
               "quantity": "1",
               "unit": "tbsp"
             }
@@ -240,10 +265,10 @@
         },
         {
           "equipment": [],
-          "flavor_text": "Add the rest of your chicken stock along with the leftover seasoning from ealier. Stir everything together and bring to a boil.",
+          "flavor_text": "Add the rest of your chicken stock along with the leftover seasoning from earlier. Stir everything together and bring to a boil.",
           "ingredients": [],
           "skills": [],
-          "text": "Add the rest of your chicken stock along with the leftover seasoning from ealier. Stir everything together and bring to a boil.",
+          "text": "Add the rest of your chicken stock along with the leftover seasoning from earlier. Stir everything together and bring to a boil.",
           "time_estimate": null
         },
         {
@@ -256,16 +281,18 @@
         },
         {
           "equipment": [],
-          "flavor_text": "Garnish with some chopped {i, fresh parsley, 1} and a big squeee of {i, lemon, 2}. You can also add sliced lemon rounds to the top if you want to really pop off. The rice is really flavorful and keeps great for lunch the next day (as does the chicky). You're beautiful. This food is beautiful. Life is beautiful. Woo!",
+          "flavor_text": "Garnish with some chopped {i, fresh parsley, 1} and a big squeeze of {i, lemon, 2}. You can also add sliced lemon rounds to the top if you want to really pop off. The rice is really flavorful and keeps great for lunch the next day (as does the chicky). You're beautiful. This food is beautiful. Life is beautiful. Woo!",
           "ingredients": [
             {
               "name": "fresh parlsey",
+              "new": false,
               "quantity": "1",
               "unit": "bunch"
             },
             {
               "name": "lemon",
-              "quantity": ".5",
+              "new": false,
+              "quantity": "0.5",
               "unit": "lemon"
             }
           ],
@@ -274,7 +301,7 @@
               "name": "Garnishing"
             }
           ],
-          "text": "Garnish with some chopped fresh parsley and a big squeee of lemon. You can also add sliced lemon rounds to the top if you want to really pop off. The rice is really flavorful and keeps great for lunch the next day (as does the chicky). You're beautiful. This food is beautiful. Life is beautiful. Woo!",
+          "text": "Garnish with some chopped fresh parsley and a big squeeze of lemon. You can also add sliced lemon rounds to the top if you want to really pop off. The rice is really flavorful and keeps great for lunch the next day (as does the chicky). You're beautiful. This food is beautiful. Life is beautiful. Woo!",
           "time_estimate": null
         }
       ]

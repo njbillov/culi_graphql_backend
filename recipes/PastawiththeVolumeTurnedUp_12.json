@@ -1,5 +1,5 @@
 {
-  "description": "Jarred pasta sauce is boring, but also making things from scratch gets tiring. So let's compromise. We're turning up the volume on this sauce by cooking it down slightly in some sauteed onions and galic. Worth it for the smell alone. ",
+  "description": "Jarred pasta sauce is boring, but also making things from scratch gets tiring. So let's compromise. We're turning up the volume on this sauce by cooking it down slightly in some sauteed onions and garlic. Worth it for the smell alone. ",
   "equipment": [
     {
       "name": "pot",
@@ -9,22 +9,31 @@
   "ingredients": [
     {
       "name": "yellow onion",
-      "quantity": ".5",
+      "new": false,
+      "quantity": "0.5",
       "unit": "onion"
     },
     {
       "name": "garlic",
+      "new": false,
       "quantity": "3",
       "unit": "cloves"
     },
     {
       "name": "tomato sauce",
+      "new": false,
       "quantity": "1",
       "unit": "jar"
+    },
+    {
+      "name": "pasta",
+      "new": false,
+      "quantity": "1",
+      "unit": "cup"
     }
   ],
   "recipe_id": "12",
-  "recipe_name": "Pasta with the Volume Turned Up",
+  "recipe_name": "PastawiththeVolumeTurnedUp",
   "steps": [
     {
       "name": "",
@@ -52,28 +61,30 @@
         },
         {
           "equipment": [],
-          "flavor_text": "Then dice 1/2 of a white or {i, yellow onion, 1} and slice 3 cloves of {i, garlic, 2} into thin rounds, cutting perpindicular to the length of the clove. We're leaving the pieces large so we don't burn the garlic. If you're using pre-minced, add the garlic a couple minutes after the onions.",
+          "flavor_text": "Then dice 1/2 of a white or {i, yellow onion, 1} and slice 3 cloves of {i, garlic, 2} into thin rounds, cutting perpendicular to the length of the clove. We're leaving the pieces large so we don't burn the garlic. If you're using pre-minced, add the garlic a couple minutes after the onions.",
           "ingredients": [
             {
               "name": "yellow onion",
-              "quantity": ".5",
+              "new": false,
+              "quantity": "0.5",
               "unit": "onion"
             },
             {
               "name": "garlic",
+              "new": false,
               "quantity": "3",
               "unit": "cloves"
             }
           ],
           "skills": [
             {
-              "name": "{Dicing}"
+              "name": "Dicing"
             },
             {
-              "name": "{Slicing}"
+              "name": "Slicing"
             }
           ],
-          "text": "Then dice 1/2 of a white or yellow onion and slice 3 cloves of garlic into thin rounds, cutting perpindicular to the length of the clove. We're leaving the pieces large so we don't burn the garlic. If you're using pre-minced, add the garlic a couple minutes after the onions.",
+          "text": "Then dice 1/2 of a white or yellow onion and slice 3 cloves of garlic into thin rounds, cutting perpendicular to the length of the clove. We're leaving the pieces large so we don't burn the garlic. If you're using pre-minced, add the garlic a couple minutes after the onions.",
           "time_estimate": null
         }
       ]
@@ -119,6 +130,7 @@
           "ingredients": [
             {
               "name": "tomato sauce",
+              "new": false,
               "quantity": "1",
               "unit": "jar"
             }
@@ -138,16 +150,23 @@
       "steps": [
         {
           "equipment": [],
-          "flavor_text": "OPTIONAL ALERT: Just before the pasta finishes cooking, you can add a splash of heavy cream or half and half to your simmering sauce to give it some, well, creaminess. Anywhere from 2 tbsp to 1/4 cup will bring a bit of richness to the sauce and cut through the acidity of the tomatoes, but this step is unecessary to achieve deliciousness.",
+          "flavor_text": "OPTIONAL ALERT: Just before the pasta finishes cooking, you can add a splash of heavy cream or half and half to your simmering sauce to give it some, well, creaminess. Anywhere from 2 tbsp to 1/4 cup will bring a bit of richness to the sauce and cut through the acidity of the tomatoes, but this step is unnecessary to achieve deliciousness.",
           "ingredients": [],
           "skills": [],
-          "text": "OPTIONAL ALERT: Just before the pasta finishes cooking, you can add a splash of heavy cream or half and half to your simmering sauce to give it some, well, creaminess. Anywhere from 2 tbsp to 1/4 cup will bring a bit of richness to the sauce and cut through the acidity of the tomatoes, but this step is unecessary to achieve deliciousness.",
+          "text": "OPTIONAL ALERT: Just before the pasta finishes cooking, you can add a splash of heavy cream or half and half to your simmering sauce to give it some, well, creaminess. Anywhere from 2 tbsp to 1/4 cup will bring a bit of richness to the sauce and cut through the acidity of the tomatoes, but this step is unnecessary to achieve deliciousness.",
           "time_estimate": null
         },
         {
           "equipment": [],
-          "flavor_text": "Add your pasta either directly to the pan with your sauce or spoon it on top when you serve. Finish with parm and basil if you're feeling fancy. Consider your jarred sauce: upgraded.",
-          "ingredients": [],
+          "flavor_text": "Add your {i, pasta, 1} either directly to the pan with your sauce or spoon it on top when you serve. Finish with parm and basil if you're feeling fancy. Consider your jarred sauce: upgraded.",
+          "ingredients": [
+            {
+              "name": "pasta",
+              "new": false,
+              "quantity": "1",
+              "unit": "cup"
+            }
+          ],
           "skills": [],
           "text": "Add your pasta either directly to the pan with your sauce or spoon it on top when you serve. Finish with parm and basil if you're feeling fancy. Consider your jarred sauce: upgraded.",
           "time_estimate": null

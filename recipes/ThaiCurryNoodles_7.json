@@ -13,57 +13,67 @@
   "ingredients": [
     {
       "name": "onion",
+      "new": false,
       "quantity": "1",
       "unit": "onion"
     },
     {
       "name": "garlic",
+      "new": false,
       "quantity": "2",
       "unit": "cloves"
     },
     {
       "name": "ginger",
-      "quantity": ".5",
+      "new": false,
+      "quantity": "0.5",
       "unit": "inches"
     },
     {
       "name": "chicken thighs",
+      "new": false,
       "quantity": "2",
       "unit": "thighs"
     },
     {
       "name": "coconut milk",
+      "new": false,
       "quantity": "1",
       "unit": "can"
     },
     {
       "name": "tomato paste",
+      "new": false,
       "quantity": "1",
       "unit": "tbsp"
     },
     {
       "name": "curry powder",
+      "new": false,
       "quantity": "2",
       "unit": "tbsp"
     },
     {
       "name": "chili powder",
-      "quantity": ".5",
+      "new": false,
+      "quantity": "0.5",
       "unit": "tsp"
     },
     {
       "name": "frozen peas and carrots",
+      "new": false,
       "quantity": "1",
       "unit": "cups"
     },
     {
       "name": "rice noodles",
+      "new": false,
       "quantity": "1",
       "unit": "serving"
     }
   ],
   "recipe_id": "7",
-  "recipe_name": "Thai Curry Noodles",
+  "recipe_name": "ThaiCurryNoodles",
   "steps": [
     {
       "name": "",
@@ -74,26 +84,29 @@
           "ingredients": [
             {
               "name": "onion",
+              "new": false,
               "quantity": "1",
               "unit": "onion"
             },
             {
               "name": "garlic",
+              "new": false,
               "quantity": "2",
               "unit": "cloves"
             },
             {
               "name": "ginger",
-              "quantity": ".5",
+              "new": false,
+              "quantity": "0.5",
               "unit": "inches"
             }
           ],
           "skills": [
             {
-              "name": "{Dicing}"
+              "name": "Dicing"
             },
             {
-              "name": "{mincing}"
+              "name": "mincing"
             }
           ],
           "text": "Let's knock some prep out of the way first. Dice half of your white or yellow onion. Mince your half an inch of ginger and 2 cloves of garlic. It should make about two tbsp of each. Place your cut ingredients into a separate bowl so we can use the cutting boar for chicken. Chicky germs are bad!",
@@ -105,6 +118,7 @@
           "ingredients": [
             {
               "name": "chicken thighs",
+              "new": false,
               "quantity": "2",
               "unit": "thighs"
             }
@@ -149,7 +163,8 @@
           "ingredients": [
             {
               "name": "coconut milk",
-              "quantity": "1",
+              "new": false,
+              "quantity": 1.0,
               "unit": "can"
             }
           ],
@@ -168,7 +183,7 @@
           "ingredients": [],
           "skills": [
             {
-              "name": "Sauteeing"
+              "name": "Sauteing"
             }
           ],
           "text": "Once the oil is hot, add in your garlic, ginger, and onions. Season with a pinch of salt. Cook, stirring often, until onions soften, making sure that the garlic does not burn and turn black.",
@@ -176,16 +191,17 @@
         },
         {
           "equipment": [],
-          "flavor_text": "Once the onions have softened, add in 1 tbsp of {i, tomato paste, 1}. Mix to incoroporate and cook the paste for about 1-2 minutes until it's darkened in color.",
+          "flavor_text": "Once the onions have softened, add in 1 tbsp of {i, tomato paste, 1}. Mix to incorporate and cook the paste for about 1-2 minutes until it's darkened in color.",
           "ingredients": [
             {
               "name": "tomato paste",
+              "new": false,
               "quantity": "1",
               "unit": "tbsp"
             }
           ],
           "skills": [],
-          "text": "Once the onions have softened, add in 1 tbsp of tomato paste. Mix to incoroporate and cook the paste for about 1-2 minutes until it's darkened in color.",
+          "text": "Once the onions have softened, add in 1 tbsp of tomato paste. Mix to incorporate and cook the paste for about 1-2 minutes until it's darkened in color.",
           "time_estimate": null
         },
         {
@@ -198,16 +214,18 @@
         },
         {
           "equipment": [],
-          "flavor_text": "Sprinkle in 2 tbsp of {i, curry powder, 1} along with a pinh of {i, chili powder, 2} if you want it to be spicy. Stir the spices into the mixture and cook them for about 1 minute to toast them and bring out their flavor. Stir often to avoid burning them.}",
+          "flavor_text": "Sprinkle in 2 tbsp of {i, curry powder, 1} along with a pinch of {i, chili powder, 2} if you want it to be spicy. Stir the spices into the mixture and cook them for about 1 minute to toast them and bring out their flavor. Stir often to avoid burning them.",
           "ingredients": [
             {
               "name": "curry powder",
+              "new": false,
               "quantity": "2",
               "unit": "tbsp"
             },
             {
               "name": "chili powder",
-              "quantity": ".5",
+              "new": false,
+              "quantity": "0.5",
               "unit": "tsp"
             }
           ],
@@ -216,8 +234,8 @@
               "name": "Seasoning"
             }
           ],
-          "text": "Sprinkle in 2 tbsp of curry powder along with a pinh of chili powder if you want it to be spicy. Stir the spices into the mixture and cook them for about 1 minute to toast them and bring out their flavor. Stir often to avoid burning them.}",
-          "time_estimate": " (Sprinkle in 2 tbsp of {i, curry powder, 1} along with a pinh of {i, chili powder, 2} if you want it to be spicy. Stir the spices into the mixture and cook them for about 1 minute to toast them and bring out their flavor. Stir often to avoid burning them.}"
+          "text": "Sprinkle in 2 tbsp of curry powder along with a pinch of chili powder if you want it to be spicy. Stir the spices into the mixture and cook them for about 1 minute to toast them and bring out their flavor. Stir often to avoid burning them.",
+          "time_estimate": null
         },
         {
           "equipment": [],
@@ -225,13 +243,14 @@
           "ingredients": [
             {
               "name": "coconut milk",
+              "new": false,
               "quantity": "1",
               "unit": "can"
             }
           ],
           "skills": [
             {
-              "name": "Simmer"
+              "name": "Simmering"
             }
           ],
           "text": "Once you've toasted the spices (nice!), add in a full can of coconut milk and bring the mixture to a simmer, stirring to combine. Simmer for around 10 minutes to marry the flavors (chef term alert!) and to make sure the chicken is cooked through.",
@@ -243,6 +262,7 @@
           "ingredients": [
             {
               "name": "frozen peas and carrots",
+              "new": false,
               "quantity": "1",
               "unit": "cups"
             }
@@ -262,6 +282,7 @@
           "ingredients": [
             {
               "name": "rice noodles",
+              "new": false,
               "quantity": "1",
               "unit": "serving"
             }
@@ -292,10 +313,10 @@
         },
         {
           "equipment": [],
-          "flavor_text": "Save the rest of the curry. It keeps really well in the fridge and is great over rice, more noodles, or on its own! Now you ahve curry made from scratch in your fridge; you're amazing!",
+          "flavor_text": "Save the rest of the curry. It keeps really well in the fridge and is great over rice, more noodles, or on its own! Now you have curry made from scratch in your fridge; you're amazing!",
           "ingredients": [],
           "skills": [],
-          "text": "Save the rest of the curry. It keeps really well in the fridge and is great over rice, more noodles, or on its own! Now you ahve curry made from scratch in your fridge; you're amazing!",
+          "text": "Save the rest of the curry. It keeps really well in the fridge and is great over rice, more noodles, or on its own! Now you have curry made from scratch in your fridge; you're amazing!",
           "time_estimate": null
         }
       ]

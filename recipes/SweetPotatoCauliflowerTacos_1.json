@@ -1,5 +1,5 @@
 {
-  "description": "This vegetarian dish is great for many reasons. It comes together entirely on a sheet tray in the oven, it's super filling and veggie-dense, and it's really customizeable. Play around with the seasonings or toppings; be sure to make it your own!",
+  "description": "This vegetarian dish is great for many reasons. It comes together entirely on a sheet tray in the oven, it's super filling and veggie-dense, and it's really customizable. Play around with the seasonings or toppings; be sure to make it your own!",
   "equipment": [
     {
       "name": "cutting knife",
@@ -29,77 +29,91 @@
   "ingredients": [
     {
       "name": "sweet potato",
+      "new": false,
       "quantity": "1",
       "unit": "potato"
     },
     {
       "name": "cauliflower",
+      "new": false,
       "quantity": "1",
       "unit": "head"
     },
     {
       "name": "salt",
+      "new": false,
       "quantity": "1",
       "unit": "pinch"
     },
     {
       "name": "pepper",
+      "new": false,
       "quantity": "1",
       "unit": "pinch"
     },
     {
       "name": "cumin",
+      "new": false,
       "quantity": "1",
       "unit": "tsp"
     },
     {
       "name": "garlic powder",
+      "new": false,
       "quantity": "1",
       "unit": "tsp"
     },
     {
       "name": "paprika",
+      "new": false,
       "quantity": "1",
       "unit": "tsp"
     },
     {
       "name": "chili powder",
+      "new": false,
       "quantity": "1",
       "unit": "tsp"
     },
     {
       "name": "olive oil",
+      "new": false,
       "quantity": "2",
       "unit": "tbsp"
     },
     {
       "name": "black beans",
+      "new": false,
       "quantity": "1",
       "unit": "can"
     },
     {
       "name": "lime",
-      "quantity": ".5",
+      "new": false,
+      "quantity": "1",
       "unit": "lime"
     },
     {
       "name": "sour cream",
+      "new": false,
       "quantity": "1",
       "unit": "scoop"
     },
     {
       "name": "hot sauce",
+      "new": false,
       "quantity": "3",
       "unit": "dashes"
     },
     {
       "name": "tortillas",
+      "new": false,
       "quantity": "3",
       "unit": "shells"
     }
   ],
   "recipe_id": "1",
-  "recipe_name": "Sweet Potato Cauliflower Tacos",
+  "recipe_name": "SweetPotatoCauliflowerTacos",
   "steps": [
     {
       "name": "",
@@ -120,20 +134,21 @@
             },
             {
               "name": "large bowl",
-              "quantity": "1"
+              "quantity": 1.0
             }
           ],
           "flavor_text": "To prepare your vegetables, peel (or don't) your {i, sweet potato, 1}, then cut into cubes that are about half an inch on all sides. Don't worry about perfection! The most important thing is keeping them roughly the same size. Place the pieces into a {e, large bowl, 2}.",
           "ingredients": [
             {
               "name": "sweet potato",
+              "new": false,
               "quantity": "1",
               "unit": "potato"
             }
           ],
           "skills": [
             {
-              "name": "dice"
+              "name": "dicing"
             }
           ],
           "text": "To prepare your vegetables, peel (or don't) your sweet potato, then cut into cubes that are about half an inch on all sides. Don't worry about perfection! The most important thing is keeping them roughly the same size. Place the pieces into a large bowl.",
@@ -150,6 +165,7 @@
           "ingredients": [
             {
               "name": "cauliflower",
+              "new": false,
               "quantity": "1",
               "unit": "head"
             }
@@ -160,46 +176,53 @@
         },
         {
           "equipment": [],
-          "flavor_text": "Drizzle a generous amount of {i, a generous amount of olive oil, 7} then add your seasonings. We recommend {i, 1tsp cumin, 3}, {i, 1tsp garlic powder, 5}, {i, 1tsp paprika, 5}, {i, 1tsp chili powder, 6}, and of course a liberal amount of salt and pepper! Toss the veggies in the bowl until each piece has a shiny coating of oil and seasoning. Add more olive oil if necessary.",
+          "flavor_text": "Drizzle {i, a generous amount of olive oil, 7} then add your seasonings. We recommend {i, 1tsp cumin, 3}, {i, 1tsp garlic powder, 5}, {i, 1tsp paprika, 5}, {i, 1tsp chili powder, 6}, and of course a liberal amount of salt and pepper! Toss the veggies in the bowl until each piece has a shiny coating of oil and seasoning. Add more olive oil if necessary.",
           "ingredients": [
             {
               "name": "salt",
+              "new": false,
               "quantity": "1",
               "unit": "pinch"
             },
             {
               "name": "pepper",
+              "new": false,
               "quantity": "1",
               "unit": "pinch"
             },
             {
               "name": "cumin",
+              "new": false,
               "quantity": "1",
               "unit": "tsp"
             },
             {
               "name": "garlic powder",
+              "new": false,
               "quantity": "1",
               "unit": "tsp"
             },
             {
               "name": "paprika",
+              "new": false,
               "quantity": "1",
               "unit": "tsp"
             },
             {
               "name": "chili powder",
+              "new": false,
               "quantity": "1",
               "unit": "tsp"
             },
             {
               "name": "olive oil",
+              "new": false,
               "quantity": "2",
               "unit": "tbsp"
             }
           ],
           "skills": [],
-          "text": "Drizzle a generous amount of a generous amount of olive oil then add your seasonings. We recommend 1tsp cumin, 1tsp garlic powder, 1tsp paprika, 1tsp chili powder, and of course a liberal amount of salt and pepper! Toss the veggies in the bowl until each piece has a shiny coating of oil and seasoning. Add more olive oil if necessary.",
+          "text": "Drizzle a generous amount of olive oil then add your seasonings. We recommend 1tsp cumin, 1tsp garlic powder, 1tsp paprika, 1tsp chili powder, and of course a liberal amount of salt and pepper! Toss the veggies in the bowl until each piece has a shiny coating of oil and seasoning. Add more olive oil if necessary.",
           "time_estimate": null
         }
       ]
@@ -218,7 +241,7 @@
           "ingredients": [],
           "skills": [
             {
-              "name": "roast"
+              "name": "roasting"
             }
           ],
           "text": "Spread out the veggies onto a sheet tray (line with parchment paper or foil for easier cleanup).",
@@ -226,16 +249,17 @@
         },
         {
           "equipment": [],
-          "flavor_text": "Place into oven when it's ready and roast for about 40 minutes.",
+          "flavor_text": "Place into oven when it's ready and roast for about 40 minutes. We'll check in on them in 25-30 minutes later.",
           "ingredients": [
             {
               "name": "black beans",
-              "quantity": "1",
+              "new": false,
+              "quantity": 1.0,
               "unit": "can"
             }
           ],
           "skills": [],
-          "text": "Place into oven when it's ready and roast for about 40 minutes.",
+          "text": "Place into oven when it's ready and roast for about 40 minutes. We'll check in on them in 25-30 minutes later.",
           "time_estimate": null
         },
         {
@@ -261,16 +285,17 @@
       "steps": [
         {
           "equipment": [],
-          "flavor_text": "When the veggies have been roasting for about 25-30 minutes, open and rain your {i, can of black beans, 1} onto the tray.",
+          "flavor_text": "When the veggies have been roasting for about 25-30 minutes, open and drain your {i, can of black beans, 1} onto the tray.",
           "ingredients": [
             {
               "name": "black beans",
-              "quantity": "1",
+              "new": false,
+              "quantity": 1.0,
               "unit": "can"
             }
           ],
           "skills": [],
-          "text": "When the veggies have been roasting for about 25-30 minutes, open and rain your can of black beans onto the tray.",
+          "text": "When the veggies have been roasting for about 25-30 minutes, open and drain your can of black beans onto the tray.",
           "time_estimate": null
         },
         {
@@ -279,6 +304,7 @@
           "ingredients": [
             {
               "name": "black beans",
+              "new": false,
               "quantity": "1",
               "unit": "can"
             }
@@ -293,7 +319,8 @@
           "ingredients": [
             {
               "name": "lime",
-              "quantity": ".5",
+              "new": false,
+              "quantity": "1",
               "unit": "lime"
             }
           ],
@@ -337,16 +364,19 @@
           "ingredients": [
             {
               "name": "sour cream",
+              "new": false,
               "quantity": "1",
               "unit": "scoop"
             },
             {
               "name": "lime",
-              "quantity": ".5",
+              "new": true,
+              "quantity": 0.5,
               "unit": "lime"
             },
             {
               "name": "hot sauce",
+              "new": false,
               "quantity": "3",
               "unit": "dashes"
             }
@@ -370,7 +400,8 @@
           "ingredients": [
             {
               "name": "tortillas",
-              "quantity": "3",
+              "new": false,
+              "quantity": 3.0,
               "unit": "shells"
             }
           ],
@@ -393,13 +424,14 @@
           "ingredients": [
             {
               "name": "tortillas",
+              "new": false,
               "quantity": "3",
               "unit": "shells"
             }
           ],
           "skills": [
             {
-              "name": "Char"
+              "name": "Charring"
             }
           ],
           "text": "Turn your smallest gas burner to medium heat. Place a tortilla directly on top of the flame (it won't catch on fire, we promise). Use the pair of tongs to flip once it picks up the amount of color/char that you want. Repeat for all tortillas.",

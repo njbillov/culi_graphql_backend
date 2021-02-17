@@ -29,52 +29,61 @@
   "ingredients": [
     {
       "name": "salmon",
+      "new": false,
       "quantity": "1",
       "unit": "fillet"
     },
     {
       "name": "olive oil",
+      "new": false,
       "quantity": "2",
       "unit": "tbsp"
     },
     {
       "name": "chickpeas",
+      "new": false,
       "quantity": "1",
       "unit": "can"
     },
     {
       "name": "shallot",
+      "new": false,
       "quantity": "1",
       "unit": "shallot"
     },
     {
       "name": "fresh parsley",
+      "new": false,
       "quantity": "1",
       "unit": "bunch"
     },
     {
       "name": "arugula",
+      "new": false,
       "quantity": "2",
       "unit": "cups"
     },
     {
       "name": "feta cheese",
+      "new": false,
       "quantity": "1",
       "unit": "sprinkle"
     },
     {
       "name": "red wine vinegar",
+      "new": false,
       "quantity": "1",
       "unit": "tbsp"
     },
     {
       "name": "lemon",
-      "quantity": ".5",
+      "new": false,
+      "quantity": "0.5",
       "unit": "lemon"
     }
   ],
   "recipe_id": "3",
-  "recipe_name": "Chickpea Salad with Salmon",
+  "recipe_name": "ChickpeaSaladwithSalmon",
   "steps": [
     {
       "name": "",
@@ -98,12 +107,14 @@
           "ingredients": [
             {
               "name": "salmon",
+              "new": false,
               "quantity": "1",
               "unit": "fillet"
             },
             {
               "name": "olive oil",
-              "quantity": "1",
+              "new": false,
+              "quantity": 1.0,
               "unit": "tbsp"
             }
           ],
@@ -175,6 +186,7 @@
           "ingredients": [
             {
               "name": "chickpeas",
+              "new": false,
               "quantity": "1",
               "unit": "can"
             }
@@ -200,20 +212,21 @@
           "equipment": [
             {
               "name": "cutting knife",
-              "quantity": "1"
+              "quantity": 1.0
             }
           ],
           "flavor_text": "Finely dice your {i, shallot, 1}. Add however much shallot you'd like in your salad to the bowl with the chickpeas. Discard the rest.",
           "ingredients": [
             {
               "name": "shallot",
+              "new": false,
               "quantity": "1",
               "unit": "shallot"
             }
           ],
           "skills": [
             {
-              "name": "Dice"
+              "name": "Dicing"
             }
           ],
           "text": "Finely dice your shallot. Add however much shallot you'd like in your salad to the bowl with the chickpeas. Discard the rest.",
@@ -230,13 +243,14 @@
           "ingredients": [
             {
               "name": "fresh parsley",
+              "new": false,
               "quantity": "1",
               "unit": "bunch"
             }
           ],
           "skills": [
             {
-              "name": "Chop"
+              "name": "Chopping"
             }
           ],
           "text": "Chop about a handful of your fresh parsley into small, sprinklable pieces. Don't worry about the stems! You can trash the thick ones but the small ones bring great flavor. Add your chopped parsley to the bowl.",
@@ -248,6 +262,7 @@
           "ingredients": [
             {
               "name": "arugula",
+              "new": false,
               "quantity": "2",
               "unit": "cups"
             }
@@ -262,6 +277,7 @@
           "ingredients": [
             {
               "name": "feta cheese",
+              "new": false,
               "quantity": "1",
               "unit": "sprinkle"
             }
@@ -284,17 +300,20 @@
           "ingredients": [
             {
               "name": "olive oil",
+              "new": false,
               "quantity": "2",
               "unit": "tbsp"
             },
             {
               "name": "red wine vinegar",
+              "new": false,
               "quantity": "1",
               "unit": "tbsp"
             },
             {
               "name": "lemon",
-              "quantity": ".5",
+              "new": false,
+              "quantity": "0.5",
               "unit": "lemon"
             }
           ],
@@ -330,22 +349,22 @@
               "quantity": "1"
             }
           ],
-          "flavor_text": "Check on your salmon. Aplly some pressure to the outside of the salmon with a fork. If it starts to flake, or you can see the inside of the salmon is no longer translucent, it's done!",
+          "flavor_text": "Check on your salmon. Apply some pressure to the outside of the salmon with a fork. If it starts to flake, or you can see the inside of the salmon is no longer translucent, it's done!",
           "ingredients": [],
           "skills": [
             {
               "name": "Checking Doneness"
             }
           ],
-          "text": "Check on your salmon. Aplly some pressure to the outside of the salmon with a fork. If it starts to flake, or you can see the inside of the salmon is no longer translucent, it's done!",
+          "text": "Check on your salmon. Apply some pressure to the outside of the salmon with a fork. If it starts to flake, or you can see the inside of the salmon is no longer translucent, it's done!",
           "time_estimate": null
         },
         {
           "equipment": [],
-          "flavor_text": "Plate up the salmon on top opf your salad and enjoy!",
+          "flavor_text": "Plate up the salmon on top of your salad and enjoy!",
           "ingredients": [],
           "skills": [],
-          "text": "Plate up the salmon on top opf your salad and enjoy!",
+          "text": "Plate up the salmon on top of your salad and enjoy!",
           "time_estimate": null
         }
       ]

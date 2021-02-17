@@ -1,5 +1,5 @@
 {
-  "description": "Fish can be scary to cook, but you want to know a secret? It's actually easier to cook than meat. This salmon gets cooked int he broiler to give it some nice color and speed up the cooking process. What's more wholesome and satisfying than quickly-prepared fish, veggies, and greens?",
+  "description": "Fish can be scary to cook, but you want to know a secret? It's actually easier to cook than meat. This salmon gets cooked in the broiler to give it some nice color and speed up the cooking process. What's more wholesome and satisfying than quickly-prepared fish, veggies, and greens?",
   "equipment": [
     {
       "name": "oven",
@@ -17,22 +17,55 @@
   "ingredients": [
     {
       "name": "lemon",
-      "quantity": ".5",
+      "new": false,
+      "quantity": "0.5",
       "unit": "lemon"
     },
     {
       "name": "asparagus",
+      "new": false,
       "quantity": "8",
       "unit": "stalks"
     },
     {
       "name": "salmon",
+      "new": false,
       "quantity": "1",
       "unit": "fillet"
+    },
+    {
+      "name": "olive oil",
+      "new": false,
+      "quantity": "1",
+      "unit": "tbsp"
+    },
+    {
+      "name": "balsamic vinegar",
+      "new": false,
+      "quantity": "2",
+      "unit": "tbsp"
+    },
+    {
+      "name": "Dijon mustard",
+      "new": false,
+      "quantity": "1",
+      "unit": "tsp"
+    },
+    {
+      "name": "lemon juice",
+      "new": false,
+      "quantity": "1",
+      "unit": "tbsp"
+    },
+    {
+      "name": "arugula",
+      "new": false,
+      "quantity": "2",
+      "unit": "handfuls"
     }
   ],
   "recipe_id": "10",
-  "recipe_name": "Broiled Salmon with Balsamic Vinaigrette ",
+  "recipe_name": "BroiledSalmonwithBalsamicVinaigrette",
   "steps": [
     {
       "name": "",
@@ -69,7 +102,8 @@
           "ingredients": [
             {
               "name": "lemon",
-              "quantity": "1",
+              "new": false,
+              "quantity": 1.0,
               "unit": "lemon"
             }
           ],
@@ -87,6 +121,7 @@
           "ingredients": [
             {
               "name": "asparagus",
+              "new": false,
               "quantity": "8",
               "unit": "stalks"
             }
@@ -105,6 +140,7 @@
           "ingredients": [
             {
               "name": "salmon",
+              "new": false,
               "quantity": "1",
               "unit": "fillet"
             }
@@ -123,7 +159,8 @@
           "ingredients": [
             {
               "name": "lemon",
-              "quantity": ".5",
+              "new": false,
+              "quantity": "0.5",
               "unit": "lemon"
             }
           ],
@@ -143,10 +180,75 @@
               "quantity": "1"
             }
           ],
-          "flavor_text": "In the meantime, let's make a quick vinaigrette. So bust out a {e, bowl, 1} jar, or measuring cup.",
+          "flavor_text": "In the meantime, let's make a quick vinaigrette. So bust out a {e, bowl, 1}, jar, or measuring cup.",
           "ingredients": [],
           "skills": [],
-          "text": "In the meantime, let's make a quick vinaigrette. So bust out a bowl jar, or measuring cup.",
+          "text": "In the meantime, let's make a quick vinaigrette. So bust out a bowl, jar, or measuring cup.",
+          "time_estimate": null
+        },
+        {
+          "equipment": [],
+          "flavor_text": "In your vessel, combine 1 tbsp of {i, olive oil, 1}, 2 tbsp of {i, balsamic vinegar, 2}, 1 tsp of {i, Dijon mustard, 3}, and then a big squeeze of {i, lemon juice, 4}. Season with salt and pepper, then whisk, mix, or shake together until you reach a smooth consistency. This is a rather acidic dressing, which is why we like it, but make sure you taste taste taste! Too acidic? More olive oil! Too oily? More acid! Don't like Dijon? Leave it out!",
+          "ingredients": [
+            {
+              "name": "olive oil",
+              "new": false,
+              "quantity": "1",
+              "unit": "tbsp"
+            },
+            {
+              "name": "balsamic vinegar",
+              "new": false,
+              "quantity": "2",
+              "unit": "tbsp"
+            },
+            {
+              "name": "Dijon mustard",
+              "new": false,
+              "quantity": "1",
+              "unit": "tsp"
+            },
+            {
+              "name": "lemon juice",
+              "new": false,
+              "quantity": "1",
+              "unit": "tbsp"
+            }
+          ],
+          "skills": [
+            {
+              "name": "Vinaigrettes"
+            }
+          ],
+          "text": "In your vessel, combine 1 tbsp of olive oil, 2 tbsp of balsamic vinegar, 1 tsp of Dijon mustard, and then a big squeeze of lemon juice. Season with salt and pepper, then whisk, mix, or shake together until you reach a smooth consistency. This is a rather acidic dressing, which is why we like it, but make sure you taste taste taste! Too acidic? More olive oil! Too oily? More acid! Don't like Dijon? Leave it out!",
+          "time_estimate": null
+        }
+      ]
+    },
+    {
+      "name": "",
+      "steps": [
+        {
+          "equipment": [],
+          "flavor_text": "Check on your salmon. If you are pleased with the color and doneness, pull it!",
+          "ingredients": [],
+          "skills": [],
+          "text": "Check on your salmon. If you are pleased with the color and doneness, pull it!",
+          "time_estimate": null
+        },
+        {
+          "equipment": [],
+          "flavor_text": "Dress a couple big handfuls of {i, arugula, 1} with your dressing, and optionally add some feta cheese, thinly sliced red onions, or whatever you enjoy in your salads (we love marinated artichoke hearts). Plate your salmon and asparagus on top or chop it in and mix it with the salad. You do you! We're just here for guidance. Enjoy this quick and healthy meal that YOU created.",
+          "ingredients": [
+            {
+              "name": "arugula",
+              "new": false,
+              "quantity": "2",
+              "unit": "handfuls"
+            }
+          ],
+          "skills": [],
+          "text": "Dress a couple big handfuls of arugula with your dressing, and optionally add some feta cheese, thinly sliced red onions, or whatever you enjoy in your salads (we love marinated artichoke hearts). Plate your salmon and asparagus on top or chop it in and mix it with the salad. You do you! We're just here for guidance. Enjoy this quick and healthy meal that YOU created.",
           "time_estimate": null
         }
       ]

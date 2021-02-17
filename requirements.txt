@@ -4,3 +4,5 @@ graphene>=2.0
 graphene-file-upload>=1.2.1
 Flask-GraphQL>=2.0.1
 boto3>=1.16
+textblob>=0.15
+pandas

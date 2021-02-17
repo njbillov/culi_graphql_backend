@@ -21,32 +21,37 @@
   "ingredients": [
     {
       "name": "Mozzarella",
+      "new": false,
       "quantity": "1",
       "unit": "ball"
     },
     {
       "name": "tomato sauce",
+      "new": false,
       "quantity": "1",
       "unit": "jar"
     },
     {
       "name": "chicken breast",
+      "new": false,
       "quantity": "1",
       "unit": "breast"
     },
     {
-      "name": "italian breadcrumbs",
-      "quantity": ".5",
+      "name": "Italian breadcrumbs",
+      "new": false,
+      "quantity": "0.5",
       "unit": "cups"
     },
     {
       "name": "mayo",
+      "new": false,
       "quantity": "2",
       "unit": "tbsp"
     }
   ],
   "recipe_id": "11",
-  "recipe_name": "Cheater's Chicken Parm",
+  "recipe_name": "CheatersChickenParm",
   "steps": [
     {
       "name": "",
@@ -70,11 +75,13 @@
           "ingredients": [
             {
               "name": "Mozzarella",
+              "new": false,
               "quantity": "1",
               "unit": "ball"
             },
             {
               "name": "tomato sauce",
+              "new": false,
               "quantity": "1",
               "unit": "jar"
             }
@@ -89,10 +96,11 @@
         },
         {
           "equipment": [],
-          "flavor_text": "Time to butterfly your {i, chicken breast, 1}! This is an exciting step for you. We're essentially going to halve it the same way you would slice through a bagel or english muffin. Place your hand on the top of the breast, and run your knife, parallel to the counter surface, all the way through the chicken, creating two thinner chicken breasts. Normally for a butterfly, you leave a little hinge and not cut all the way through, but we like separating into two smaller portions.",
+          "flavor_text": "Time to butterfly your {i, chicken breast, 1}! This is an exciting step for you. We're essentially going to halve it the same way you would slice through a bagel or English muffin. Place your hand on the top of the breast, and run your knife, parallel to the counter surface, all the way through the chicken, creating two thinner chicken breasts. Normally for a butterfly, you leave a little hinge and not cut all the way through, but we like separating into two smaller portions.",
           "ingredients": [
             {
               "name": "chicken breast",
+              "new": false,
               "quantity": "1",
               "unit": "breast"
             }
@@ -102,7 +110,7 @@
               "name": "Butterflying Chicken"
             }
           ],
-          "text": "Time to butterfly your chicken breast! This is an exciting step for you. We're essentially going to halve it the same way you would slice through a bagel or english muffin. Place your hand on the top of the breast, and run your knife, parallel to the counter surface, all the way through the chicken, creating two thinner chicken breasts. Normally for a butterfly, you leave a little hinge and not cut all the way through, but we like separating into two smaller portions.",
+          "text": "Time to butterfly your chicken breast! This is an exciting step for you. We're essentially going to halve it the same way you would slice through a bagel or English muffin. Place your hand on the top of the breast, and run your knife, parallel to the counter surface, all the way through the chicken, creating two thinner chicken breasts. Normally for a butterfly, you leave a little hinge and not cut all the way through, but we like separating into two smaller portions.",
           "time_estimate": null
         },
         {
@@ -116,10 +124,10 @@
               "quantity": "1"
             }
           ],
-          "flavor_text": "Place the two chicken pieces down on a cutting board, cover them with a layer of {e, plastic wrap, 2}, and beat the hell out of them with a {e, rolling pin, 1} or a wine bottle until they are about 1/2 an thick. They don't need to be perfect, but the thinner the better.",
+          "flavor_text": "Place the two chicken pieces down on a cutting board, cover them with a layer of {e, plastic wrap, 2}, and beat the hell out of them with a {e, rolling pin, 1} or a wine bottle until they are about 1/2 an inch thick. They don't need to be perfect, but the thinner the better.",
           "ingredients": [],
           "skills": [],
-          "text": "Place the two chicken pieces down on a cutting board, cover them with a layer of plastic wrap, and beat the hell out of them with a rolling pin or a wine bottle until they are about 1/2 an thick. They don't need to be perfect, but the thinner the better.",
+          "text": "Place the two chicken pieces down on a cutting board, cover them with a layer of plastic wrap, and beat the hell out of them with a rolling pin or a wine bottle until they are about 1/2 an inch thick. They don't need to be perfect, but the thinner the better.",
           "time_estimate": null
         }
       ]
@@ -142,16 +150,17 @@
         },
         {
           "equipment": [],
-          "flavor_text": "Add a 1/2 cup of {i, italian breadcrumbs, 1} (or seasoned panko) to a plate.",
+          "flavor_text": "Add a 1/2 cup of {i, Italian breadcrumbs, 1} (or seasoned panko) to a plate.",
           "ingredients": [
             {
-              "name": "italian breadcrumbs",
-              "quantity": ".5",
+              "name": "Italian breadcrumbs",
+              "new": false,
+              "quantity": "0.5",
               "unit": "cups"
             }
           ],
           "skills": [],
-          "text": "Add a 1/2 cup of italian breadcrumbs (or seasoned panko) to a plate.",
+          "text": "Add a 1/2 cup of Italian breadcrumbs (or seasoned panko) to a plate.",
           "time_estimate": null
         },
         {
@@ -160,6 +169,7 @@
           "ingredients": [
             {
               "name": "mayo",
+              "new": false,
               "quantity": "2",
               "unit": "tbsp"
             }
@@ -187,14 +197,14 @@
       "steps": [
         {
           "equipment": [],
-          "flavor_text": "Carefully lay the chicken pieces into the hot oil breaded side down. Cook until golden brown, about 2 minutes. If it starts to burn, flip that guy! Be careful not to accidentally scrape off the breading, since it's adhered delicately.",
+          "flavor_text": "Carefully lay the chicken pieces into the hot oil breaded side down. Cook until golden brown, about 2 minutes. If it starts to burn, flip that guy! Be careful not to accidentally scrape off the breading since it's adhered delicately.",
           "ingredients": [],
           "skills": [
             {
               "name": "Frying"
             }
           ],
-          "text": "Carefully lay the chicken pieces into the hot oil breaded side down. Cook until golden brown, about 2 minutes. If it starts to burn, flip that guy! Be careful not to accidentally scrape off the breading, since it's adhered delicately.",
+          "text": "Carefully lay the chicken pieces into the hot oil breaded side down. Cook until golden brown, about 2 minutes. If it starts to burn, flip that guy! Be careful not to accidentally scrape off the breading since it's adhered delicately.",
           "time_estimate": null
         },
         {

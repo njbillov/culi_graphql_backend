@@ -2,6 +2,7 @@
 
 yum install python3
 pip3 install -r requirements.txt
+python3 -m textblob.download_corpora
 
 aws s3api get-object --bucket cookwithculi-appdata --key db_password .db_password
 aws s3api get-object --bucket cookwithculi-appdata --key db_uri .db_uri

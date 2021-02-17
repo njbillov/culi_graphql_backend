@@ -21,47 +21,55 @@
   "ingredients": [
     {
       "name": "salt",
+      "new": false,
       "quantity": "1",
       "unit": "pinch"
     },
     {
       "name": "garlic",
+      "new": false,
       "quantity": "4",
       "unit": "cloves"
     },
     {
       "name": "fresh parsley",
+      "new": false,
       "quantity": "1",
       "unit": "bunch"
     },
     {
       "name": "olive oil",
+      "new": false,
       "quantity": "4",
       "unit": "tbsp"
     },
     {
       "name": "dried pasta",
-      "quantity": ".5",
+      "new": false,
+      "quantity": "0.5",
       "unit": "box"
     },
     {
       "name": "chili flakes",
-      "quantity": ".25",
+      "new": false,
+      "quantity": "0.25",
       "unit": "tsp"
     },
     {
       "name": "lemon",
+      "new": false,
       "quantity": "1",
       "unit": "squeeze"
     },
     {
       "name": "parmesan",
+      "new": false,
       "quantity": "1",
       "unit": "shaving"
     }
   ],
   "recipe_id": "2",
-  "recipe_name": "Aglio e Olio",
+  "recipe_name": "AglioeOlio",
   "steps": [
     {
       "name": "",
@@ -77,6 +85,7 @@
           "ingredients": [
             {
               "name": "salt",
+              "new": false,
               "quantity": "1",
               "unit": "pinch"
             }
@@ -89,14 +98,15 @@
           "equipment": [
             {
               "name": "cutting knife",
-              "quantity": "1"
+              "quantity": 1.0
             }
           ],
-          "flavor_text": "Peel and slice four cloves of your {i, garlic, 1}. We're slicing the garlic into rounds by cutting perpindicular to the length of each clove. We're keeping the pieces larger because garlic burns easily, and we're going to be cooking it over direct heat for a while.",
+          "flavor_text": "Peel and slice four cloves of your {i, garlic, 1}. We're slicing the garlic into rounds by cutting perpendicular to the length of each clove. We're keeping the pieces larger because garlic burns easily, and we're going to be cooking it over direct heat for a while.",
           "ingredients": [
             {
               "name": "garlic",
-              "quantity": "4",
+              "new": false,
+              "quantity": 4.0,
               "unit": "cloves"
             }
           ],
@@ -105,7 +115,7 @@
               "name": "Slicing"
             }
           ],
-          "text": "Peel and slice four cloves of your garlic. We're slicing the garlic into rounds by cutting perpindicular to the length of each clove. We're keeping the pieces larger because garlic burns easily, and we're going to be cooking it over direct heat for a while.",
+          "text": "Peel and slice four cloves of your garlic. We're slicing the garlic into rounds by cutting perpendicular to the length of each clove. We're keeping the pieces larger because garlic burns easily, and we're going to be cooking it over direct heat for a while.",
           "time_estimate": null
         },
         {
@@ -119,13 +129,14 @@
           "ingredients": [
             {
               "name": "fresh parsley",
+              "new": false,
               "quantity": "1",
               "unit": "bunch"
             }
           ],
           "skills": [
             {
-              "name": "Chop"
+              "name": "Chopping"
             }
           ],
           "text": "Chop up about a handful of your fresh parsley into small pieces. Try to get a pretty fine chop so the parsley can get really evenly distributed later on.",
@@ -142,6 +153,7 @@
           "ingredients": [
             {
               "name": "olive oil",
+              "new": false,
               "quantity": "4",
               "unit": "tbsp"
             }
@@ -161,7 +173,8 @@
           "ingredients": [
             {
               "name": "dried pasta",
-              "quantity": ".5",
+              "new": false,
+              "quantity": "0.5",
               "unit": "box"
             }
           ],
@@ -175,6 +188,7 @@
           "ingredients": [
             {
               "name": "garlic",
+              "new": false,
               "quantity": "4",
               "unit": "cloves"
             }
@@ -189,13 +203,14 @@
           "ingredients": [
             {
               "name": "chili flakes",
-              "quantity": ".25",
+              "new": false,
+              "quantity": "0.25",
               "unit": "tsp"
             }
           ],
           "skills": [
             {
-              "name": "Saute"
+              "name": "Sauteing"
             }
           ],
           "text": "Gently cook the garlic until you start to see the edges of your slices brown a little bit. At this point, turn off the heat and add about 1/4tsp of chili flakes to the oil and garlic and stir it in.",
@@ -225,6 +240,7 @@
           "ingredients": [
             {
               "name": "lemon",
+              "new": false,
               "quantity": "1",
               "unit": "squeeze"
             }
@@ -251,6 +267,7 @@
           "ingredients": [
             {
               "name": "parmesan",
+              "new": false,
               "quantity": "1",
               "unit": "shaving"
             }

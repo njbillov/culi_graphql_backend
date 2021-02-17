@@ -21,57 +21,67 @@
   "ingredients": [
     {
       "name": "chicken thighs",
+      "new": false,
       "quantity": "1",
       "unit": "package"
     },
     {
       "name": "soy sauce",
-      "quantity": ".25",
+      "new": false,
+      "quantity": "0.25",
       "unit": "cup"
     },
     {
       "name": "honey",
-      "quantity": ".25",
+      "new": false,
+      "quantity": "0.25",
       "unit": "cup"
     },
     {
       "name": "sriracha",
-      "quantity": ".25",
+      "new": false,
+      "quantity": "0.25",
       "unit": "cup"
     },
     {
       "name": "cauliflower rice",
+      "new": false,
       "quantity": "1",
       "unit": "package"
     },
     {
       "name": "garlic",
+      "new": false,
       "quantity": "2",
       "unit": "cloves"
     },
     {
       "name": "ginger",
-      "quantity": ".5",
+      "new": false,
+      "quantity": "0.5",
       "unit": "inches"
     },
     {
       "name": "yellow onion",
-      "quantity": ".5",
+      "new": false,
+      "quantity": "0.5",
       "unit": "onion"
     },
     {
       "name": "neutral oil",
+      "new": false,
       "quantity": "1",
       "unit": "tbsp"
     },
     {
       "name": "frozen peas and carrots",
-      "quantity": ".5",
+      "new": false,
+      "quantity": "0.5",
       "unit": "cups"
     }
   ],
   "recipe_id": "5",
-  "recipe_name": "Glazed Chicken and Cauliflower Fried Rice",
+  "recipe_name": "GlazedChickenandCauliflowerFriedRice",
   "steps": [
     {
       "name": "",
@@ -82,7 +92,8 @@
           "ingredients": [
             {
               "name": "chicken thighs",
-              "quantity": "1",
+              "new": false,
+              "quantity": 1.0,
               "unit": "package"
             }
           ],
@@ -109,17 +120,20 @@
           "ingredients": [
             {
               "name": "soy sauce",
-              "quantity": ".25",
+              "new": false,
+              "quantity": "0.25",
               "unit": "cup"
             },
             {
               "name": "honey",
-              "quantity": ".25",
+              "new": false,
+              "quantity": "0.25",
               "unit": "cup"
             },
             {
               "name": "sriracha",
-              "quantity": ".25",
+              "new": false,
+              "quantity": "0.25",
               "unit": "cup"
             }
           ],
@@ -151,16 +165,17 @@
               "quantity": "1"
             }
           ],
-          "flavor_text": "Microwave your bag of {i, cauliflower rice, 1} according to the instructinos on the package.",
+          "flavor_text": "Microwave your bag of {i, cauliflower rice, 1} according to the instructions on the package.",
           "ingredients": [
             {
               "name": "cauliflower rice",
-              "quantity": "1",
+              "new": false,
+              "quantity": 1.0,
               "unit": "package"
             }
           ],
           "skills": [],
-          "text": "Microwave your bag of cauliflower rice according to the instructinos on the package.",
+          "text": "Microwave your bag of cauliflower rice according to the instructions on the package.",
           "time_estimate": null
         },
         {
@@ -174,26 +189,29 @@
           "ingredients": [
             {
               "name": "garlic",
+              "new": false,
               "quantity": "2",
               "unit": "cloves"
             },
             {
               "name": "ginger",
-              "quantity": ".5",
+              "new": false,
+              "quantity": "0.5",
               "unit": "inches"
             },
             {
               "name": "yellow onion",
-              "quantity": ".5",
+              "new": false,
+              "quantity": "0.5",
               "unit": "onion"
             }
           ],
           "skills": [
             {
-              "name": "{mincing}"
+              "name": "mincing"
             },
             {
-              "name": "{dicing}"
+              "name": "dicing"
             }
           ],
           "text": "While that's heating, mince 1-2 cloves of garlic and about 1/2 an inch of ginger. Remember, scrape off the peel using the edge of a spoon. Mince half of a yellow onion.",
@@ -203,13 +221,13 @@
           "equipment": [
             {
               "name": "pan",
-              "quantity": "1"
+              "quantity": 1.0
             }
           ],
-          "flavor_text": "Place a {e, pan, 1} or skillet over medium heat. We're giong to season the fried rice with soy sauce and sesame oil if you have it, so you might want to have them handy.",
+          "flavor_text": "Place a {e, pan, 1} or skillet over medium heat. We're going to season the fried rice with soy sauce and sesame oil if you have it, so you might want to have them handy.",
           "ingredients": [],
           "skills": [],
-          "text": "Place a pan or skillet over medium heat. We're giong to season the fried rice with soy sauce and sesame oil if you have it, so you might want to have them handy.",
+          "text": "Place a pan or skillet over medium heat. We're going to season the fried rice with soy sauce and sesame oil if you have it, so you might want to have them handy.",
           "time_estimate": null
         }
       ]
@@ -223,6 +241,7 @@
           "ingredients": [
             {
               "name": "neutral oil",
+              "new": false,
               "quantity": "1",
               "unit": "tbsp"
             }
@@ -237,18 +256,20 @@
           "ingredients": [
             {
               "name": "cauliflower rice",
+              "new": false,
               "quantity": "1",
               "unit": "package"
             },
             {
               "name": "frozen peas and carrots",
-              "quantity": ".5",
+              "new": false,
+              "quantity": "0.5",
               "unit": "cups"
             }
           ],
           "skills": [
             {
-              "name": "Sauteeing"
+              "name": "Sauteing"
             }
           ],
           "text": "Season the veggies with a pinch of salt and continue to stir until onion is softened. After a couple minutes, add in your bag of cauliflower rice as well as about 1/2 cup of frozen peas and carrots. Add another good pinch of salt. Fried rice is an art not a science, so don't be too worried about measurements.",
@@ -290,6 +311,7 @@
           "ingredients": [
             {
               "name": "chicken thighs",
+              "new": false,
               "quantity": "1",
               "unit": "package"
             }
