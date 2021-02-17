@@ -839,7 +839,7 @@ class RequestMenu(graphene.Mutation):
                 CREATE (m)-[c:HasRecipe]->(r)
                 RETURN COLLECT(r) AS recipes
             }
-            RETURN a, m, recipes
+            RETURN m, recipes
         '''
         results = get_db().run(assign_query, parameters=menu_params)
         menus = []
@@ -851,6 +851,7 @@ class RequestMenu(graphene.Mutation):
             # print(len(recipes))
             menu['recipes'] = [json.loads(recipe) for recipe in recipes[len(menus) * recipe_count:(len(menus) + 1) * recipe_count]]
             menus.append(menu)
+        print(menus)
         return RequestMenu(ok=True, menus=menus)
 
 
