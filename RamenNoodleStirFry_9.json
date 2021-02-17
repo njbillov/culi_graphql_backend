@@ -1,0 +1,284 @@
+{
+  "description": "The beauty of a stir-fry is that you can add whatever you have on hand or whatever makes you happy. Make sure you get the prep out of the way first, because you're going to want to have everything on hand!",
+  "equipment": [
+    {
+      "name": "small bowl",
+      "quantity": "1"
+    },
+    {
+      "name": "microplane",
+      "quantity": "1"
+    },
+    {
+      "name": "large pan",
+      "quantity": "1"
+    },
+    {
+      "name": "tongs",
+      "quantity": "1"
+    }
+  ],
+  "ingredients": [
+    {
+      "name": "soy sauce",
+      "new": false,
+      "quantity": "1",
+      "unit": "tbsp"
+    },
+    {
+      "name": "rice wine vinegar",
+      "new": false,
+      "quantity": "0.5",
+      "unit": "tbsp"
+    },
+    {
+      "name": "sesame oil",
+      "new": false,
+      "quantity": "1",
+      "unit": "tsp"
+    },
+    {
+      "name": "sriracha",
+      "new": false,
+      "quantity": "0.5",
+      "unit": "tbsp"
+    },
+    {
+      "name": "honey",
+      "new": false,
+      "quantity": "1",
+      "unit": "tbsp"
+    },
+    {
+      "name": "ginger",
+      "new": false,
+      "quantity": "1",
+      "unit": "tsp"
+    },
+    {
+      "name": "ramen",
+      "new": false,
+      "quantity": "1",
+      "unit": "packet"
+    },
+    {
+      "name": "white button mushrooms",
+      "new": false,
+      "quantity": "4",
+      "unit": "mushrooms"
+    },
+    {
+      "name": "broccoli",
+      "new": false,
+      "quantity": "1",
+      "unit": "head"
+    },
+    {
+      "name": "green onions",
+      "new": false,
+      "quantity": "1",
+      "unit": "stalk"
+    }
+  ],
+  "recipe_id": "9",
+  "recipe_name": "Ramen Noodle Stir Fry",
+  "steps": [
+    {
+      "name": "",
+      "steps": [
+        {
+          "equipment": [],
+          "flavor_text": "This dish comes together really quickly, so we're going to get all the prep out of the way first!",
+          "ingredients": [],
+          "skills": [],
+          "text": "This dish comes together really quickly, so we're going to get all the prep out of the way first!",
+          "time_estimate": null
+        },
+        {
+          "equipment": [
+            {
+              "name": "small bowl",
+              "quantity": "1"
+            }
+          ],
+          "flavor_text": "Let's make our stir-fry sauce. In a measuring cup or small bowl, add 1 tbsp  of {i, soy sauce, 1}, 1/2 tbsp of {i, rice wine vinegar, 2}, 1 tsp of {i, sesame oil, 3}, 1/2 tbsp of {i, sriracha, 4} (or more if you're feeling spicy), and 1 tbsp of {i, honey, 5}. This baby is gonna bring flav to those noods.",
+          "ingredients": [
+            {
+              "name": "soy sauce",
+              "new": false,
+              "quantity": "1",
+              "unit": "tbsp"
+            },
+            {
+              "name": "rice wine vinegar",
+              "new": false,
+              "quantity": "0.5",
+              "unit": "tbsp"
+            },
+            {
+              "name": "sesame oil",
+              "new": false,
+              "quantity": "1",
+              "unit": "tsp"
+            },
+            {
+              "name": "sriracha",
+              "new": false,
+              "quantity": "0.5",
+              "unit": "tbsp"
+            },
+            {
+              "name": "honey",
+              "new": false,
+              "quantity": "1",
+              "unit": "tbsp"
+            }
+          ],
+          "skills": [],
+          "text": "Let's make our stir-fry sauce. In a measuring cup or small bowl, add 1 tbsp  of soy sauce, 1/2 tbsp of rice wine vinegar, 1 tsp of sesame oil, 1/2 tbsp of sriracha (or more if you're feeling spicy), and 1 tbsp of honey. This baby is gonna bring flav to those noods.",
+          "time_estimate": null
+        },
+        {
+          "equipment": [
+            {
+              "name": "microplane",
+              "quantity": "1"
+            }
+          ],
+          "flavor_text": "Now listen up, bub. This next part is important. If you have a {e, microplane, 1}, mince about 1 tsp of fresh {i, ginger, 1} directly into the sauce. If you don't have a microplane, mince your ginger as finely as you can and set it off to the side for later.",
+          "ingredients": [
+            {
+              "name": "ginger",
+              "new": false,
+              "quantity": "1",
+              "unit": "tsp"
+            }
+          ],
+          "skills": [],
+          "text": "Now listen up, bub. This next part is important. If you have a microplane, mince about 1 tsp of fresh ginger directly into the sauce. If you don't have a microplane, mince your ginger as finely as you can and set it off to the side for later.",
+          "time_estimate": null
+        },
+        {
+          "equipment": [],
+          "flavor_text": "Find your ramen packet and get out the noodles. We're not going to use the seasoning packet but you should save it for another use (try it on popcorn). Start a pot of boiling water.",
+          "ingredients": [
+            {
+              "name": "ramen",
+              "new": false,
+              "quantity": 1.0,
+              "unit": "pack"
+            }
+          ],
+          "skills": [],
+          "text": "Find your ramen packet and get out the noodles. We're not going to use the seasoning packet but you should save it for another use (try it on popcorn). Start a pot of boiling water.",
+          "time_estimate": null
+        },
+        {
+          "equipment": [],
+          "flavor_text": "Next, slice your {i, white button mushrooms, 1} (use however many you'd like), and cut of a few pieces of {i, broccoli, 2} and cut them into small florets since we'll be cooking them quickly in the pan. Slice 1 stalk of your {i, green onions, 3} (the green and white part, avoiding the very end with the root) into pieces about half an inch long.",
+          "ingredients": [
+            {
+              "name": "white button mushrooms",
+              "new": false,
+              "quantity": "4",
+              "unit": "mushrooms"
+            },
+            {
+              "name": "broccoli",
+              "new": false,
+              "quantity": "1",
+              "unit": "head"
+            },
+            {
+              "name": "green onions",
+              "new": false,
+              "quantity": "1",
+              "unit": "stalk"
+            }
+          ],
+          "skills": [
+            {
+              "name": "Slicing"
+            }
+          ],
+          "text": "Next, slice your white button mushrooms (use however many you'd like), and cut of a few pieces of broccoli and cut them into small florets since we'll be cooking them quickly in the pan. Slice 1 stalk of your green onions (the green and white part, avoiding the very end with the root) into pieces about half an inch long.",
+          "time_estimate": null
+        }
+      ]
+    },
+    {
+      "name": "",
+      "steps": [
+        {
+          "equipment": [
+            {
+              "name": "large pan",
+              "quantity": "1"
+            }
+          ],
+          "flavor_text": "Place a {e, large pan, 1} or skillet over medium-high heat with a splash of oil and wait for them to heat up (1-2 mins). In the meantime, gather all of your veggies together (and your minced ginger if you didn't have a microplane.)",
+          "ingredients": [],
+          "skills": [],
+          "text": "Place a large pan or skillet over medium-high heat with a splash of oil and wait for them to heat up (1-2 mins). In the meantime, gather all of your veggies together (and your minced ginger if you didn't have a microplane.)",
+          "time_estimate": null
+        },
+        {
+          "equipment": [],
+          "flavor_text": "When the oil is hot, add all of your chopped veggies (and ginger if applicable) and season them with salt and pep. Stir them frequently, making sure nothings sticks or burns. Cook to your liking (probably about 6 minutes for softer, 3 minutes for firmer. Don't be afraid of a little color on the veg!)",
+          "ingredients": [],
+          "skills": [
+            {
+              "name": "Sauteing"
+            }
+          ],
+          "text": "When the oil is hot, add all of your chopped veggies (and ginger if applicable) and season them with salt and pep. Stir them frequently, making sure nothings sticks or burns. Cook to your liking (probably about 6 minutes for softer, 3 minutes for firmer. Don't be afraid of a little color on the veg!)",
+          "time_estimate": null
+        },
+        {
+          "equipment": [],
+          "flavor_text": "Once the veggies are close to done, add your {i, ramen, 1} noodles to your boiling water and cook for 2 minutes. Don't stress out about timing the veggies and noodles, two things at once can be overwhelming! Just remember you can always turn down/off the heat on the veggies if you're worried about burning them. Stay calm! No need to rush.",
+          "ingredients": [
+            {
+              "name": "ramen",
+              "new": false,
+              "quantity": "1",
+              "unit": "packet"
+            }
+          ],
+          "skills": [],
+          "text": "Once the veggies are close to done, add your ramen noodles to your boiling water and cook for 2 minutes. Don't stress out about timing the veggies and noodles, two things at once can be overwhelming! Just remember you can always turn down/off the heat on the veggies if you're worried about burning them. Stay calm! No need to rush.",
+          "time_estimate": null
+        },
+        {
+          "equipment": [
+            {
+              "name": "tongs",
+              "quantity": "1"
+            }
+          ],
+          "flavor_text": "After the noodles have cooked, use a pair of {e, tongs, 1} and add them directly to the pan with your veggies. Don't worry about a bit of water carrying over. Pour in your sauce mixture then stir everything together until the sauce has stained the noodles and veggies and slightly thickened (1-2 mins). Sometimes it's hard to mix the veggies into the noodles, but do your best.",
+          "ingredients": [],
+          "skills": [
+            {
+              "name": "Stir frying"
+            }
+          ],
+          "text": "After the noodles have cooked, use a pair of tongs and add them directly to the pan with your veggies. Don't worry about a bit of water carrying over. Pour in your sauce mixture then stir everything together until the sauce has stained the noodles and veggies and slightly thickened (1-2 mins). Sometimes it's hard to mix the veggies into the noodles, but do your best.",
+          "time_estimate": null
+        },
+        {
+          "equipment": [],
+          "flavor_text": "Plate your noodles and optionally garnish them with some more sliced green onion, sesame seeds, and a wedge of lime. You made a stir fry! There are endless combos to stir fry, so keep this formula in mind for the future. Enjoy!",
+          "ingredients": [],
+          "skills": [
+            {
+              "name": "Garnishing"
+            }
+          ],
+          "text": "Plate your noodles and optionally garnish them with some more sliced green onion, sesame seeds, and a wedge of lime. You made a stir fry! There are endless combos to stir fry, so keep this formula in mind for the future. Enjoy!",
+          "time_estimate": null
+        }
+      ]
+    }
+  ]
+}

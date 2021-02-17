@@ -1,0 +1,362 @@
+{
+  "description": "This is a great weeknight dish because it's mostly hands-off cooking. A little bit of patience and some attention to detail will leave you with crispy chicken thighs and a base of filling, warm, and flavorful lentils to keep you cozy on a winter evening.",
+  "equipment": [
+    {
+      "name": "paper towels",
+      "quantity": "2"
+    },
+    {
+      "name": "baking tray",
+      "quantity": "1"
+    },
+    {
+      "name": "strainer",
+      "quantity": "1"
+    },
+    {
+      "name": "cutting knife",
+      "quantity": "1"
+    },
+    {
+      "name": "measuring cup",
+      "quantity": "1"
+    },
+    {
+      "name": "small pot",
+      "quantity": "1"
+    }
+  ],
+  "ingredients": [
+    {
+      "name": "chicken thighs",
+      "new": false,
+      "quantity": "2",
+      "unit": "thighs"
+    },
+    {
+      "name": "brown lentils",
+      "new": false,
+      "quantity": "0.5",
+      "unit": "cups"
+    },
+    {
+      "name": "yellow onion",
+      "new": false,
+      "quantity": "0.5",
+      "unit": "onion"
+    },
+    {
+      "name": "chicken broth",
+      "new": false,
+      "quantity": "1.5",
+      "unit": "cups"
+    },
+    {
+      "name": "cumin",
+      "new": false,
+      "quantity": "0.5",
+      "unit": "tsp"
+    },
+    {
+      "name": "turmeric",
+      "new": false,
+      "quantity": "0.5",
+      "unit": "tsp"
+    },
+    {
+      "name": "chili powder",
+      "new": false,
+      "quantity": "0.5",
+      "unit": "tsp"
+    }
+  ],
+  "recipe_id": "4",
+  "recipe_name": "Chicken Thighs and Spiced Lentils",
+  "steps": [
+    {
+      "name": "",
+      "steps": [
+        {
+          "equipment": [],
+          "flavor_text": "Preheat your oven to 400F.",
+          "ingredients": [],
+          "skills": [],
+          "text": "Preheat your oven to 400F.",
+          "time_estimate": null
+        },
+        {
+          "equipment": [],
+          "flavor_text": "Get out your bone-in, skin-on {i, chicken thighs, 1}.",
+          "ingredients": [
+            {
+              "name": "chicken thighs",
+              "new": false,
+              "quantity": "2",
+              "unit": "thighs"
+            }
+          ],
+          "skills": [],
+          "text": "Get out your bone-in, skin-on chicken thighs.",
+          "time_estimate": null
+        },
+        {
+          "equipment": [
+            {
+              "name": "paper towels",
+              "quantity": "2"
+            }
+          ],
+          "flavor_text": "Pat them really dry with {e, paper towels, 1}, especially the skin, as this is what allows them to get crispy.",
+          "ingredients": [],
+          "skills": [],
+          "text": "Pat them really dry with paper towels, especially the skin, as this is what allows them to get crispy.",
+          "time_estimate": null
+        },
+        {
+          "equipment": [],
+          "flavor_text": "Rub the chicken thighs with a layer of olive oil, then season generously with salt and pepper (and any other seasonings or dry herbs you're a fan of!)",
+          "ingredients": [],
+          "skills": [
+            {
+              "name": "Seasoning"
+            }
+          ],
+          "text": "Rub the chicken thighs with a layer of olive oil, then season generously with salt and pepper (and any other seasonings or dry herbs you're a fan of!)",
+          "time_estimate": null
+        },
+        {
+          "equipment": [
+            {
+              "name": "baking tray",
+              "quantity": "1"
+            }
+          ],
+          "flavor_text": "Place them on a rimmed baking sheet SKIN SIDE UP. Exposing the skin to the heat will help them crisp, and trust us, you want crispy.",
+          "ingredients": [],
+          "skills": [],
+          "text": "Place them on a rimmed baking sheet SKIN SIDE UP. Exposing the skin to the heat will help them crisp, and trust us, you want crispy.",
+          "time_estimate": null
+        },
+        {
+          "equipment": [],
+          "flavor_text": "Once the oven is preheated, throw them in and let them cook for about 40 minutes. No need to move or flip. Easy!",
+          "ingredients": [],
+          "skills": [
+            {
+              "name": "Roasting"
+            }
+          ],
+          "text": "Once the oven is preheated, throw them in and let them cook for about 40 minutes. No need to move or flip. Easy!",
+          "time_estimate": null
+        }
+      ]
+    },
+    {
+      "name": "",
+      "steps": [
+        {
+          "equipment": [
+            {
+              "name": "strainer",
+              "quantity": "1"
+            }
+          ],
+          "flavor_text": "Lentils time! Measure out one half cup of your {i, brown lentils, 1} and use a {e, strainer, 1} to rinse them under cool water. Set them aside. Lentils aren't typically processed at all before they're packaged, which is why we're rinsing them off.",
+          "ingredients": [
+            {
+              "name": "brown lentils",
+              "new": false,
+              "quantity": 0.5,
+              "unit": "cup"
+            }
+          ],
+          "skills": [],
+          "text": "Lentils time! Measure out one half cup of your brown lentils and use a strainer to rinse them under cool water. Set them aside. Lentils aren't typically processed at all before they're packaged, which is why we're rinsing them off.",
+          "time_estimate": null
+        },
+        {
+          "equipment": [
+            {
+              "name": "cutting knife",
+              "quantity": "1"
+            },
+            {
+              "name": "measuring cup",
+              "quantity": "1"
+            }
+          ],
+          "flavor_text": "Dice up half of your {i, yellow onion, 1} and using a {e, measuring cup, 1}, measure out 1.5 cups of {i, chicken broth, 2} or water.",
+          "ingredients": [
+            {
+              "name": "yellow onion",
+              "new": false,
+              "quantity": "0.5",
+              "unit": "onion"
+            },
+            {
+              "name": "chicken broth",
+              "new": false,
+              "quantity": 1.5,
+              "unit": "cups"
+            }
+          ],
+          "skills": [
+            {
+              "name": "Dicing"
+            }
+          ],
+          "text": "Dice up half of your yellow onion and using a measuring cup, measure out 1.5 cups of chicken broth or water.",
+          "time_estimate": null
+        },
+        {
+          "equipment": [
+            {
+              "name": "small pot",
+              "quantity": "1"
+            }
+          ],
+          "flavor_text": "Place a {e, small pot, 1} or saucepan over medium heat. Once the pot is hot, add a splash of olive oil.",
+          "ingredients": [],
+          "skills": [],
+          "text": "Place a small pot or saucepan over medium heat. Once the pot is hot, add a splash of olive oil.",
+          "time_estimate": null
+        },
+        {
+          "equipment": [],
+          "flavor_text": "Once your oil is hot, add your diced yellow onion. Cook for about 3-4 minutes until they soften. Try not to let them get too brown around the edges.",
+          "ingredients": [],
+          "skills": [
+            {
+              "name": "Sauteing"
+            }
+          ],
+          "text": "Once your oil is hot, add your diced yellow onion. Cook for about 3-4 minutes until they soften. Try not to let them get too brown around the edges.",
+          "time_estimate": null
+        },
+        {
+          "equipment": [],
+          "flavor_text": "To the softened onion, add about 1/2 tsp each of the following, {i, cumin, 1}, {i, turmeric, 2} -optional-, {i, curry powder, 3}, and {i, chili powder, 3} if you want some heat in the dish.",
+          "ingredients": [
+            {
+              "name": "cumin",
+              "new": false,
+              "quantity": "0.5",
+              "unit": "tsp"
+            },
+            {
+              "name": "turmeric",
+              "new": false,
+              "quantity": "0.5",
+              "unit": "tsp"
+            },
+            {
+              "name": "chili powder",
+              "new": false,
+              "quantity": "0.5",
+              "unit": "tsp"
+            }
+          ],
+          "skills": [
+            {
+              "name": "Seasoning"
+            }
+          ],
+          "text": "To the softened onion, add about 1/2 tsp each of the following, cumin, turmeric -optional-, curry powder, and chili powder if you want some heat in the dish.",
+          "time_estimate": null
+        },
+        {
+          "equipment": [],
+          "flavor_text": "Stir the spices into the onions for only about 30 seconds, making sure that they don't turn black, then add your {i, chicken broth, 1} or water.",
+          "ingredients": [
+            {
+              "name": "chicken broth",
+              "new": false,
+              "quantity": "1.5",
+              "unit": "cups"
+            }
+          ],
+          "skills": [],
+          "text": "Stir the spices into the onions for only about 30 seconds, making sure that they don't turn black, then add your chicken broth or water.",
+          "time_estimate": null
+        }
+      ]
+    },
+    {
+      "name": "",
+      "steps": [
+        {
+          "equipment": [],
+          "flavor_text": "Add your {i, brown lentils, 1} to the mixture and bring the contents to a boil.",
+          "ingredients": [
+            {
+              "name": "brown lentils",
+              "new": false,
+              "quantity": "0.5",
+              "unit": "cups"
+            }
+          ],
+          "skills": [
+            {
+              "name": "Lentils"
+            }
+          ],
+          "text": "Add your brown lentils to the mixture and bring the contents to a boil.",
+          "time_estimate": null
+        },
+        {
+          "equipment": [],
+          "flavor_text": "Once it boils, turn the heat to a simmer and cover the pot.",
+          "ingredients": [],
+          "skills": [],
+          "text": "Once it boils, turn the heat to a simmer and cover the pot.",
+          "time_estimate": null
+        },
+        {
+          "equipment": [],
+          "flavor_text": "Let the lentils cook over the heat for about 20-30 minutes! You're in the waiting game now, so take some time to clean up or relax.",
+          "ingredients": [],
+          "skills": [],
+          "text": "Let the lentils cook over the heat for about 20-30 minutes! You're in the waiting game now, so take some time to clean up or relax.",
+          "time_estimate": null
+        }
+      ]
+    },
+    {
+      "name": "",
+      "steps": [
+        {
+          "equipment": [],
+          "flavor_text": "To check on the chicken, take out a thigh and cut into the largest part to see if it's done. Other than a thermometer (which should read 165F), there is really not a more reliable way!",
+          "ingredients": [],
+          "skills": [],
+          "text": "To check on the chicken, take out a thigh and cut into the largest part to see if it's done. Other than a thermometer (which should read 165F), there is really not a more reliable way!",
+          "time_estimate": null
+        },
+        {
+          "equipment": [],
+          "flavor_text": "Check on the lentils. Almost all of the liquid should be absorbed and the lentils should hold their shape but not be hard. If there's still liquid, let them continue to cook until it's mostly absorbed. Try one for seasoning and add salt to taste (it will depend on the salinity of your chicken broth, but you're definitely going to want to add a good amount of salt.)",
+          "ingredients": [],
+          "skills": [
+            {
+              "name": "Seasoning"
+            }
+          ],
+          "text": "Check on the lentils. Almost all of the liquid should be absorbed and the lentils should hold their shape but not be hard. If there's still liquid, let them continue to cook until it's mostly absorbed. Try one for seasoning and add salt to taste (it will depend on the salinity of your chicken broth, but you're definitely going to want to add a good amount of salt.)",
+          "time_estimate": null
+        },
+        {
+          "equipment": [],
+          "flavor_text": "Plate up and optionally garnish the lentils with a dollop of Greek yogurt and a squeeze of lemon juice. Enjoy!",
+          "ingredients": [],
+          "skills": [
+            {
+              "name": "Garnishing"
+            }
+          ],
+          "text": "Plate up and optionally garnish the lentils with a dollop of Greek yogurt and a squeeze of lemon juice. Enjoy!",
+          "time_estimate": null
+        }
+      ]
+    }
+  ]
+}

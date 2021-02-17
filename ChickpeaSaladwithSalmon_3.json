@@ -1,0 +1,373 @@
+{
+  "description": "This salad is, in a word, refreshing. The addition of salmon makes it a well-balanced dinner, but the salad itself keeps wonderfully in the fridge and makes for an amazing lunch the next day. ",
+  "equipment": [
+    {
+      "name": "baking tray",
+      "quantity": "1"
+    },
+    {
+      "name": "strainer",
+      "quantity": "1"
+    },
+    {
+      "name": "can opener",
+      "quantity": "1"
+    },
+    {
+      "name": "medium bowl",
+      "quantity": "1"
+    },
+    {
+      "name": "cutting knife",
+      "quantity": "1"
+    },
+    {
+      "name": "fork",
+      "quantity": "1"
+    }
+  ],
+  "ingredients": [
+    {
+      "name": "salmon",
+      "new": false,
+      "quantity": "1",
+      "unit": "fillet"
+    },
+    {
+      "name": "olive oil",
+      "new": false,
+      "quantity": "2",
+      "unit": "tbsp"
+    },
+    {
+      "name": "chickpeas",
+      "new": false,
+      "quantity": "1",
+      "unit": "can"
+    },
+    {
+      "name": "shallot",
+      "new": false,
+      "quantity": "1",
+      "unit": "shallot"
+    },
+    {
+      "name": "fresh parsley",
+      "new": false,
+      "quantity": "1",
+      "unit": "bunch"
+    },
+    {
+      "name": "arugula",
+      "new": false,
+      "quantity": "2",
+      "unit": "cups"
+    },
+    {
+      "name": "feta cheese",
+      "new": false,
+      "quantity": "1",
+      "unit": "sprinkle"
+    },
+    {
+      "name": "red wine vinegar",
+      "new": false,
+      "quantity": "1",
+      "unit": "tbsp"
+    },
+    {
+      "name": "lemon",
+      "new": false,
+      "quantity": "0.5",
+      "unit": "lemon"
+    }
+  ],
+  "recipe_id": "3",
+  "recipe_name": "Chickpea Salad with Salmon",
+  "steps": [
+    {
+      "name": "",
+      "steps": [
+        {
+          "equipment": [],
+          "flavor_text": "Preheat your oven to 375F. OR ELSE. Just kidding.",
+          "ingredients": [],
+          "skills": [],
+          "text": "Preheat your oven to 375F. OR ELSE. Just kidding.",
+          "time_estimate": null
+        },
+        {
+          "equipment": [
+            {
+              "name": "baking tray",
+              "quantity": "1"
+            }
+          ],
+          "flavor_text": "Get out a {e, baking tray, 1} and rub about a teaspoon of olive oil over the {i, salmon, 1} until it has a shiny coat of oil.",
+          "ingredients": [
+            {
+              "name": "salmon",
+              "new": false,
+              "quantity": "1",
+              "unit": "fillet"
+            },
+            {
+              "name": "olive oil",
+              "new": false,
+              "quantity": 1.0,
+              "unit": "tbsp"
+            }
+          ],
+          "skills": [],
+          "text": "Get out a baking tray and rub about a teaspoon of olive oil over the salmon until it has a shiny coat of oil.",
+          "time_estimate": null
+        },
+        {
+          "equipment": [],
+          "flavor_text": "Sprinkle liberally with salt and pepper on both sides. Feel free to use any other seasonings you'd like! If you're happy, we're happy.",
+          "ingredients": [],
+          "skills": [
+            {
+              "name": "Seasoning"
+            }
+          ],
+          "text": "Sprinkle liberally with salt and pepper on both sides. Feel free to use any other seasonings you'd like! If you're happy, we're happy.",
+          "time_estimate": null
+        },
+        {
+          "equipment": [],
+          "flavor_text": "Place on the baking sheet and put into your preheated oven.",
+          "ingredients": [],
+          "skills": [],
+          "text": "Place on the baking sheet and put into your preheated oven.",
+          "time_estimate": null
+        },
+        {
+          "equipment": [],
+          "flavor_text": "Cook for about 10 minutes depending on thickness, until the translucent color is gone.",
+          "ingredients": [],
+          "skills": [],
+          "text": "Cook for about 10 minutes depending on thickness, until the translucent color is gone.",
+          "time_estimate": null
+        }
+      ]
+    },
+    {
+      "name": "",
+      "steps": [
+        {
+          "equipment": [],
+          "flavor_text": "While your salmon is cooking in the oven, let's whip up a delicious salad.",
+          "ingredients": [],
+          "skills": [],
+          "text": "While your salmon is cooking in the oven, let's whip up a delicious salad.",
+          "time_estimate": null
+        },
+        {
+          "equipment": [],
+          "flavor_text": "Did you know that chickpeas and garbanzo beans are the same thing? Your beans are actually peas! Or... the other way around?",
+          "ingredients": [],
+          "skills": [],
+          "text": "Did you know that chickpeas and garbanzo beans are the same thing? Your beans are actually peas! Or... the other way around?",
+          "time_estimate": null
+        },
+        {
+          "equipment": [
+            {
+              "name": "strainer",
+              "quantity": "1"
+            },
+            {
+              "name": "can opener",
+              "quantity": "1"
+            }
+          ],
+          "flavor_text": "Open your can of bean peas {i, chickpeas, 1} and drain the liquid. If you have a {e, strainer, 1} we recommend giving them a quick rinse to get rid of the slightly viscous texture.",
+          "ingredients": [
+            {
+              "name": "chickpeas",
+              "new": false,
+              "quantity": "1",
+              "unit": "can"
+            }
+          ],
+          "skills": [],
+          "text": "Open your can of bean peas chickpeas and drain the liquid. If you have a strainer we recommend giving them a quick rinse to get rid of the slightly viscous texture.",
+          "time_estimate": null
+        },
+        {
+          "equipment": [
+            {
+              "name": "medium bowl",
+              "quantity": "1"
+            }
+          ],
+          "flavor_text": "Pat them dry with a paper towel and throw them into a {e, medium bowl, 1}.",
+          "ingredients": [],
+          "skills": [],
+          "text": "Pat them dry with a paper towel and throw them into a medium bowl.",
+          "time_estimate": null
+        },
+        {
+          "equipment": [
+            {
+              "name": "cutting knife",
+              "quantity": 1.0
+            }
+          ],
+          "flavor_text": "Finely dice your {i, shallot, 1}. Add however much shallot you'd like in your salad to the bowl with the chickpeas. Discard the rest.",
+          "ingredients": [
+            {
+              "name": "shallot",
+              "new": false,
+              "quantity": "1",
+              "unit": "shallot"
+            }
+          ],
+          "skills": [
+            {
+              "name": "Dicing"
+            }
+          ],
+          "text": "Finely dice your shallot. Add however much shallot you'd like in your salad to the bowl with the chickpeas. Discard the rest.",
+          "time_estimate": null
+        },
+        {
+          "equipment": [
+            {
+              "name": "cutting knife",
+              "quantity": "1"
+            }
+          ],
+          "flavor_text": "Chop about a handful of your {i, fresh parsley, 1} into small, sprinklable pieces. Don't worry about the stems! You can trash the thick ones but the small ones bring great flavor. Add your chopped parsley to the bowl.",
+          "ingredients": [
+            {
+              "name": "fresh parsley",
+              "new": false,
+              "quantity": "1",
+              "unit": "bunch"
+            }
+          ],
+          "skills": [
+            {
+              "name": "Chopping"
+            }
+          ],
+          "text": "Chop about a handful of your fresh parsley into small, sprinklable pieces. Don't worry about the stems! You can trash the thick ones but the small ones bring great flavor. Add your chopped parsley to the bowl.",
+          "time_estimate": null
+        },
+        {
+          "equipment": [],
+          "flavor_text": "Add a big handful of {i, arugula, 1} to the bowl.",
+          "ingredients": [
+            {
+              "name": "arugula",
+              "new": false,
+              "quantity": "2",
+              "unit": "cups"
+            }
+          ],
+          "skills": [],
+          "text": "Add a big handful of arugula to the bowl.",
+          "time_estimate": null
+        },
+        {
+          "equipment": [],
+          "flavor_text": "Add your desired amount of {i, feta cheese, 1} to the salad. All about you baby!",
+          "ingredients": [
+            {
+              "name": "feta cheese",
+              "new": false,
+              "quantity": "1",
+              "unit": "sprinkle"
+            }
+          ],
+          "skills": [],
+          "text": "Add your desired amount of feta cheese to the salad. All about you baby!",
+          "time_estimate": null
+        },
+        {
+          "equipment": [],
+          "flavor_text": "Let's dress this puppy! We can dress it right in the bowl.",
+          "ingredients": [],
+          "skills": [],
+          "text": "Let's dress this puppy! We can dress it right in the bowl.",
+          "time_estimate": null
+        },
+        {
+          "equipment": [],
+          "flavor_text": "Add about 2 tbsp of {i, olive oil, 1}, then 1 tbsp of {i, red wine vinegar, 2} (if you don't have red wine vinegar you can substitute with any vinegar you have). Squeeze the juice of half of your {i, lemon, 3} into the bowl. Add a healthy pinch of salt and pepper and a sprinkle of red chili flakes for some spice.",
+          "ingredients": [
+            {
+              "name": "olive oil",
+              "new": false,
+              "quantity": "2",
+              "unit": "tbsp"
+            },
+            {
+              "name": "red wine vinegar",
+              "new": false,
+              "quantity": "1",
+              "unit": "tbsp"
+            },
+            {
+              "name": "lemon",
+              "new": false,
+              "quantity": "0.5",
+              "unit": "lemon"
+            }
+          ],
+          "skills": [
+            {
+              "name": "Salad Dressing"
+            }
+          ],
+          "text": "Add about 2 tbsp of olive oil, then 1 tbsp of red wine vinegar (if you don't have red wine vinegar you can substitute with any vinegar you have). Squeeze the juice of half of your lemon into the bowl. Add a healthy pinch of salt and pepper and a sprinkle of red chili flakes for some spice.",
+          "time_estimate": null
+        },
+        {
+          "equipment": [],
+          "flavor_text": "Mix the contents, then taste for seasoning! Need more punch? Add more acid in the form of lemon or vinegar. Chickpeas taste bland? Add a bit more salt. Too acidic? Drizzle in a bit more olive oil, or even some honey. Taste taste taste!",
+          "ingredients": [],
+          "skills": [
+            {
+              "name": "Tasting for Seasoning"
+            }
+          ],
+          "text": "Mix the contents, then taste for seasoning! Need more punch? Add more acid in the form of lemon or vinegar. Chickpeas taste bland? Add a bit more salt. Too acidic? Drizzle in a bit more olive oil, or even some honey. Taste taste taste!",
+          "time_estimate": null
+        }
+      ]
+    },
+    {
+      "name": "",
+      "steps": [
+        {
+          "equipment": [
+            {
+              "name": "fork",
+              "quantity": "1"
+            }
+          ],
+          "flavor_text": "Check on your salmon. Apply some pressure to the outside of the salmon with a fork. If it starts to flake, or you can see the inside of the salmon is no longer translucent, it's done!",
+          "ingredients": [],
+          "skills": [
+            {
+              "name": "Checking Doneness"
+            }
+          ],
+          "text": "Check on your salmon. Apply some pressure to the outside of the salmon with a fork. If it starts to flake, or you can see the inside of the salmon is no longer translucent, it's done!",
+          "time_estimate": null
+        },
+        {
+          "equipment": [],
+          "flavor_text": "Plate up the salmon on top of your salad and enjoy!",
+          "ingredients": [],
+          "skills": [],
+          "text": "Plate up the salmon on top of your salad and enjoy!",
+          "time_estimate": null
+        }
+      ]
+    }
+  ]
+}
