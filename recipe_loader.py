@@ -180,6 +180,48 @@ def check_recipe(recipe_json):
         print(f"{recipe_name} is not ready to add to the database")
 
 
+def purge_skills(files):
+    skills = set()
+
+    for file in files:
+        with open(file, 'r') as f:
+            recipe_dict = json.loads(f.read())
+            for macro_step in recipe_dict['steps']:
+                for micro_step in macro_step['steps']:
+                    for skill in micro_step['skills']:
+                        skills.add(skill['name'].lower())
+
+    get_current_skills_query = '''MATCH (s:Skill) RETURN s.name AS skill'''
+
+    results = neo4j_db.run(get_current_skills_query)
+    db_skills = set()
+    for record in results:
+        db_skills.add(record.get('skill').lower())
+
+    print(f'Skills in the database: {", ".join(db_skills)}')
+
+    new_skills = list(skills - db_skills)
+    stale_skills = list(db_skills - skills)
+
+    print(f'Skills in database but not in recipes: {", ".join(stale_skills)}')
+    print(f'Skills in recipe directory but not in database: {", ".join(new_skills)}')
+
+    if len(stale_skills) > 0:
+        print("Purging the stale skills from the database")
+        remove_skills_query = '''UNWIND $stale_skills AS skill
+        OPTIONAL MATCH (s:Skill {name: skill})
+        DETACH DELETE s
+        RETURN count(s) as count
+        '''
+
+        neo4j_db.run(remove_skills_query, parameters={'stale_skills': stale_skills})
+
+        deleted_skills = 0
+        for record in results:
+            deleted_skills = record.get('count')
+        print(f'{deleted_skills} skills successfully removed from the database')
+
+
 def main():
     if len(sys.argv) != 3:
         print('Usage: ./recipe_loader clear|update|add|check recipe_directory')
@@ -261,6 +303,17 @@ def main():
                 with open(os.path.join(directory, filename), 'r') as file:
                     json_string = file.read()
                     check_recipe(json_string)
+    elif command.lower() == 'purge_skills':
+        if os.path.isfile(directory):
+            print("Expecting a directory of recipes to purge skills.")
+
+        abs_directory = os.path.abspath(directory)
+        _, _, filenames = next(os.walk(directory))
+        print('Fetching skills from all existing recipes')
+        filenames = [os.path.join(directory, file) for file in filenames]
+
+        purge_skills(filenames)
+
     else:
         print('Usage: ./recipe_loader clear|update|add|check recipe_directory')
         return
