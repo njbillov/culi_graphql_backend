@@ -357,6 +357,7 @@ class Account(graphene.ObjectType):
         for record in results:
             count = record.get("skill_count")
             skill_name = record.get("skill")
+            print(f"count: {skill_count}, skill: {skill}")
             skills[skill_name]["progress"] = max(count / 10, 1)
 
         user_skills = {'skills': list(skills.values)}
