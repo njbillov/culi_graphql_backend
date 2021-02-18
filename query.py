@@ -331,17 +331,35 @@ class Account(graphene.ObjectType):
     @staticmethod
     def resolve_skills(parent, info):
         session = parent['session']
-        query = f'MATCH (a:Account {{session: "{session}"}}),(s:Skill) OPTIONAL MATCH (a)-[c:HasSkill]->(s) RETURN ' \
-                f'COALESCE(c.progress, 0) as progress, s.name as name'
-        results = get_db().run(query)
-        skills = []
+        params = {'session': session}
+        query = 'MATCH (a:Account {session: $session}),(s:Skill) OPTIONAL MATCH (a)-[c:HasSkill]->(s) RETURN ' \
+                'COALESCE(c.progress, 0) as progress, s.name as name'
+        results = get_db().run(query, parameters = params)
+        skills = {}
         for record in results:
             d = {"progress": record.get("progress") if not None else 0, "name": record.get("name")}
             if "progress" not in d:
                 d['progress'] = 0
-            skills.append(d)
+            skills[d['name']] = d
             # print(d)
-        user_skills = {'skills': skills}
+
+        get_completed_recipe_skills = '''MATCH (a:Account {session: $session}),
+            (a)-[c:Made]->(r: Recipe)
+            WITH a, c, r CALL {
+                WITH a, c, r:
+                UNWIND r.skills as skills
+                RETURN skill
+            }
+            RETURN skill, count(skill) as skill_count
+        '''
+
+        results = get_db.run(query, parameters: params)
+        for record in results:
+            count = record.get("skill_count")
+            skill_name = record.get("skill")
+            skills[skill_name]["progress"] = max(count / 10, 1)
+            
+        user_skills = {'skills': list(skills.values)}
         # print(user_skills)
         return skills
 
