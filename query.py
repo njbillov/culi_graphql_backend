@@ -353,12 +353,12 @@ class Account(graphene.ObjectType):
             RETURN skill, count(skill) as skill_count
         '''
 
-        results = get_db.run(query, parameters: params)
+        results = get_db.run(query, parameters= params)
         for record in results:
             count = record.get("skill_count")
             skill_name = record.get("skill")
             skills[skill_name]["progress"] = max(count / 10, 1)
-            
+
         user_skills = {'skills': list(skills.values)}
         # print(user_skills)
         return skills
