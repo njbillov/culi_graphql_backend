@@ -361,10 +361,10 @@ class Account(graphene.ObjectType):
             print(f"count: {count}, skill: {skill_name}")
             if count is not None:
                 skills[skill_name]["progress"] = min(count / 10, 1)
-        print(list(skills.values()))
-        user_skills = {'skills': list(skills.values())}
-        print(user_skills)
-        return skills
+        # print(list(skills.values()))
+        # user_skills = {'skills': list(skills.values())}
+
+        return list(skills.values())
 
     @staticmethod
     def resolve_flags(parent, info):
