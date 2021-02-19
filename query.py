@@ -346,22 +346,24 @@ class Account(graphene.ObjectType):
         get_completed_recipe_skills = '''MATCH (a:Account {session: $session}),
             (a)-[c:Made]->(r: Recipe)
             WITH a, c, r CALL {
-                WITH a, c, r:
-                UNWIND r.skills as skills
+                WITH a, c, r
+                UNWIND r.skills as skill
                 RETURN skill
             }
-            RETURN skill, count(skill) as skill_count
+            RETURN skill , count(skill) as skill_count
         '''
 
-        results = get_db.run(query, parameters= params)
+        results = get_db().run(get_completed_recipe_skills, parameters= params)
         for record in results:
             count = record.get("skill_count")
+            print(record)
             skill_name = record.get("skill")
-            print(f"count: {skill_count}, skill: {skill}")
-            skills[skill_name]["progress"] = max(count / 10, 1)
-
-        user_skills = {'skills': list(skills.values)}
-        # print(user_skills)
+            print(f"count: {count}, skill: {skill_name}")
+            if count is not None:
+                skills[skill_name]["progress"] = min(count / 10, 1)
+        print(list(skills.values()))
+        user_skills = {'skills': list(skills.values())}
+        print(user_skills)
         return skills
 
     @staticmethod
