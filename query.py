@@ -360,7 +360,7 @@ class Account(graphene.ObjectType):
             skill_name = record.get("skill")
             print(f"count: {count}, skill: {skill_name}")
             if count is not None:
-                skills[skill_name]["progress"] = min(count / 10, 1)
+                skills[skill_name]["progress"] = min(count / 7, 1)
         # print(list(skills.values()))
         # user_skills = {'skills': list(skills.values())}
 
