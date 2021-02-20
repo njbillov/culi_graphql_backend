@@ -64,7 +64,7 @@ def upload_object(key: str, content: str, tags="", bucket: str = BUCKET) -> Tupl
     #     tag_param = "&".join([f'key{i + 1}={tag}' for i, tag in enumerate(tags)])
     s3_client = boto3.client('s3')
     try:
-        response = s3_client.put_object(Key=key, Bucket=bucket, Body=content, Tagging=tags)
+        response = s3_client.put_object(Key=key, Bucket=bucket, Body=content, Tagging="&".join(tags))
     except ClientError as e:
         print(e)
         return False, key
