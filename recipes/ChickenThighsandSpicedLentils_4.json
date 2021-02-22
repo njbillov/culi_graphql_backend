@@ -82,7 +82,7 @@
           "ingredients": [],
           "skills": [],
           "text": "Preheat your oven to 400F.",
-          "time_estimate": null
+          "time_estimate": 0
         },
         {
           "equipment": [],
@@ -97,7 +97,7 @@
           ],
           "skills": [],
           "text": "Get out your bone-in, skin-on chicken thighs.",
-          "time_estimate": null
+          "time_estimate": 0
         },
         {
           "equipment": [
@@ -110,7 +110,7 @@
           "ingredients": [],
           "skills": [],
           "text": "Pat them really dry with paper towels, especially the skin, as this is what allows them to get crispy.",
-          "time_estimate": null
+          "time_estimate": 0
         },
         {
           "equipment": [],
@@ -122,7 +122,7 @@
             }
           ],
           "text": "Rub the chicken thighs with a layer of olive oil, then season generously with salt and pepper (and any other seasonings or dry herbs you're a fan of!)",
-          "time_estimate": null
+          "time_estimate": 0
         },
         {
           "equipment": [
@@ -135,7 +135,7 @@
           "ingredients": [],
           "skills": [],
           "text": "Place them on a rimmed baking sheet SKIN SIDE UP. Exposing the skin to the heat will help them crisp, and trust us, you want crispy.",
-          "time_estimate": null
+          "time_estimate": 0
         },
         {
           "equipment": [],
@@ -147,7 +147,7 @@
             }
           ],
           "text": "Once the oven is preheated, throw them in and let them cook for about 40 minutes. No need to move or flip. Easy!",
-          "time_estimate": null
+          "time_estimate": 0
         }
       ]
     },
@@ -172,7 +172,7 @@
           ],
           "skills": [],
           "text": "Lentils time! Measure out one half cup of your brown lentils and use a strainer to rinse them under cool water. Set them aside. Lentils aren't typically processed at all before they're packaged, which is why we're rinsing them off.",
-          "time_estimate": null
+          "time_estimate": 0
         },
         {
           "equipment": [
@@ -206,7 +206,7 @@
             }
           ],
           "text": "Dice up half of your yellow onion and using a measuring cup, measure out 1.5 cups of chicken broth or water.",
-          "time_estimate": null
+          "time_estimate": 0
         },
         {
           "equipment": [
@@ -219,7 +219,7 @@
           "ingredients": [],
           "skills": [],
           "text": "Place a small pot or saucepan over medium heat. Once the pot is hot, add a splash of olive oil.",
-          "time_estimate": null
+          "time_estimate": 0
         },
         {
           "equipment": [],
@@ -231,7 +231,7 @@
             }
           ],
           "text": "Once your oil is hot, add your diced yellow onion. Cook for about 3-4 minutes until they soften. Try not to let them get too brown around the edges.",
-          "time_estimate": null
+          "time_estimate": 0
         },
         {
           "equipment": [],
@@ -262,7 +262,7 @@
             }
           ],
           "text": "To the softened onion, add about 1/2 tsp each of the following, cumin, turmeric -optional-, curry powder, and chili powder if you want some heat in the dish.",
-          "time_estimate": null
+          "time_estimate": 0
         },
         {
           "equipment": [],
@@ -277,7 +277,7 @@
           ],
           "skills": [],
           "text": "Stir the spices into the onions for only about 30 seconds, making sure that they don't turn black, then add your chicken broth or water.",
-          "time_estimate": null
+          "time_estimate": 0
         }
       ]
     },
@@ -301,7 +301,7 @@
             }
           ],
           "text": "Add your brown lentils to the mixture and bring the contents to a boil.",
-          "time_estimate": null
+          "time_estimate": 0
         },
         {
           "equipment": [],
@@ -309,7 +309,7 @@
           "ingredients": [],
           "skills": [],
           "text": "Once it boils, turn the heat to a simmer and cover the pot.",
-          "time_estimate": null
+          "time_estimate": 0
         },
         {
           "equipment": [],
@@ -317,7 +317,7 @@
           "ingredients": [],
           "skills": [],
           "text": "Let the lentils cook over the heat for about 20-30 minutes! You're in the waiting game now, so take some time to clean up or relax.",
-          "time_estimate": null
+          "time_estimate": 0
         }
       ]
     },
@@ -330,7 +330,7 @@
           "ingredients": [],
           "skills": [],
           "text": "To check on the chicken, take out a thigh and cut into the largest part to see if it's done. Other than a thermometer (which should read 165F), there is really not a more reliable way!",
-          "time_estimate": null
+          "time_estimate": 0
         },
         {
           "equipment": [],
@@ -342,7 +342,7 @@
             }
           ],
           "text": "Check on the lentils. Almost all of the liquid should be absorbed and the lentils should hold their shape but not be hard. If there's still liquid, let them continue to cook until it's mostly absorbed. Try one for seasoning and add salt to taste (it will depend on the salinity of your chicken broth, but you're definitely going to want to add a good amount of salt.)",
-          "time_estimate": null
+          "time_estimate": 0
         },
         {
           "equipment": [],
@@ -354,9 +354,10 @@
             }
           ],
           "text": "Plate up and optionally garnish the lentils with a dollop of Greek yogurt and a squeeze of lemon juice. Enjoy!",
-          "time_estimate": null
+          "time_estimate": 0
         }
       ]
     }
-  ]
+  ],
+  "time_estimate": null
 }

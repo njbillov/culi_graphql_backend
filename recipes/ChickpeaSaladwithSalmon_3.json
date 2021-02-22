@@ -94,7 +94,7 @@
           "ingredients": [],
           "skills": [],
           "text": "Preheat your oven to 375F. OR ELSE. Just kidding.",
-          "time_estimate": null
+          "time_estimate": 0
         },
         {
           "equipment": [
@@ -120,7 +120,7 @@
           ],
           "skills": [],
           "text": "Get out a baking tray and rub about a teaspoon of olive oil over the salmon until it has a shiny coat of oil.",
-          "time_estimate": null
+          "time_estimate": 0
         },
         {
           "equipment": [],
@@ -132,7 +132,7 @@
             }
           ],
           "text": "Sprinkle liberally with salt and pepper on both sides. Feel free to use any other seasonings you'd like! If you're happy, we're happy.",
-          "time_estimate": null
+          "time_estimate": 0
         },
         {
           "equipment": [],
@@ -140,7 +140,7 @@
           "ingredients": [],
           "skills": [],
           "text": "Place on the baking sheet and put into your preheated oven.",
-          "time_estimate": null
+          "time_estimate": 0
         },
         {
           "equipment": [],
@@ -148,7 +148,7 @@
           "ingredients": [],
           "skills": [],
           "text": "Cook for about 10 minutes depending on thickness, until the translucent color is gone.",
-          "time_estimate": null
+          "time_estimate": 0
         }
       ]
     },
@@ -161,7 +161,7 @@
           "ingredients": [],
           "skills": [],
           "text": "While your salmon is cooking in the oven, let's whip up a delicious salad.",
-          "time_estimate": null
+          "time_estimate": 0
         },
         {
           "equipment": [],
@@ -169,7 +169,7 @@
           "ingredients": [],
           "skills": [],
           "text": "Did you know that chickpeas and garbanzo beans are the same thing? Your beans are actually peas! Or... the other way around?",
-          "time_estimate": null
+          "time_estimate": 0
         },
         {
           "equipment": [
@@ -193,7 +193,7 @@
           ],
           "skills": [],
           "text": "Open your can of bean peas chickpeas and drain the liquid. If you have a strainer we recommend giving them a quick rinse to get rid of the slightly viscous texture.",
-          "time_estimate": null
+          "time_estimate": 0
         },
         {
           "equipment": [
@@ -206,7 +206,7 @@
           "ingredients": [],
           "skills": [],
           "text": "Pat them dry with a paper towel and throw them into a medium bowl.",
-          "time_estimate": null
+          "time_estimate": 0
         },
         {
           "equipment": [
@@ -230,7 +230,7 @@
             }
           ],
           "text": "Finely dice your shallot. Add however much shallot you'd like in your salad to the bowl with the chickpeas. Discard the rest.",
-          "time_estimate": null
+          "time_estimate": 0
         },
         {
           "equipment": [
@@ -254,7 +254,7 @@
             }
           ],
           "text": "Chop about a handful of your fresh parsley into small, sprinklable pieces. Don't worry about the stems! You can trash the thick ones but the small ones bring great flavor. Add your chopped parsley to the bowl.",
-          "time_estimate": null
+          "time_estimate": 0
         },
         {
           "equipment": [],
@@ -269,7 +269,7 @@
           ],
           "skills": [],
           "text": "Add a big handful of arugula to the bowl.",
-          "time_estimate": null
+          "time_estimate": 0
         },
         {
           "equipment": [],
@@ -284,7 +284,7 @@
           ],
           "skills": [],
           "text": "Add your desired amount of feta cheese to the salad. All about you baby!",
-          "time_estimate": null
+          "time_estimate": 0
         },
         {
           "equipment": [],
@@ -292,7 +292,7 @@
           "ingredients": [],
           "skills": [],
           "text": "Let's dress this puppy! We can dress it right in the bowl.",
-          "time_estimate": null
+          "time_estimate": 0
         },
         {
           "equipment": [],
@@ -323,7 +323,7 @@
             }
           ],
           "text": "Add about 2 tbsp of olive oil, then 1 tbsp of red wine vinegar (if you don't have red wine vinegar you can substitute with any vinegar you have). Squeeze the juice of half of your lemon into the bowl. Add a healthy pinch of salt and pepper and a sprinkle of red chili flakes for some spice.",
-          "time_estimate": null
+          "time_estimate": 0
         },
         {
           "equipment": [],
@@ -335,7 +335,7 @@
             }
           ],
           "text": "Mix the contents, then taste for seasoning! Need more punch? Add more acid in the form of lemon or vinegar. Chickpeas taste bland? Add a bit more salt. Too acidic? Drizzle in a bit more olive oil, or even some honey. Taste taste taste!",
-          "time_estimate": null
+          "time_estimate": 0
         }
       ]
     },
@@ -357,7 +357,7 @@
             }
           ],
           "text": "Check on your salmon. Apply some pressure to the outside of the salmon with a fork. If it starts to flake, or you can see the inside of the salmon is no longer translucent, it's done!",
-          "time_estimate": null
+          "time_estimate": 0
         },
         {
           "equipment": [],
@@ -365,9 +365,10 @@
           "ingredients": [],
           "skills": [],
           "text": "Plate up the salmon on top of your salad and enjoy!",
-          "time_estimate": null
+          "time_estimate": 0
         }
       ]
     }
-  ]
+  ],
+  "time_estimate": null
 }

@@ -88,7 +88,7 @@
           "ingredients": [],
           "skills": [],
           "text": "Let's make Pico de Gallo, shall we?",
-          "time_estimate": null
+          "time_estimate": 0
         },
         {
           "equipment": [
@@ -112,7 +112,7 @@
             }
           ],
           "text": "Dice up 1/4 of your yellow or white onion. Try your best to accomplish a small dice. Just remember to go slow and steady. Add the onion to a medium bowl.",
-          "time_estimate": null
+          "time_estimate": 0
         },
         {
           "equipment": [],
@@ -131,7 +131,7 @@
             }
           ],
           "text": "Chop up a handful of fresh cilantro. If you're a fan, add a lot, if not, do some reflecting.",
-          "time_estimate": null
+          "time_estimate": 0
         },
         {
           "equipment": [],
@@ -150,7 +150,7 @@
             }
           ],
           "text": "Cut your jalapeno in half lengthwise, then remove the white pith and the seeds (the spiciest parts) so you're left with just the green. Dice up half and add it to the bowl.",
-          "time_estimate": null
+          "time_estimate": 0
         },
         {
           "equipment": [],
@@ -169,7 +169,7 @@
             }
           ],
           "text": "Next, dice up your 2 roma tomatoes. We recommend cutting them into slices like you would put on your sandwich, and then stacking a couple slices and dicing them from there. Don't worry about any goop that comes out, you can leave it behind. Add the tomato to the bowl.",
-          "time_estimate": null
+          "time_estimate": 0
         },
         {
           "equipment": [],
@@ -188,7 +188,7 @@
             }
           ],
           "text": "Season the contents of the bowl with a big pinch of salt and pepper, then add the juice of a full lime. Mix everything together and let sit while we get our tacos going. The acidic lime juice will mellow out the harshness from the raw onion and jalapeno.",
-          "time_estimate": null
+          "time_estimate": 0
         }
       ]
     },
@@ -206,7 +206,7 @@
           "ingredients": [],
           "skills": [],
           "text": "For the eggs, we're doing a quick scramble, but we're NOT going to overcook them. We're talking on the heat for no more than 30 seconds. for cooking them we highly recommend using a silicone spatula, but a wooden spoon can work.",
-          "time_estimate": null
+          "time_estimate": 0
         },
         {
           "equipment": [
@@ -226,7 +226,7 @@
           ],
           "skills": [],
           "text": "Whisk together 2-4 eggs (we don't know how hungry you are) in a small bowl with a big pinch of salt and pepper until homogeneous.",
-          "time_estimate": null
+          "time_estimate": 0
         },
         {
           "equipment": [],
@@ -245,7 +245,7 @@
             }
           ],
           "text": "Slice two scallions into pieces that are about 1/2 an inch long.",
-          "time_estimate": null
+          "time_estimate": 0
         },
         {
           "equipment": [
@@ -262,7 +262,7 @@
             }
           ],
           "text": "Heat up a non-stick pan over medium heat with a splash of olive oil. Once the oil is hot, add your sliced scallions to the pan and season with a bit of salt.",
-          "time_estimate": null
+          "time_estimate": 0
         },
         {
           "equipment": [],
@@ -274,7 +274,7 @@
             }
           ],
           "text": "When the scallions are nicely browned (2 minutes ish), get ready to add your eggs. Once they hit the pan, you're going to continually push them around with the edge of your spatula so nothing stays on the bottom for more than a couple seconds. The whole process should take no more than 30 seconds.",
-          "time_estimate": null
+          "time_estimate": 0
         },
         {
           "equipment": [],
@@ -282,7 +282,7 @@
           "ingredients": [],
           "skills": [],
           "text": "As soon as the eggs solidify, take them off the heat and slide them onto a plate so they avoid cooking in the residual heat from the pan.",
-          "time_estimate": null
+          "time_estimate": 0
         }
       ]
     },
@@ -302,7 +302,7 @@
           ],
           "skills": [],
           "text": "Just before serving, heat up your tortillas. We recommend you place them directly onto your stovetop if you have a gas burner. It gives them a nice char and grilled flavor.",
-          "time_estimate": null
+          "time_estimate": 0
         },
         {
           "equipment": [
@@ -330,7 +330,7 @@
             }
           ],
           "text": "Turn your smallest gas burner to medium heat. Place a tortilla directly on top of the flame (it won't catch on fire, we promise). Use the pair of tongs to flip once it picks up the amount of color/char that you want. Repeat for all tortillas.",
-          "time_estimate": null
+          "time_estimate": 0
         },
         {
           "equipment": [],
@@ -338,9 +338,10 @@
           "ingredients": [],
           "skills": [],
           "text": "Serve with avocado if you have it! Aren't breakfast tacos comforting?",
-          "time_estimate": null
+          "time_estimate": 30
         }
       ]
     }
-  ]
+  ],
+  "time_estimate": 30
 }

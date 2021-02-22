@@ -92,7 +92,7 @@
           ],
           "skills": [],
           "text": "Fill up your large pot about halfway with water and set over high heat to start boiling. Add a huge pinch of salt to the water. This ensures that your pasta will be seasoned and your Italian friend will finally respect you.",
-          "time_estimate": null
+          "time_estimate": 0
         },
         {
           "equipment": [
@@ -116,7 +116,7 @@
             }
           ],
           "text": "Peel and slice four cloves of your garlic. We're slicing the garlic into rounds by cutting perpendicular to the length of each clove. We're keeping the pieces larger because garlic burns easily, and we're going to be cooking it over direct heat for a while.",
-          "time_estimate": null
+          "time_estimate": 0
         },
         {
           "equipment": [
@@ -140,7 +140,7 @@
             }
           ],
           "text": "Chop up about a handful of your fresh parsley into small pieces. Try to get a pretty fine chop so the parsley can get really evenly distributed later on.",
-          "time_estimate": null
+          "time_estimate": 0
         },
         {
           "equipment": [
@@ -160,7 +160,7 @@
           ],
           "skills": [],
           "text": "In a pan or skillet, heat up about 4 tbsp or 1/4 a cup of olive oil over medium-low heat.",
-          "time_estimate": null
+          "time_estimate": 0
         }
       ]
     },
@@ -180,7 +180,7 @@
           ],
           "skills": [],
           "text": "Once your water comes to a boil, drop in about half a box of your dried pasta and cook according to directions on the back of the box.",
-          "time_estimate": null
+          "time_estimate": 0
         },
         {
           "equipment": [],
@@ -195,7 +195,7 @@
           ],
           "skills": [],
           "text": "Once your oil is hot, add your chopped garlic to the pan and take a moment to savor that unbeatable aroma. Seriously do it. Season the garlic with a pinch of salt.",
-          "time_estimate": null
+          "time_estimate": 0
         },
         {
           "equipment": [],
@@ -214,7 +214,7 @@
             }
           ],
           "text": "Gently cook the garlic until you start to see the edges of your slices brown a little bit. At this point, turn off the heat and add about 1/4tsp of chili flakes to the oil and garlic and stir it in.",
-          "time_estimate": null
+          "time_estimate": 0
         }
       ]
     },
@@ -232,7 +232,7 @@
           "ingredients": [],
           "skills": [],
           "text": "Once your pasta is done cooking, collect about half a cup of pasta water in a measuring cup or mug and set aside.",
-          "time_estimate": null
+          "time_estimate": 0
         },
         {
           "equipment": [],
@@ -247,7 +247,7 @@
           ],
           "skills": [],
           "text": "Transfer the pasta into your oil, garlic, and chili flake mixture. Add your fresh squeeze of lemon and another sprinkle of salt and black pepper.",
-          "time_estimate": null
+          "time_estimate": 0
         },
         {
           "equipment": [],
@@ -259,7 +259,7 @@
             }
           ],
           "text": "Add a splash of pasta water and stir to combine, adding splashes of your pasta water as you go until the pasta looks well coated and evenly mixed.",
-          "time_estimate": null
+          "time_estimate": 0
         },
         {
           "equipment": [],
@@ -278,9 +278,10 @@
             }
           ],
           "text": "Plate and top with parmesan, more chili flakes, or whatever else you want and enjoy!",
-          "time_estimate": null
+          "time_estimate": 0
         }
       ]
     }
-  ]
+  ],
+  "time_estimate": null
 }

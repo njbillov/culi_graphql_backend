@@ -75,7 +75,7 @@
           "ingredients": [],
           "skills": [],
           "text": "Fill a pot about halfway with water and set it over high heat to boil. Make sure to salt the water heavily! The Italians do it, so we do too.",
-          "time_estimate": null
+          "time_estimate": 0
         },
         {
           "equipment": [],
@@ -103,7 +103,7 @@
             }
           ],
           "text": "Dice half of an onion. If it's a large onion or you would prefer a smoother sauce, only use a quarter. Mince 1-2 cloves of garlic.",
-          "time_estimate": null
+          "time_estimate": 0
         },
         {
           "equipment": [],
@@ -111,7 +111,7 @@
           "ingredients": [],
           "skills": [],
           "text": "Locate your tomato paste, pepper flakes, and heavy cream so you're not overwhelmed while you cook!",
-          "time_estimate": null
+          "time_estimate": 0
         }
       ]
     },
@@ -129,7 +129,7 @@
           "ingredients": [],
           "skills": [],
           "text": "Place a pan over medium heat and add a splash of olive oil.",
-          "time_estimate": null
+          "time_estimate": 0
         },
         {
           "equipment": [],
@@ -148,7 +148,7 @@
             }
           ],
           "text": "Once the oil is hot, add your onion to the pan and cook until translucent. Salt them a bit and stir occasionally (3-4 minutes).",
-          "time_estimate": null
+          "time_estimate": 0
         },
         {
           "equipment": [],
@@ -163,7 +163,7 @@
           ],
           "skills": [],
           "text": "Add about 1/2 tsp of chili flakes to the pan and stir them in for around 30 seconds. Feel free to use more or less. Trust yourself!",
-          "time_estimate": null
+          "time_estimate": 0
         },
         {
           "equipment": [],
@@ -182,7 +182,7 @@
             }
           ],
           "text": "Add 2 tbsp of vodka to the pan. Don't be afraid of the steam or noise! Stir the vodka around and wait for the liquid to reduce almost all the way (1-3 minutes). You just deglazed a pan!",
-          "time_estimate": null
+          "time_estimate": 0
         },
         {
           "equipment": [],
@@ -197,7 +197,7 @@
           ],
           "skills": [],
           "text": "Add about two heaping spoonfuls of 3 tbsp of tomato paste to the pan. Cook the paste for about 2-3 minutes to get rid of the raw flavor. It should darken in color and form an ugly looking heap of onions and paste.",
-          "time_estimate": null
+          "time_estimate": 0
         },
         {
           "equipment": [],
@@ -212,7 +212,7 @@
           ],
           "skills": [],
           "text": "Add 1/4 cup of heavy cream to the mixture and stir to combine until you have a vibrant, light orange sauce.",
-          "time_estimate": null
+          "time_estimate": 0
         },
         {
           "equipment": [],
@@ -220,7 +220,7 @@
           "ingredients": [],
           "skills": [],
           "text": "Add a pinch of salt and pepper and turn the heat down to the lowest setting.",
-          "time_estimate": null
+          "time_estimate": 0
         }
       ]
     },
@@ -240,7 +240,7 @@
           ],
           "skills": [],
           "text": "Add your desired amount of dried pasta (preferably rigatoni or penne) to your boiling water. About 1 cup of dried pasta is a serving. Cook the pasta for 1 minute less than the box instructs.",
-          "time_estimate": null
+          "time_estimate": 0
         },
         {
           "equipment": [
@@ -257,7 +257,7 @@
             }
           ],
           "text": "Once the pasta is done, kill the heat and use a measuring cup or mug to scoop out about a cup of pasta water. Add splashes of the collected pasta water to the sauce and stir until the desired consistency is reached. Add in your pasta and continue tinkering with the sauce consistency, adding in water and stirring as you go. Cook the pasta for about 1 more minute in the sauce.",
-          "time_estimate": null
+          "time_estimate": 0
         },
         {
           "equipment": [],
@@ -265,9 +265,10 @@
           "ingredients": [],
           "skills": [],
           "text": "Plate with parmesan cheese, more chili flakes, or anything else your heart desires. You deserve this pasta!",
-          "time_estimate": null
+          "time_estimate": 0
         }
       ]
     }
-  ]
+  ],
+  "time_estimate": null
 }

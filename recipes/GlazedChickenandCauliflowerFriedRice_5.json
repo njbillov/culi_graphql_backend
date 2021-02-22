@@ -99,7 +99,7 @@
           ],
           "skills": [],
           "text": "First, get out your chicken thighs and sprinkle them lightly with salt and black pepper.",
-          "time_estimate": null
+          "time_estimate": 0
         },
         {
           "equipment": [],
@@ -107,7 +107,7 @@
           "ingredients": [],
           "skills": [],
           "text": "Now let's build a marinade.",
-          "time_estimate": null
+          "time_estimate": 0
         },
         {
           "equipment": [
@@ -143,7 +143,7 @@
             }
           ],
           "text": "In your medium bowl, combine 1/4 cup of soy sauce, 1/4 cup of honey, and 1 tbsp sriracha. Mix the contents together, then add in your chicken thighs, making sure they're coated in the marinade. No need to cover or refrigerate.",
-          "time_estimate": null
+          "time_estimate": 0
         }
       ]
     },
@@ -156,7 +156,7 @@
           "ingredients": [],
           "skills": [],
           "text": "While the chicken takes a saucy bath, let's prepare the cauliflower fried rice.",
-          "time_estimate": null
+          "time_estimate": 0
         },
         {
           "equipment": [
@@ -176,7 +176,7 @@
           ],
           "skills": [],
           "text": "Microwave your bag of cauliflower rice according to the instructions on the package.",
-          "time_estimate": null
+          "time_estimate": 0
         },
         {
           "equipment": [
@@ -215,7 +215,7 @@
             }
           ],
           "text": "While that's heating, mince 1-2 cloves of garlic and about 1/2 an inch of ginger. Remember, scrape off the peel using the edge of a spoon. Mince half of a yellow onion.",
-          "time_estimate": null
+          "time_estimate": 0
         },
         {
           "equipment": [
@@ -228,7 +228,7 @@
           "ingredients": [],
           "skills": [],
           "text": "Place a pan or skillet over medium heat. We're going to season the fried rice with soy sauce and sesame oil if you have it, so you might want to have them handy.",
-          "time_estimate": null
+          "time_estimate": 0
         }
       ]
     },
@@ -248,7 +248,7 @@
           ],
           "skills": [],
           "text": "Once the pan is hot, add a splash of neutral oil (such as canola or vegetable oil, although olive oil will work in a pinch). When the oil is heated through, add your onion, garlic, and ginger, and stir often, making sure that the garlic doesn't burn and turn black.",
-          "time_estimate": null
+          "time_estimate": 0
         },
         {
           "equipment": [],
@@ -273,7 +273,7 @@
             }
           ],
           "text": "Season the veggies with a pinch of salt and continue to stir until onion is softened. After a couple minutes, add in your bag of cauliflower rice as well as about 1/2 cup of frozen peas and carrots. Add another good pinch of salt. Fried rice is an art not a science, so don't be too worried about measurements.",
-          "time_estimate": null
+          "time_estimate": 0
         },
         {
           "equipment": [],
@@ -285,7 +285,7 @@
             }
           ],
           "text": "Turn off the heat and taste. If it needs salt, you can add more soy sauce or just season with salt. Place the fried rice in a separate bowl and save the pan for the chicken. If you want you can wipe it out (let your effort level guide you here).",
-          "time_estimate": null
+          "time_estimate": 0
         }
       ]
     },
@@ -303,7 +303,7 @@
           "ingredients": [],
           "skills": [],
           "text": "Place the (probably not clean) pan over medium-high heat and add a splash of neutral oil.",
-          "time_estimate": null
+          "time_estimate": 0
         },
         {
           "equipment": [],
@@ -318,15 +318,15 @@
           ],
           "skills": [],
           "text": "Once the oil is hot, add in your chicken thighs. You should hear a sizzle.",
-          "time_estimate": null
+          "time_estimate": 0
         },
         {
           "equipment": [],
-          "flavor_text": "Cook them on one side for about 3-4 minutes. Flip them and sear the second side for about 1-2 minutes",
+          "flavor_text": "Cook them on one side for about 3-4 minutes. Flip them and sear the second side for the same amount of time. Once the chicken is finished cooking",
           "ingredients": [],
           "skills": [],
-          "text": "Cook them on one side for about 3-4 minutes. Flip them and sear the second side for about 1-2 minutes",
-          "time_estimate": null
+          "text": "Cook them on one side for about 3-4 minutes. Flip them and sear the second side for the same amount of time. Once the chicken is finished cooking",
+          "time_estimate": ""
         },
         {
           "equipment": [],
@@ -338,7 +338,7 @@
             }
           ],
           "text": "To check if the chicken is done, cut into a piece at its thickest point.",
-          "time_estimate": null
+          "time_estimate": 0
         },
         {
           "equipment": [],
@@ -346,9 +346,10 @@
           "ingredients": [],
           "skills": [],
           "text": "Plate up your desired amount of chicken on top of a serving of your fried rice. Optionally garnish with green onions and sesame seeds. Look at what you made!",
-          "time_estimate": null
+          "time_estimate": 0
         }
       ]
     }
-  ]
+  ],
+  "time_estimate": null
 }

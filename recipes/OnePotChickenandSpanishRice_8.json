@@ -123,7 +123,7 @@
           ],
           "skills": [],
           "text": "Let's prep. In a small bowl, mix together about 1 tsp each of the following seasonings: salt, paprika (smoked paprika if you have it), garlic powder, cumin, and dried oregano.",
-          "time_estimate": null
+          "time_estimate": 0
         },
         {
           "equipment": [],
@@ -154,7 +154,7 @@
             }
           ],
           "text": "Chop your asparagus into pieces that are about 1 inch long, making sure to remove and discard about the bottom 1-2 inches of each stalk. The bottom of asparagus is fibrous and not pleasant to eat. Roughly dice half of your red onion and slice your cloves of garlic into rounds. Set all the veg aside for now. If you have other veggies you'd like to use too, don't hold back!",
-          "time_estimate": null
+          "time_estimate": 0
         },
         {
           "equipment": [],
@@ -173,7 +173,7 @@
             }
           ],
           "text": "Season your boneless skinless chicken thighs on both sides with the spice mixture you made along with an extra pinch of salt. The amount of chicken you use is up to you. Make 3-4 thighs if you want leftover chicken for later in the week or use 1-2 for just a single serving. Reserve your leftover seasoning for later.",
-          "time_estimate": null
+          "time_estimate": 0
         },
         {
           "equipment": [],
@@ -194,7 +194,7 @@
           ],
           "skills": [],
           "text": "Rinse your 3/4 cups of white rice and set it aside, then measure out 1.5 cups of chicken stock and reserve for later.",
-          "time_estimate": null
+          "time_estimate": 0
         },
         {
           "equipment": [
@@ -207,7 +207,7 @@
           "ingredients": [],
           "skills": [],
           "text": "Heat a large high walled skillet or a shallow pot (the vessel needs a lid to cook the rice) over medium-high heat with a splash of olive oil.",
-          "time_estimate": null
+          "time_estimate": 0
         }
       ]
     },
@@ -231,7 +231,7 @@
             }
           ],
           "text": "Once the oil is hot (1-2 mins), lay in your seasoned chicken and brown on both sides. We are not cooking them all the way through so once they're nice and golden brown on both sides move them to a plate and turn the heat down to medium. A little bit of charring is fine! If there are a lot of burned (they will look black, not brown) bits at the bottom of the pan, scrape most of it out and continue in the same pan.",
-          "time_estimate": null
+          "time_estimate": 0
         },
         {
           "equipment": [],
@@ -246,7 +246,7 @@
             }
           ],
           "text": "Add all your veggies and garlic to the pan along with a tiny splash of your chicken stock, and mix cook the veggies while you scrape up all of the brown (or slightly black) bits stuck to the bottom of the pan. You just used the stock to \"deglaze\" the pan, nice! Season with salt and pepper and cook the veggies until they've softened (about 4 minutes).",
-          "time_estimate": null
+          "time_estimate": 0
         },
         {
           "equipment": [],
@@ -261,7 +261,7 @@
           ],
           "skills": [],
           "text": "To the softened veggies add about 1 tbsp of tomato paste and all of your dried white rice. Mix everything together and cook the mixture for about 1 minute to get rid of the raw tomato paste flavor.",
-          "time_estimate": null
+          "time_estimate": 0
         },
         {
           "equipment": [],
@@ -269,7 +269,7 @@
           "ingredients": [],
           "skills": [],
           "text": "Add the rest of your chicken stock along with the leftover seasoning from earlier. Stir everything together and bring to a boil.",
-          "time_estimate": null
+          "time_estimate": 0
         },
         {
           "equipment": [],
@@ -277,7 +277,7 @@
           "ingredients": [],
           "skills": [],
           "text": "Once it boils, reduce it to a simmer and add the chicken thigs along with whatever juices ran onto the plate back into the pan. Cover it and cook on low for around 20 minutes or until all the liquid has been absorbed and the chicken is cooked.",
-          "time_estimate": null
+          "time_estimate": 0
         },
         {
           "equipment": [],
@@ -302,9 +302,10 @@
             }
           ],
           "text": "Garnish with some chopped fresh parsley and a big squeeze of lemon. You can also add sliced lemon rounds to the top if you want to really pop off. The rice is really flavorful and keeps great for lunch the next day (as does the chicky). You're beautiful. This food is beautiful. Life is beautiful. Woo!",
-          "time_estimate": null
+          "time_estimate": 50
         }
       ]
     }
-  ]
+  ],
+  "time_estimate": 50
 }

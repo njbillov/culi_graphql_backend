@@ -44,7 +44,7 @@
           "ingredients": [],
           "skills": [],
           "text": "Okay so you have a jar of tomato sauce in your fridge. Let's amp it up. But not too much, because maybe you're tired today.",
-          "time_estimate": null
+          "time_estimate": 0
         },
         {
           "equipment": [
@@ -57,7 +57,7 @@
           "ingredients": [],
           "skills": [],
           "text": "Set a pot of heavily salted water over high heat and wait for it to come to a boil.",
-          "time_estimate": null
+          "time_estimate": 0
         },
         {
           "equipment": [],
@@ -85,7 +85,7 @@
             }
           ],
           "text": "Then dice 1/2 of a white or yellow onion and slice 3 cloves of garlic into thin rounds, cutting perpendicular to the length of the clove. We're leaving the pieces large so we don't burn the garlic. If you're using pre-minced, add the garlic a couple minutes after the onions.",
-          "time_estimate": null
+          "time_estimate": 0
         }
       ]
     },
@@ -98,7 +98,7 @@
           "ingredients": [],
           "skills": [],
           "text": "Heat up a splash of olive oil in a pan over medium heat.",
-          "time_estimate": null
+          "time_estimate": 0
         },
         {
           "equipment": [],
@@ -110,7 +110,7 @@
             }
           ],
           "text": "Once the oil is hot, add your onions and garlic. Season with salt and pepper and chili flakes if you feel so inclined. Holy moly that smell! Breath it in.",
-          "time_estimate": null
+          "time_estimate": 0
         },
         {
           "equipment": [],
@@ -122,7 +122,7 @@
             }
           ],
           "text": "Saute for about 4-5 minutes until everything is softened and starting to get golden. If something starts to burn or turn black, just turn down the heat! You are fully in control here.",
-          "time_estimate": null
+          "time_estimate": 0
         },
         {
           "equipment": [],
@@ -141,7 +141,7 @@
             }
           ],
           "text": "Once the veggies are where you want them, add in your desired amount of tomato sauce straight from the jar and mix everything together. Turn the heat down to low and let the mixture simmer while we turn to the pasta.",
-          "time_estimate": null
+          "time_estimate": 0
         }
       ]
     },
@@ -154,7 +154,7 @@
           "ingredients": [],
           "skills": [],
           "text": "OPTIONAL ALERT: Just before the pasta finishes cooking, you can add a splash of heavy cream or half and half to your simmering sauce to give it some, well, creaminess. Anywhere from 2 tbsp to 1/4 cup will bring a bit of richness to the sauce and cut through the acidity of the tomatoes, but this step is unnecessary to achieve deliciousness.",
-          "time_estimate": null
+          "time_estimate": 0
         },
         {
           "equipment": [],
@@ -169,9 +169,10 @@
           ],
           "skills": [],
           "text": "Add your pasta either directly to the pan with your sauce or spoon it on top when you serve. Finish with parm and basil if you're feeling fancy. Consider your jarred sauce: upgraded.",
-          "time_estimate": null
+          "time_estimate": 30
         }
       ]
     }
-  ]
+  ],
+  "time_estimate": 30
 }

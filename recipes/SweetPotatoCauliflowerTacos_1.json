@@ -124,7 +124,7 @@
           "ingredients": [],
           "skills": [],
           "text": "Preheat your oven to 420F.",
-          "time_estimate": null
+          "time_estimate": 0
         },
         {
           "equipment": [
@@ -152,7 +152,7 @@
             }
           ],
           "text": "To prepare your vegetables, peel (or don't) your sweet potato, then cut into cubes that are about half an inch on all sides. Don't worry about perfection! The most important thing is keeping them roughly the same size. Place the pieces into a large bowl.",
-          "time_estimate": null
+          "time_estimate": 0
         },
         {
           "equipment": [
@@ -172,7 +172,7 @@
           ],
           "skills": [],
           "text": "Break down your cauliflower into florets, leaving the desired amount of stem on each piece. If you can, try and make smaller pieces so that there is more surface area to roast in the oven and they are closer to the size of your potatoes. Place the cauliflower into the same large bowl as the potatoes.",
-          "time_estimate": null
+          "time_estimate": 0
         },
         {
           "equipment": [],
@@ -223,7 +223,7 @@
           ],
           "skills": [],
           "text": "Drizzle a generous amount of olive oil then add your seasonings. We recommend 1tsp cumin, 1tsp garlic powder, 1tsp paprika, 1tsp chili powder, and of course a liberal amount of salt and pepper! Toss the veggies in the bowl until each piece has a shiny coating of oil and seasoning. Add more olive oil if necessary.",
-          "time_estimate": null
+          "time_estimate": 0
         }
       ]
     },
@@ -245,7 +245,7 @@
             }
           ],
           "text": "Spread out the veggies onto a sheet tray (line with parchment paper or foil for easier cleanup).",
-          "time_estimate": null
+          "time_estimate": 0
         },
         {
           "equipment": [],
@@ -260,7 +260,7 @@
           ],
           "skills": [],
           "text": "Place into oven when it's ready and roast for about 40 minutes. We'll check in on them in 25-30 minutes later.",
-          "time_estimate": null
+          "time_estimate": 0
         },
         {
           "equipment": [],
@@ -268,7 +268,7 @@
           "ingredients": [],
           "skills": [],
           "text": "Nice! Now... I guess we just wait.",
-          "time_estimate": null
+          "time_estimate": 0
         },
         {
           "equipment": [],
@@ -276,7 +276,7 @@
           "ingredients": [],
           "skills": [],
           "text": "So, uhhh, you come here often? Sorry--moving on.",
-          "time_estimate": null
+          "time_estimate": 0
         }
       ]
     },
@@ -296,7 +296,7 @@
           ],
           "skills": [],
           "text": "When the veggies have been roasting for about 25-30 minutes, open and drain your can of black beans onto the tray.",
-          "time_estimate": null
+          "time_estimate": 0
         },
         {
           "equipment": [],
@@ -311,7 +311,7 @@
           ],
           "skills": [],
           "text": "Pull out your veggies, give them a little toss, then scatter the can of black beans onto the tray.",
-          "time_estimate": null
+          "time_estimate": 0
         },
         {
           "equipment": [],
@@ -326,7 +326,7 @@
           ],
           "skills": [],
           "text": "Squeeze the juice of half of a lime over the tray of veggies and one more sprinkle of salt to show the beans some love.",
-          "time_estimate": null
+          "time_estimate": 0
         },
         {
           "equipment": [],
@@ -334,7 +334,7 @@
           "ingredients": [],
           "skills": [],
           "text": "Pop the tray back into the oven for about 10 more minutes!",
-          "time_estimate": null
+          "time_estimate": 0
         }
       ]
     },
@@ -351,7 +351,7 @@
             }
           ],
           "text": "While your veggies are finishing in the oven, let's make a quick sauce.",
-          "time_estimate": null
+          "time_estimate": 0
         },
         {
           "equipment": [
@@ -387,7 +387,7 @@
             }
           ],
           "text": "Add a big scoop of sour cream or plain yogurt to a small bowl. Mix in the juice of the other half of a lime and add however many dashes of hot sauce you'd like. Taste for seasoning.",
-          "time_estimate": null
+          "time_estimate": 0
         }
       ]
     },
@@ -407,7 +407,7 @@
           ],
           "skills": [],
           "text": "Just before serving, heat up your tortillas. We recommend you place them directly onto your stovetop if you have a gas burner. It gives them a nice char and grilled flavor.",
-          "time_estimate": null
+          "time_estimate": 0
         },
         {
           "equipment": [
@@ -435,7 +435,7 @@
             }
           ],
           "text": "Turn your smallest gas burner to medium heat. Place a tortilla directly on top of the flame (it won't catch on fire, we promise). Use the pair of tongs to flip once it picks up the amount of color/char that you want. Repeat for all tortillas.",
-          "time_estimate": null
+          "time_estimate": 0
         },
         {
           "equipment": [],
@@ -443,9 +443,10 @@
           "ingredients": [],
           "skills": [],
           "text": "Place your tortilla, go down with a layer of your spicy crema, add your veggies, then sprinkle with cilantro and avocado and enjoy!",
-          "time_estimate": null
+          "time_estimate": 0
         }
       ]
     }
-  ]
+  ],
+  "time_estimate": null
 }

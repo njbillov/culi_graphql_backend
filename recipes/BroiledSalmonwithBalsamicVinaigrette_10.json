@@ -81,7 +81,7 @@
           "ingredients": [],
           "skills": [],
           "text": "Preheat your oven to the broiler setting. Ikr? Rare ask, but it helps mimic the direct heat of a grill!",
-          "time_estimate": null
+          "time_estimate": 0
         },
         {
           "equipment": [
@@ -94,7 +94,7 @@
           "ingredients": [],
           "skills": [],
           "text": "Get out a sheet tray and optionally cover it with foil or parchment paper to make for easier cleanup.",
-          "time_estimate": null
+          "time_estimate": 0
         },
         {
           "equipment": [],
@@ -113,7 +113,7 @@
             }
           ],
           "text": "Cut your lemon in half, then slice off a few thin rounds to top the salmon later.",
-          "time_estimate": null
+          "time_estimate": 0
         },
         {
           "equipment": [],
@@ -132,7 +132,7 @@
             }
           ],
           "text": "Get out about 7-8 stalks of asparagus (or however many you want) and cut off the bottom 1-2 inches from the stalks. This part is hard and fibrous. It's unpleasant to eat and stupid for being there. Place the trimmed asparagus on the baking sheet and drizzle about a tbsp of olive oil onto them. Season heavily with salt, pepper, and garlic powder. Toss to coat each piece with oil and seasoning. (If you have any other veg you're looking to cook up, give it the same treatment and add it to the party!).",
-          "time_estimate": null
+          "time_estimate": 0
         },
         {
           "equipment": [],
@@ -151,7 +151,7 @@
             }
           ],
           "text": "Season one side of your salmon fillet(s) liberally with salt, pepper, and anything else you're feeling! Chili flakes? Sure. Gar pow? (New abbrev.) Sure! Experiment a bit. Add a baby splash of olive oil to the baking sheet and place the seasoned side of your salmon on top of it. Drizzle the unseasoned side with another baby splash and repeat with your seasonings.",
-          "time_estimate": null
+          "time_estimate": 0
         },
         {
           "equipment": [],
@@ -166,7 +166,7 @@
           ],
           "skills": [],
           "text": "Lay your lemon slices atop the salmon then place in the oven on the top rack for about 8-10 minutes or until the salmon is cooked through.",
-          "time_estimate": null
+          "time_estimate": 0
         }
       ]
     },
@@ -184,7 +184,7 @@
           "ingredients": [],
           "skills": [],
           "text": "In the meantime, let's make a quick vinaigrette. So bust out a bowl, jar, or measuring cup.",
-          "time_estimate": null
+          "time_estimate": ""
         },
         {
           "equipment": [],
@@ -221,7 +221,7 @@
             }
           ],
           "text": "In your vessel, combine 1 tbsp of olive oil, 2 tbsp of balsamic vinegar, 1 tsp of Dijon mustard, and then a big squeeze of lemon juice. Season with salt and pepper, then whisk, mix, or shake together until you reach a smooth consistency. This is a rather acidic dressing, which is why we like it, but make sure you taste taste taste! Too acidic? More olive oil! Too oily? More acid! Don't like Dijon? Leave it out!",
-          "time_estimate": null
+          "time_estimate": 0
         }
       ]
     },
@@ -234,7 +234,7 @@
           "ingredients": [],
           "skills": [],
           "text": "Check on your salmon. If you are pleased with the color and doneness, pull it!",
-          "time_estimate": null
+          "time_estimate": 0
         },
         {
           "equipment": [],
@@ -249,9 +249,10 @@
           ],
           "skills": [],
           "text": "Dress a couple big handfuls of arugula with your dressing, and optionally add some feta cheese, thinly sliced red onions, or whatever you enjoy in your salads (we love marinated artichoke hearts). Plate your salmon and asparagus on top or chop it in and mix it with the salad. You do you! We're just here for guidance. Enjoy this quick and healthy meal that YOU created.",
-          "time_estimate": null
+          "time_estimate": 25
         }
       ]
     }
-  ]
+  ],
+  "time_estimate": 25
 }
