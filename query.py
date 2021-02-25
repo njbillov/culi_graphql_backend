@@ -6,6 +6,7 @@ import neo4j
 from graphene_file_upload.scalars import Upload
 from flask import g
 from neo4j import GraphDatabase, basic_auth
+from app_change_log import AppChangeLog
 import random
 import uuid
 import json
@@ -219,6 +220,16 @@ class MicroStep(graphene.ObjectType):
     skills = graphene.List(Skill, default_value=[])
     text = graphene.String()
 
+class ChangeLog(graphene.ObjectType):
+    major = graphene.Int()
+    minor = graphene.Int()
+    patch = graphene.Int()
+    build = graphene.Int()
+    major_changes = graphene.List(graphene.String, default_value=[])
+    minor_changes = graphene.List(graphene.String, default_value=[])
+    patch_changes = graphene.List(graphene.String, default_value=[])
+    build_changes = graphene.List(graphene.String, default_value=[])
+
 
 class MacroStep(graphene.ObjectType):
     steps = graphene.List(MicroStep, default_value=[])
@@ -396,6 +407,7 @@ class Query(graphene.ObjectType):
     presign_object = graphene.String(key=graphene.String(required=True))
     survey = graphene.Field(Survey, survey_string=graphene.String(required=False))
     recipe = graphene.Field(Recipe, recipe_id=graphene.Int(required=True))
+    change_log = graphene.List(ChangeLog, app_version=graphene.String(required=True))
 
     @staticmethod
     def resolve_recipe(parent, info, recipe_id):
@@ -448,6 +460,10 @@ class Query(graphene.ObjectType):
         for record in results:
             print(record)
         return unpack(record.get("account"))
+
+    @staticmethod
+    def resolve_change_log(parent, info, app_version):
+        return AppChangeLog().get_since(app_version)
 
 
 class ScreenChangeMetric(graphene.InputObjectType):
