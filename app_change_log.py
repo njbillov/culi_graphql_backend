@@ -138,13 +138,13 @@ class AppChangeLog():
             return
         print(f'Build Version: {self.changes[i]["version"]}')
         print(f'Major Changes:')
-        print('\t-'.join([f'{change}\n' for change in self.changes[i]['major_changes']]))
+        print(''.join([f'\t-{change}\n' for change in self.changes[i]['major_changes']]))
         print(f'Minor Changes:')
-        print('\t-'.join([f'{change}\n' for change in self.changes[i]['minor_changes']]))
+        print(''.join([f'\t-{change}\n' for change in self.changes[i]['minor_changes']]))
         print(f'Patch Changes:')
-        print('\t-'.join([f'{change}\n' for change in self.changes[i]['patch_changes']]))
+        print(''.join([f'\t-{change}\n' for change in self.changes[i]['patch_changes']]))
         print(f'Build Changes:')
-        print('\t-'.join([f'{change}\n' for change in self.changes[i]['build_changes']]))
+        print(''.join([f'\t-{change}\n' for change in self.changes[i]['build_changes']]))
 
         while True:
             print('(P)revious, (N)ext, (Q)uit')
