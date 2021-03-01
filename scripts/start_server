@@ -7,5 +7,8 @@ else
 	echo "Starting up server"
 	export FLASK_DEBUG=False
 	export FLASK_APP=graph
-	nohup flask run --host 0.0.0.0 --port 6969 &
+	python3 graph.py 6969 &
+	jobs -l
+	disown -h %1
+	jobs -l
 fi

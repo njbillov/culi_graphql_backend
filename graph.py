@@ -5,6 +5,7 @@ from query import schema
 from neo4j import GraphDatabase,  basic_auth
 import os
 import utils
+import sys
 import time
 
 app = Flask(__name__)
@@ -44,4 +45,5 @@ app.add_url_rule(
 if __name__ == '__main__':
     # print(utils.upload_object())
     # utils.test_get_object()
-    app.run(host='0.0.0.0', port=8080)
+    port = int(sys.argv[1])
+    app.run(host='0.0.0.0', port=port)
