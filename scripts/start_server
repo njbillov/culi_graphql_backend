@@ -5,8 +5,5 @@ then
 	echo "Server already running"
 else
 	echo "Starting up server"
-	python3 graph.py 6969 &
-	jobs -l
-	disown -h %1
-	jobs -l
+	nohup python3 graph.py 6969 &
 fi
