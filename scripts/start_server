@@ -5,8 +5,6 @@ then
 	echo "Server already running"
 else
 	echo "Starting up server"
-	export FLASK_DEBUG=False
-	export FLASK_APP=graph
 	python3 graph.py 6969 &
 	jobs -l
 	disown -h %1

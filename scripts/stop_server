@@ -1,7 +1,8 @@
 #!/bin/bash
 
 echo "Attempting to stop server by terminating."
-if curl -s localhost:6969/ | grep "Hello World" > /dev/null
+export server_process=$(ps aux | grep "[p]ython3 graph.py" | awk '{print $2}')
+if [ ${#server_process} -gt 0 ]
 then
   kill -SIGTERM $(ps aux | grep "[p]ython3 graph.py" | awk '{print $2}')
   echo "Sent termination signal to the server."
