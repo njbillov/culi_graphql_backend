@@ -1,11 +1,11 @@
 #!/bin/bash
 
-if curl -s localhost:8080/ | grep "Hello World" > /dev/null
+if curl -s localhost:6969/ | grep "Hello World" > /dev/null
 then
 	echo "Server already running"
 else
 	echo "Starting up server"
 	export FLASK_DEBUG=False
 	export FLASK_APP=graph
-	flask run --host 0.0.0.0 --port 8080 &
+	nohup flask run --host 0.0.0.0 --port 6969 &
 fi

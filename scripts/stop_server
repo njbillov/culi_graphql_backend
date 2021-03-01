@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "Attempting to stop server by terminating."
-if curl -s localhost:8080/ | grep "Hello World" > /dev/null
+if curl -s localhost:6969/ | grep "Hello World" > /dev/null
 then
   pkill -SIGTERM -f flask
   echo "Sent termination signal to the server."
