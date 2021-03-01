@@ -3,7 +3,7 @@
 echo "Attempting to stop server by terminating."
 if curl -s localhost:6969/ | grep "Hello World" > /dev/null
 then
-  pkill -SIGTERM -f flask
+  kill -SIGTERM $(ps aux | grep "[p]ython3 graph.py" | awk '{print $2}')
   echo "Sent termination signal to the server."
 else
 	echo "Server is not running"
