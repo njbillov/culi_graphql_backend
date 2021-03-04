@@ -236,6 +236,10 @@ class MacroStep(graphene.ObjectType):
     name = graphene.String(default_value='')
 
 
+class Tag(graphene.ObjectType):
+    name = graphene.String()
+    value = graphene.Boolean()
+
 class Recipe(graphene.ObjectType):
     recipe_name = graphene.String()
     recipe_id = graphene.Int()
@@ -246,6 +250,7 @@ class Recipe(graphene.ObjectType):
     splash_url = graphene.String()
     time_estimate = graphene.Int()
     description = graphene.String()
+    tags = graphene.List(Tag)
 
     # @staticmethod
     # def resolve_ingredients(parent, info):
@@ -262,6 +267,27 @@ class Recipe(graphene.ObjectType):
     #             ingredient["unit"] = connection["unit"]
     #         ingredients.append(ingredient)
     #     return ingredients
+
+    @staticmethod
+    def resolve_tags(parent, info):
+        tags = []
+        recipe_id = parent["recipe_id"]
+        print(recipe_id)
+        params = {'recipeId': recipe_id}
+        get_tags_query = 'MATCH (r:Recipe {recipeId: toInteger($recipeId)}) RETURN r LIMIT 1'
+        results = get_db().run(get_tags_query, parameters=params)
+
+        recipe = None
+        for i, record in enumerate(results):
+            recipe = unpack(record.get('r'))
+        
+        if recipe is None:
+            return []
+        
+        for key, value in recipe.items():
+            if key.startswith('tag_'):
+                tags.append({'name': key[len('tag_'):], 'value': value})
+        return tags
 
 
 class Menu(graphene.ObjectType):
@@ -593,6 +619,8 @@ class CompleteRecipe(graphene.Mutation):
 class CreateAccount(graphene.Mutation):
     class Arguments:
         password_form = PasswordForm(required=True)
+        restrictions = graphene.List(graphene.String, default_value=[])
+
 
     ok = graphene.Boolean(required=True)
     code = graphene.String()
@@ -600,7 +628,7 @@ class CreateAccount(graphene.Mutation):
     account = graphene.Field(Account)
 
     @staticmethod
-    def mutate(root, info, password_form):
+    def mutate(root, info, password_form, restrictions):
         print(password_form)
         email = password_form['email']
         password_input = password_form['password_input']
@@ -611,13 +639,15 @@ class CreateAccount(graphene.Mutation):
             return CreateAccount(ok=False, code="Error: Invalid password format")
         password_hash = create_password(password_input)
         # print(f'Name: {name}, Email: {email}, Password: {password}')
+        tag_string = ', '.join(f'tag_{tag}: true' for tag in restrictions)
 
         session = uuid.uuid4().hex
-        create_account_query = f'CREATE (a:Account {{email: "{email}", name: "{name}", password: "{password_hash}", ' \
-                               f'session: "{session}", verified: false, completedOrientation: false}}), (f:Flags),' \
-                               f'(a)-[c:HasFlags]->(f) return a, c, f'
+        params = {'email': email, 'name': name, 'password_hash': password_hash, 'session': session}
+        create_account_query = 'CREATE (a:Account {email: $email, name: $name, password: $password_hash, ' \
+                               'session: $session, verified: false, completedOrientation: false, ' + tag_string + '}), (f:Flags),' \
+                               '(a)-[c:HasFlags]->(f) return a, c, f'
 
-        results = get_db().run(create_account_query)
+        results = get_db().run(create_account_query, parameters=params)
         account = None
         for record in results:
             account = unpack(record.get("a"))
@@ -634,6 +664,43 @@ def upload_to_s3(file: FileStorage, prefix: str = 'images', bucket: str = BUCKET
         os.remove(local_file)
 
     return ok, name, bucket
+
+class TagInput(graphene.InputObjectType):
+    name = graphene.String()
+    value = graphene.Boolean()
+
+class SetDietaryRestrictions(graphene.Mutation):
+    class Arguments:
+        session = graphene.String(required=True)
+        restrictions = graphene.List(TagInput, required=True)
+
+    ok = graphene.Boolean(required=True)
+    tags = graphene.List(Tag)
+
+    @staticmethod
+    def mutate(self, info, session, restrictions):
+        # TODO put better data sanitization here
+        set_tag_string = ', '.join([f'a.tag_{tag["name"]} = {tag["value"]}' for tag in restrictions])
+        if len(set_tag_string) != 0:
+            set_tag_string = "SET " + set_tag_string
+        params = {'session': session}
+        change_restrictions_query = 'MATCH (a: Account {session: $session}) ' + set_tag_string + ' RETURN a LIMIT 1'
+
+        results = get_db().run(change_restrictions_query, parameters=params)
+
+        account = None
+        for record in results:
+            account = unpack(record.get('a'))
+        
+        if account is None:
+            return SetDietaryRestrictions(ok=False)
+
+        tags = []
+        for k, v in account.items():
+            if k.startswith('tag_'):
+                tags.append({'name': k[len('tag_'):], 'value': v})
+
+        return SetDietaryRestrictions(ok=True, tags=tags)
 
 
 class Post(graphene.Mutation):
@@ -838,10 +905,32 @@ class RequestMenu(graphene.Mutation):
             # print(menus)
             if len(menus) > 0:
                 return RequestMenu(ok=True, menus=menus)
+        
+        get_account_query = 'MATCH (a:Account {session: $session}) return a LIMIT 1'
+        results = get_db().run(get_account_query, parameters=params)
+
+        account = None
+        for record in results:
+            account = unpack(record.get('a'))
+
+        if account is None:
+            return RequestMenu(ok=False)
+
+        tags = []
+        for k, v in account.items():
+            if k.startswith('tag_') and v == True:
+                tags.append(k)
+
+        tag_string_filter = ' AND '.join([f'r.{tag} = true' for tag in tags])
+        print(tag_string_filter)
+
+        if len(tag_string_filter) != 0:
+            tag_string_filter = ' AND ' + tag_string_filter
+
         print(menu_count)
         query = '''UNWIND range(1, $menu_count) as menu_index
                 WITH menu_index CALL {
-                   MATCH (r:Recipe) WHERE toInteger(r.recipeId) < 1000
+                   MATCH (r:Recipe) WHERE toInteger(r.recipeId) < 1000''' + tag_string_filter + '''
                    RETURN r.json as recipe, r.recipeId as recipe_id ORDER BY rand() LIMIT $recipe_count
                 }
                 WITH menu_index, recipe, recipe_id CALL {
@@ -888,7 +977,7 @@ class RequestMenu(graphene.Mutation):
             # print(len(recipes))
             menu['recipes'] = [json.loads(recipe) for recipe in recipes[len(menus) * recipe_count:(len(menus) + 1) * recipe_count]]
             menus.append(menu)
-        print(menus)
+        # print(menus)
         return RequestMenu(ok=True, menus=menus)
 
 
@@ -972,6 +1061,7 @@ class Mutations(graphene.ObjectType):
     upload_survey = UploadSurvey.Field()
     set_flag = SetFlag.Field()
     request_menus = RequestMenu.Field()
+    update_dietary_restrictions = SetDietaryRestrictions.Field()
 
     upload_feedback = UploadFeedback.Field()
     post = Post.Field()
