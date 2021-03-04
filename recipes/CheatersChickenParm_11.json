@@ -165,7 +165,7 @@
         },
         {
           "equipment": [],
-          "flavor_text": "Season both sides of the chicken",
+          "flavor_text": "Season both sides of the chicken, then, using the back of a spoon, coat one side of each chicken piece with a thin layer of mayo (~1 tbsp). Hold up, did they just say mayo? Yeah. This is the cheaters part. Mayo is made of eggs and oil, so it browns nicely and is going to adhere the breadcrumbs.",
           "ingredients": [
             {
               "name": "mayo",
@@ -175,8 +175,8 @@
             }
           ],
           "skills": [],
-          "text": "Season both sides of the chicken",
-          "time_estimate": ""
+          "text": "Season both sides of the chicken, then, using the back of a spoon, coat one side of each chicken piece with a thin layer of mayo (~1 tbsp). Hold up, did they just say mayo? Yeah. This is the cheaters part. Mayo is made of eggs and oil, so it browns nicely and is going to adhere the breadcrumbs.",
+          "time_estimate": 0
         },
         {
           "equipment": [],
@@ -242,5 +242,9 @@
       ]
     }
   ],
+  "tags": {
+    "pescatarian": false,
+    "vegetarian": false
+  },
   "time_estimate": 30
 }

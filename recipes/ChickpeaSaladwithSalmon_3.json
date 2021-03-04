@@ -136,10 +136,10 @@
         },
         {
           "equipment": [],
-          "flavor_text": "Place on the baking sheet and put into your preheated oven.",
+          "flavor_text": "Place salmon into your preheated oven.",
           "ingredients": [],
           "skills": [],
-          "text": "Place on the baking sheet and put into your preheated oven.",
+          "text": "Place salmon into your preheated oven.",
           "time_estimate": 0
         },
         {
@@ -370,5 +370,9 @@
       ]
     }
   ],
+  "tags": {
+    "pescatarian": true,
+    "vegetarian": false
+  },
   "time_estimate": null
 }

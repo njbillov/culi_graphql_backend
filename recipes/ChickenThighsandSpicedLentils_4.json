@@ -359,5 +359,9 @@
       ]
     }
   ],
+  "tags": {
+    "pescatarian": false,
+    "vegetarian": false
+  },
   "time_estimate": null
 }

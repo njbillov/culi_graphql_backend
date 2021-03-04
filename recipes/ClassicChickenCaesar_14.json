@@ -2,60 +2,30 @@
   "description": "Who doesn't love a restaurant-style chicken caesar salad? Such a craveable dish. So make it at home! Get in your lean protein and your greens, and dress it all in a quick version of caesar dressing that captures everything you love about the restaurant versions. ",
   "equipment": [
     {
-      "name": "rolling pin",
+      "name": "silicone spatula",
       "quantity": "1"
     },
     {
-      "name": "plastic wrap",
+      "name": "small bowl",
       "quantity": "1"
     },
     {
-      "name": "pan",
+      "name": "non-stick pan",
       "quantity": "1"
     }
   ],
   "ingredients": [
     {
-      "name": "Romaine",
+      "name": "eggs",
       "new": false,
-      "quantity": "1",
-      "unit": "head"
+      "quantity": "4",
+      "unit": "eggs"
     },
     {
-      "name": "mayo",
+      "name": "scallions",
       "new": false,
-      "quantity": "1",
-      "unit": "tbsp"
-    },
-    {
-      "name": "Dijon mustard",
-      "new": false,
-      "quantity": "1",
-      "unit": "tsp"
-    },
-    {
-      "name": "lemon",
-      "new": false,
-      "quantity": "0.5",
-      "unit": "lemon"
-    },
-    {
-      "name": "parmesan",
-      "new": false,
-      "quantity": "1",
-      "unit": "tbsp"
-    },
-    {
-      "name": "chicken breast",
-      "new": false,
-      "quantity": "1",
-      "unit": "breast"
-    },
-    {
-      "name": "garlic powder",
-      "new": false,
-      "quantity": "1",
-      "unit": "tsp"
+      "quantity": "2",
+      "unit": "stalks"
     }
   ],
   "recipe_id": "14",
@@ -65,161 +35,100 @@
       "name": "",
       "steps": [
         {
-          "equipment": [],
-          "flavor_text": "Wash your lettuce, girl! Don't be gross. If you have a salad spinner, that's ideal, but no worries if not. Traditionally, a caesar salad uses {i, romaine, 1}, but we've tried this salad with all kinds of greens and it works with anything!",
-          "ingredients": [
-            {
-              "name": "Romaine",
-              "new": false,
-              "quantity": "1",
-              "unit": "head"
-            }
-          ],
-          "skills": [],
-          "text": "Wash your lettuce, girl! Don't be gross. If you have a salad spinner, that's ideal, but no worries if not. Traditionally, a caesar salad uses romaine, but we've tried this salad with all kinds of greens and it works with anything!",
-          "time_estimate": 0
-        },
-        {
-          "equipment": [],
-          "flavor_text": "For one serving of the caesar dressing, combine 1 tbsp {i, mayo, 1}, 1 tsp of {i, Dijon mustard, 2}, the juice of half a {i, lemon, 3}, and 1 tbsp of chopped or grated {i, parmesan, 4}. If you have Worcestershire sauce, add a splash to the dressing as well. Mix together then taste! Make sure it has the flavor and consistency that YOU like.",
-          "ingredients": [
-            {
-              "name": "mayo",
-              "new": false,
-              "quantity": "1",
-              "unit": "tbsp"
-            },
-            {
-              "name": "Dijon mustard",
-              "new": false,
-              "quantity": "1",
-              "unit": "tsp"
-            },
-            {
-              "name": "lemon",
-              "new": false,
-              "quantity": "0.5",
-              "unit": "lemon"
-            },
-            {
-              "name": "parmesan",
-              "new": false,
-              "quantity": "1",
-              "unit": "tbsp"
-            }
-          ],
-          "skills": [
-            {
-              "name": "Salad Dressing"
-            }
-          ],
-          "text": "For one serving of the caesar dressing, combine 1 tbsp mayo, 1 tsp of Dijon mustard, the juice of half a lemon, and 1 tbsp of chopped or grated parmesan. If you have Worcestershire sauce, add a splash to the dressing as well. Mix together then taste! Make sure it has the flavor and consistency that YOU like.",
-          "time_estimate": 0
-        }
-      ]
-    },
-    {
-      "name": "",
-      "steps": [
-        {
           "equipment": [
             {
-              "name": "rolling pin",
-              "quantity": "1"
-            },
-            {
-              "name": "plastic wrap",
+              "name": "silicone spatula",
               "quantity": "1"
             }
           ],
-          "flavor_text": "Okay, now for the chicky. We're going to cook it in a pan, which could take forever if it's too thick. So, pretend that the {i, chicken breast, 1} is that annoying coworker that always throws you under the bus for stuff, cover them with a layer of {e, plastic wrap, 2}, then use a wine bottle or {e, rolling pin, 1} to beat the hell out of them until they are about 1 inch thick.",
-          "ingredients": [
-            {
-              "name": "chicken breast",
-              "new": false,
-              "quantity": "1",
-              "unit": "breast"
-            }
-          ],
-          "skills": [
-            {
-              "name": "Tenderizing"
-            }
-          ],
-          "text": "Okay, now for the chicky. We're going to cook it in a pan, which could take forever if it's too thick. So, pretend that the chicken breast is that annoying coworker that always throws you under the bus for stuff, cover them with a layer of plastic wrap, then use a wine bottle or rolling pin to beat the hell out of them until they are about 1 inch thick.",
-          "time_estimate": 0
-        },
-        {
-          "equipment": [],
-          "flavor_text": "Season your boneless, skinless chicken breast on both sides with salt, pepper, and garlic powder. Add some paprika or chili powder if you're feeling crazy!",
-          "ingredients": [
-            {
-              "name": "garlic powder",
-              "new": false,
-              "quantity": "1",
-              "unit": "tsp"
-            }
-          ],
-          "skills": [
-            {
-              "name": "Seasoning"
-            }
-          ],
-          "text": "Season your boneless, skinless chicken breast on both sides with salt, pepper, and garlic powder. Add some paprika or chili powder if you're feeling crazy!",
+          "flavor_text": "For the eggs, we're doing a quick scramble, but we're NOT going to overcook them. We're talking on the heat for no more than 30 seconds. for cooking them we highly recommend using a {e, silicone spatula, 1}, but a wooden spoon can work.",
+          "ingredients": [],
+          "skills": [],
+          "text": "For the eggs, we're doing a quick scramble, but we're NOT going to overcook them. We're talking on the heat for no more than 30 seconds. for cooking them we highly recommend using a silicone spatula, but a wooden spoon can work.",
           "time_estimate": 0
         },
         {
           "equipment": [
             {
-              "name": "pan",
+              "name": "small bowl",
               "quantity": "1"
             }
           ],
-          "flavor_text": "Heat up a {e, pan, 1} with a splash of olive oil over medium-high heat. Wait for the oil to heat up (about 2 minutes) -- this is especially important when cooking meat, because we want to get a nice hard sear on both sides to add texture and lock in the juices.",
-          "ingredients": [],
+          "flavor_text": "Whisk together 2-4 {i, eggs, 1} (we don't know how hungry you are) in a {e, small bowl, 1} with a big pinch of salt and pepper until homogeneous.",
+          "ingredients": [
+            {
+              "name": "eggs",
+              "new": false,
+              "quantity": "4",
+              "unit": "eggs"
+            }
+          ],
           "skills": [],
-          "text": "Heat up a pan with a splash of olive oil over medium-high heat. Wait for the oil to heat up (about 2 minutes) -- this is especially important when cooking meat, because we want to get a nice hard sear on both sides to add texture and lock in the juices.",
+          "text": "Whisk together 2-4 eggs (we don't know how hungry you are) in a small bowl with a big pinch of salt and pepper until homogeneous.",
           "time_estimate": 0
         },
         {
           "equipment": [],
-          "flavor_text": "Add your chicken breast into the pan and try not to move it around so it can develop that crust. You should hear a sizzle. Cook for about 4-5 minutes on both sides, depending on how thick is.",
-          "ingredients": [],
-          "skills": [
+          "flavor_text": "Slice two {i, scallions, 1} into pieces that are about 1/2 an inch long.",
+          "ingredients": [
             {
-              "name": "Searing"
+              "name": "scallions",
+              "new": false,
+              "quantity": "2",
+              "unit": "stalks"
             }
           ],
-          "text": "Add your chicken breast into the pan and try not to move it around so it can develop that crust. You should hear a sizzle. Cook for about 4-5 minutes on both sides, depending on how thick is.",
+          "skills": [
+            {
+              "name": "Slicing"
+            }
+          ],
+          "text": "Slice two scallions into pieces that are about 1/2 an inch long.",
           "time_estimate": 0
-        }
-      ]
-    },
-    {
-      "name": "",
-      "steps": [
+        },
         {
-          "equipment": [],
-          "flavor_text": "Remove the chicken and cut into the thickest part to make sure it's cooked through. If it's still pink inside, don't panic! Just throw it back into the pan until it's cooked. Slice up your chicken and throw it on top of the salad.",
+          "equipment": [
+            {
+              "name": "non-stick pan",
+              "quantity": "1"
+            }
+          ],
+          "flavor_text": "Heat up a {e, non-stick pan, 1} over medium heat with a splash of olive oil. Once the oil is hot, add your sliced scallions to the pan and season with a bit of salt.",
           "ingredients": [],
           "skills": [
             {
-              "name": "Checking Doneness"
+              "name": "Sauteing"
             }
           ],
-          "text": "Remove the chicken and cut into the thickest part to make sure it's cooked through. If it's still pink inside, don't panic! Just throw it back into the pan until it's cooked. Slice up your chicken and throw it on top of the salad.",
+          "text": "Heat up a non-stick pan over medium heat with a splash of olive oil. Once the oil is hot, add your sliced scallions to the pan and season with a bit of salt.",
           "time_estimate": 0
         },
         {
           "equipment": [],
-          "flavor_text": "Hit the salad with some more parm, cracked black pepper, pickled red onions, or whatever you want really. This quick version of a caesar really delivers on the same creamy and tangy qualities you'd get from a restaurant version, and the chicken makes it a light but filling meal.",
+          "flavor_text": "When the scallions are nicely browned (2 minutes ish), get ready to add your eggs. Once they hit the pan, you're going to continually push them around with the edge of your spatula so nothing stays on the bottom for more than a couple seconds. The whole process should take no more than 30 seconds.",
+          "ingredients": [],
+          "skills": [
+            {
+              "name": "Quick Scramble"
+            }
+          ],
+          "text": "When the scallions are nicely browned (2 minutes ish), get ready to add your eggs. Once they hit the pan, you're going to continually push them around with the edge of your spatula so nothing stays on the bottom for more than a couple seconds. The whole process should take no more than 30 seconds.",
+          "time_estimate": 0
+        },
+        {
+          "equipment": [],
+          "flavor_text": "As soon as the eggs solidify, take them off the heat and slide them onto a plate so they avoid cooking in the residual heat from the pan.",
           "ingredients": [],
           "skills": [],
-          "text": "Hit the salad with some more parm, cracked black pepper, pickled red onions, or whatever you want really. This quick version of a caesar really delivers on the same creamy and tangy qualities you'd get from a restaurant version, and the chicken makes it a light but filling meal.",
-          "time_estimate": 30
+          "text": "As soon as the eggs solidify, take them off the heat and slide them onto a plate so they avoid cooking in the residual heat from the pan.",
+          "time_estimate": 0
         }
       ]
     }
   ],
-  "time_estimate": 30
+  "tags": {
+    "pescatarian": false,
+    "vegetarian": false
+  },
+  "time_estimate": null
 }

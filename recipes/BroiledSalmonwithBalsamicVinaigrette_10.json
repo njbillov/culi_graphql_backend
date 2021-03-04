@@ -254,5 +254,9 @@
       ]
     }
   ],
+  "tags": {
+    "pescatarian": true,
+    "vegetarian": false
+  },
   "time_estimate": 25
 }
