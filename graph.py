@@ -45,5 +45,8 @@ app.add_url_rule(
 if __name__ == '__main__':
     # print(utils.upload_object())
     # utils.test_get_object()
-    port = int(sys.argv[1])
+    if len(sys.argv) > 1:
+        port = int(sys.argv[1])
+    else:
+        port = 8080
     app.run(host='0.0.0.0', port=port)
