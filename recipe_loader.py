@@ -50,6 +50,11 @@ def load_recipe(json_string: str):
     j = json.loads(json_string)
     recipe_id = j['recipe_id']
     recipe_name = j['recipe_name']
+    tags = j['tags']
+    new_tags = {}
+    for k, v in tags.items():
+        new_tags[f'tag_{k}'] = v
+    tags = new_tags
     skills = set()
     for macro_step in j['steps']:
         for micro_step in macro_step['steps']:
@@ -61,7 +66,9 @@ def load_recipe(json_string: str):
     params["recipe_name"] = recipe_name
     params["json"] = json_string
     params["skills"] = skills
-    query = "CREATE (r:Recipe {recipeId: $recipe_id, recipeName: $recipe_name, skills: $skills, json: $json}) RETURN r;"
+    params.update(tags)
+    tag_string = ', '.join([f'{key}: ${key}' for key, _ in tags.items()])
+    query = "CREATE (r:Recipe {recipeId: $recipe_id, recipeName: $recipe_name, skills: $skills, json: $json, " + tag_string + "}) RETURN r;"
     results = neo4j_db.run(query, parameters=params)
 
     create_skills_query = '''UNWIND $skills AS skill
@@ -94,15 +101,25 @@ def update_recipe(json_string):
             return
         recipe_id = j['recipe_id']
         recipe_name = j['recipe_name']
+        tags = j['tags']
+        new_tags = {}
+        for k, v in tags.items():
+            new_tags[f'tag_{k}'] = v
+        tags = new_tags
+        tag_string = ', '.join([f'{key}: ${key}' for key, _ in tags.items()])
         skills = set()
         for macro_step in j['steps']:
             for micro_step in macro_step['steps']:
                 for skill in micro_step['skills']:
                     skills.add(skill['name'].lower())
         skills = list(skills)
-        params = {"recipe_id": int(recipe_id), "recipe_name": recipe_name, "json": json_string, "skills": skills}
+        params = {"recipe_id": int(recipe_id), "recipe_name": recipe_name, "json": json_string, "skills": skills, **tags}
         query = '''MATCH (r:Recipe {recipeId: $recipe_id})
-                   SET r = {recipeId: $recipe_id, recipeName: $recipe_name, skills: $skills, json: $json}
+                   SET r = {recipeId: $recipe_id, recipeName: $recipe_name, skills: $skills, json: $json,
+                '''\
+                + tag_string +\
+                '''
+                }
                    RETURN r
                 '''
         results = neo4j_db.run(query, parameters=params)
