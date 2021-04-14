@@ -1,0 +1,23 @@
+<html>
+<head>
+    <title>{{ recipe.recipe_name }}</title>
+</head>
+<body>
+    <div >{{ rendering|safe }}</div>
+</body>
+<input id="Update" type="button" value="Update" onclick="updateRecipe()"/>
+<input id="Delete" type="button" value="Delete" onclick="deleteRecipe()"/>
+</html>
+
+
+<script>
+function updateRecipe() {
+    fetch('/recipes/{{ recipe.recipe_id }}/update')
+    console.log("Updating recipe")
+}
+
+function deleteRecipe() {
+    fetch('/recipes/{{ recipe.recipe_id }}/delete')
+    console.log("Deleting recipe")
+}
+</script>

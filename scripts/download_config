@@ -1,0 +1,5 @@
+#!/bin/bash
+
+aws s3api get-object --bucket cookwithculi-appdata --key db_password .db_password
+aws s3api get-object --bucket cookwithculi-appdata --key db_uri .db_uri
+aws s3api get-object --bucket cookwithculi-appdata --key sheets_credentials .sheets_credentials.json

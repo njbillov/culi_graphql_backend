@@ -1,0 +1,5 @@
+#!/bin/bash
+
+aws s3 cp .db_uri s3://cookwithculi-appdata/db_uri
+aws s3 cp .db_password s3://cookwithculi-appdata/db_password
+aws s3 cp .sheets_credentials.json s3://cookwithculi-appdata/sheets_credentials

@@ -1,0 +1,14 @@
+<html>
+<head>
+    <title>Recipe Search</title>
+</head>
+<body>
+    <h1>Recipes</h1>
+    <p>These are all of the recipes that were found in the Google Sheet.  Refresh the page to fetch recipes again.</p>
+    <ul id="recipes">
+        {% for recipe in recipes %}
+            <li><a href="/recipes/{{ recipe.id }}">{{ recipe.name }}</a>
+        {% endfor%}
+    </ul>
+</body>
+</html>

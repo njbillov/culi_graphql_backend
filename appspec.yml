@@ -6,12 +6,12 @@ files:
 hooks:
   BeforeInstall:
     - location: scripts/install_environment
-      timeout: 60000
+      timeout: 100
       runas: root
     - location: scripts/start_server
-      timeout: 2000
+      timeout: 60
       runas: root
   ApplicationStop:
     - location: scripts/stop_server
-      timeout: 2000
+      timeout: 5
       runas: root
