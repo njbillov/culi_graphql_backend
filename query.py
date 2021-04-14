@@ -1,16 +1,17 @@
 #!/usr/bin/env python3
 from datetime import time, datetime
-
+from database import GraphDB
+from flask import g
 import graphene
 import neo4j
-from graphene_file_upload.scalars import Upload
-from flask import g
 from neo4j import GraphDatabase, basic_auth
+from graphene_file_upload.scalars import Upload
 from app_change_log import AppChangeLog
 import random
 import uuid
 import json
 import os
+
 
 from typing import Tuple
 from werkzeug.datastructures import FileStorage
@@ -18,25 +19,17 @@ from werkzeug.datastructures import FileStorage
 from config import BUCKET
 from utils import create_password, compare_password, presign_object, save_file, upload_file, upload_object
 
-if not os.path.exists('.dev'):
-    if os.path.exists('.db_uri'):
-        with open('.db_uri', 'r') as file:
-            os.environ['DB_URI'] = file.read().strip()
-    if os.path.exists('.db_password'):
-        with open('.db_password', 'r') as file:
-            os.environ['DB_PASSWORD'] = file.read().strip()
-
-
-url = os.getenv('DB_URI') if os.getenv('DB_URI') is not None else "bolt://localhost"
-password = os.getenv('DB_PASSWORD') if os.getenv('DB_PASSWORD') is not None else 'memphis-place-optimal-velvet-phantom-127'
-
-driver = GraphDatabase.driver(url, auth=basic_auth("neo4j", password), encrypted=False)
+"""
+This file could be broken up into separate files, but most of the time it's just more convenient to have
+the entire schema in a single file while searching/editting.
+"""
 
 
 def get_db():
     if not hasattr(g, 'neo4j_db'):
-        g.neo4j_db = driver.session()
-    return g.neo4j_db
+        print("Grabbing a new DB connection")
+        g.neo4j_db = GraphDB()
+    return g.neo4j_db.driver.session()
 
 
 class QuestionType(graphene.Enum):
@@ -368,40 +361,8 @@ class Account(graphene.ObjectType):
     @staticmethod
     def resolve_skills(parent, info):
         session = parent['session']
-        params = {'session': session}
-        query = 'MATCH (a:Account {session: $session}),(s:Skill) OPTIONAL MATCH (a)-[c:HasSkill]->(s) RETURN ' \
-                'COALESCE(c.progress, 0) as progress, s.name as name'
-        results = get_db().run(query, parameters = params)
-        skills = {}
-        for record in results:
-            d = {"progress": record.get("progress") if not None else 0, "name": record.get("name")}
-            if "progress" not in d:
-                d['progress'] = 0
-            skills[d['name']] = d
-            # print(d)
-
-        get_completed_recipe_skills = '''MATCH (a:Account {session: $session}),
-            (a)-[c:Made]->(r: Recipe)
-            WITH a, c, r CALL {
-                WITH a, c, r
-                UNWIND r.skills as skill
-                RETURN skill
-            }
-            RETURN skill , count(skill) as skill_count
-        '''
-
-        results = get_db().run(get_completed_recipe_skills, parameters= params)
-        for record in results:
-            count = record.get("skill_count")
-            print(record)
-            skill_name = record.get("skill")
-            print(f"count: {count}, skill: {skill_name}")
-            if count is not None:
-                skills[skill_name]["progress"] = min(count / 7, 1)
-        # print(list(skills.values()))
-        # user_skills = {'skills': list(skills.values())}
-
-        return list(skills.values())
+        skills = get_db().get_user_skills(session)
+        return skills
 
     @staticmethod
     def resolve_flags(parent, info):
@@ -441,6 +402,7 @@ class Query(graphene.ObjectType):
         results = get_db().run(query, parameters=({'recipe_id': recipe_id}))
         recipe = None
         for item in results:
+            print("Found a result")
             recipe = item.get('recipe')
         return json.loads(recipe)
 
@@ -802,72 +764,6 @@ class SetFlag(graphene.Mutation):
         if len(flags) == 0:
             ok = False
         return SetFlag(ok=ok, flags=flags)
-
-#
-# class RequestMenuTest(graphene.Mutation):
-#         class Arguments:
-#             recipe_count = graphene.Int()
-#             menu_count = graphene.Int()
-#
-#         ok = graphene.Boolean()
-#         menus = graphene.List(graphene.List(graphene.Int))
-#
-#         @staticmethod
-#         def mutate(parent, info, recipe_count, menu_count, **kwargs):
-#             params = {"recipe_count": recipe_count, "menu_count": menu_count,}
-#             query = '''UNWIND range(1, $menu_count) as menu_index
-#                 WITH menu_index CALL {
-#                    MATCH (r:Recipe) WHERE toInteger(r.recipeId) < 1000
-#                    RETURN r.json as recipe, r.recipeId as recipe_id ORDER BY rand() LIMIT $recipe_count
-#                 }
-#                 WITH menu_index, recipe, recipe_id CALL {
-#                     WITH recipe, recipe_id
-#                     RETURN collect(recipe) as recipes, collect(recipe_id) as recipe_ids
-#                 }
-#                 RETURN menu_index, recipes, recipe_ids'''
-#             recipes = []
-#             recipe_ids = []
-#             results = get_db().run(query, parameters=params)
-#             for record in results:
-#                 recipes.extend(record.get('recipes'))
-#                 # print(f'Number of recipe lists: {len(recipes)}')
-#                 # print(f"Number of recipes in each list: {len(record.get('recipes'))}")
-#                 recipe_ids.extend(record.get('recipe_ids'))
-#                 # print(type(recipes[0]))
-#                 # print(record.get('menu_index'))
-#             # print(recipes)
-#             # recipe_ids = [json.loads(recipe)['recipe_id'] for recipe in recipes]
-#
-#             menu_params = {'recipe_ids': recipe_ids, 'menu_count': menu_count}
-#             print(recipe_ids)
-#             assign_query = '''
-#                 UNWIND range(1, $menu_count) AS menu_index
-#                 WITH $recipe_ids[menu_index] as recipe_ids, menu_index
-#                 CALL {
-#                     WITH recipe_ids
-#                     UNWIND recipe_ids AS id
-#                     OPTIONAL MATCH (r:Recipe {recipeId: toInteger(id)})
-#                     RETURN COLLECT(r) AS recipes
-#                 }
-#                 WITH recipes, menu_index
-#                 RETURN recipes, menu_index
-#             '''
-#             print(menu_params)
-#             results = get_db().run(assign_query, parameters=menu_params)
-#             menus = []
-#             for record in results:
-#                 menu = {}
-#                 print(record.get('menu_index'))
-#                 # print(record.get('recipes'))
-#                 # recipes = [json.loads(recipe['json']) if recipe['json'] is not None else unpack(recipe) for recipe in
-#                 #            record.get('recipes')]
-#                 # print(len(recipes))
-#                 # menu['recipes'] = [json.loads(recipe) for recipe in recipes[len(menus):len(menus) + recipe_count]]
-#                 menu['recipe_ids'] = [json.loads(recipe)['recipe_id'] for recipe in recipes[len(menus) * recipe_count:(len(menus) + 1) * recipe_count]]
-#                 menus.append(menu)
-#             print(menus)
-#             return RequestMenuTest(ok=True, menus=menus)
-#
 
 
 class RequestMenu(graphene.Mutation):
