@@ -35,8 +35,6 @@ class GraphDB():
 
         url = os.getenv('DB_URI') if os.getenv('DB_URI') is not None else "bolt://localhost"
         password = os.getenv('DB_PASSWORD') if os.getenv('DB_PASSWORD') is not None else 'memphis-place-optimal-velvet-phantom-127'
-        print(url)
-        print(password)
 
         self.driver = GraphDatabase.driver(url, auth=("neo4j", password))
 
