@@ -1,0 +1,12 @@
+venv
+.DS_Store
+__pycache__
+.idea
+.db_uri
+.db_password
+.dev
+.sheets_credentials.json
+*credentials.json
+/RAW_recipes.csv
+/step_word_counts.json
+/ingredient_counts.json

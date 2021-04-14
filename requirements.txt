@@ -1,8 +1,13 @@
 Flask>=1.1.2
-neo4j>=1.7.6
+neo4j>=4.1.3
 graphene>=2.0
 graphene-file-upload>=1.2.1
 Flask-GraphQL>=2.0.1
 boto3>=1.16
 textblob>=0.15
 pandas
+google-api-python-client
+google-auth-httplib2
+google-auth-oauthlib
+jinja2
+six
