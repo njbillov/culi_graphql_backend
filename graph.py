@@ -45,6 +45,15 @@ def update_recipe_data(recipe_id):
     update_recipe(recipe_json, is_dict=True)
     return {"response": "Updating the recipe"}
 
+@app.route('/logs/<year>/<month>/<day>')
+def get_logs(year, month, day):
+    location = os.path.join('api_validation_canary', year, month, f'{day}.log')
+    if os.path.exists(location):
+        with open(location, 'r') as file:
+            return ''.join([f'<p>{line}</p>' for line in file.readlines()])
+    
+    return "Logs do not exist for this day"
+
 @app.route('/recipes/<recipe_id>/delete')
 def delete_recipe(recipe_id):
     clear_one_recipe(int(recipe_id))

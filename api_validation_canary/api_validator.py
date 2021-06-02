@@ -100,7 +100,6 @@ def create_account():
         return False, None
     data = json.loads(response.text)['data']['createAccount']
 
-    print(data)
     session = data['session']
     ok = data['ok']
     code = data['code']
@@ -164,6 +163,7 @@ def cleanup_account(session):
 
 
 def main():
+    logger.print("-------------------------------------")
     ok = False
     successful = True
     session = None
@@ -223,10 +223,6 @@ def main():
     else:
         logger.print(f"Something failed when trying to access API at {date_string}")
         diagnostics = dict(time=date_string, status="Dead", cause=failureCause, logs=logger.get_all())
-
-    print("DIAGNOSTICS MESSAGE\n")
-
-    print(diagnostics)
 
 if __name__ == "__main__":
     main()
