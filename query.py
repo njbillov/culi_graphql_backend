@@ -617,6 +617,43 @@ class CreateAccount(graphene.Mutation):
         return CreateAccount(ok=True, code="", session=session, account=account)
 
 
+class DeleteAccount(graphene.Mutation):
+    class Arguments:
+        session= graphene.String(required=True)
+    
+    ok = graphene.Boolean(required=True)
+    code = graphene.String()
+
+    @staticmethod
+    def mutate(root, info, session):
+        delete_account_query = """MATCH (a:Account {session: $session})
+            CALL {
+                WITH a
+                MATCH (a)-[]->(m:Menu)
+                DETACH DELETE m
+                RETURN count(m) as menus 
+            } 
+            DETACH DELETE a 
+            RETURN count(a) as accounts, menus"""
+        params = dict(session=session)
+        results = get_db().run(delete_account_query, parameters=params)
+        accounts_deleted = 0
+        menus_deleted = 0
+        for record in results:
+            accounts_deleted = record.get("accounts")
+            menus_deleted = record.get("menus")
+
+        ok = True
+        code = ""
+        if accounts_deleted != 1:
+            ok = False
+            code = f"{accounts_deleted} matching accounts were found and deleted"
+        else: 
+            code = f"{menus_deleted} lingering menus were deleted"
+    
+        return DeleteAccount(ok=ok, code=code)
+
+
 def upload_to_s3(file: FileStorage, prefix: str = 'images', bucket: str = BUCKET) -> Tuple[bool, str, str]:
     key, local_file = save_file(file)
 
@@ -958,6 +995,7 @@ class Mutations(graphene.ObjectType):
     set_flag = SetFlag.Field()
     request_menus = RequestMenu.Field()
     update_dietary_restrictions = SetDietaryRestrictions.Field()
+    delete_account = DeleteAccount.Field()
 
     upload_feedback = UploadFeedback.Field()
     post = Post.Field()
