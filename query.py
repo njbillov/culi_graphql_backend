@@ -619,7 +619,7 @@ class CreateAccount(graphene.Mutation):
 
 class DeleteAccount(graphene.Mutation):
     class Arguments:
-        session= graphene.String(required=True)
+        session = graphene.String(required=True)
     
     ok = graphene.Boolean(required=True)
     code = graphene.String()
@@ -643,6 +643,7 @@ class DeleteAccount(graphene.Mutation):
             accounts_deleted = record.get("accounts")
             menus_deleted = record.get("menus")
 
+        print(f'Deleted {accounts_deleted} accounts and {menus_deleted} menus')
         ok = True
         code = ""
         if accounts_deleted != 1:

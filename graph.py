@@ -11,8 +11,13 @@ import sys
 import time
 from recipe_parser import RecipeParser
 from recipe_loader import clear_one_recipe, update_recipe
+import logging
 
 app = Flask(__name__)
+handler = logging.FileHandler("debug.log")
+app.logger.addHandler(handler)
+app.logger.setLevel(logging.DEBUG)
+
 
 @app.route('/recipes')
 def recipe_search():
