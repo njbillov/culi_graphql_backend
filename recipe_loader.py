@@ -118,14 +118,14 @@ def update_recipe(json_string, is_dict=True):
     params = {'recipe_id': int(j["recipe_id"])}
     equality_query = "MATCH (r:Recipe {recipeId: $recipe_id}) return r as previous_r, r.json as recipe_json"
 
+    recipe_json = None
+    previous_r = None
     with get_session() as session:
         results = session.run(equality_query, parameters=params)
 
-    recipe_json = None
-    previous_r = None
-    for record in results:
-        recipe_json = record.get("recipe_json")
-        previous_r = record.get("previous_r")
+        for record in results:
+            recipe_json = record.get("recipe_json")
+            previous_r = record.get("previous_r")
 
     if json_string == recipe_json:
         print(f"{j['recipe_name']} in database is already up-to-date")
@@ -171,6 +171,9 @@ def update_recipe(json_string, is_dict=True):
 
     with get_session() as session:
         results = session.run(create_skills_query, parameters={'skills': skills})
+
+        for record in results:
+            _ = record.get("s")
         print(f'Updated the {params["recipe_name"]}')
 
 
