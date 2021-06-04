@@ -155,14 +155,15 @@ def update_recipe(json_string, is_dict=True):
             + tag_string +\
             '''
             }
-                RETURN r
+                RETURN r.recipeId as recipeId
             '''
     with get_session() as session:
         results = session.run(query, parameters=params)
 
         r = None
         for record in results:
-            r = record.get('r')
+            r = record.get('recipeId')
+            print(f'Updating recipe {r}')
 
         create_skills_query = '''UNWIND $skills AS skill
         MERGE (s:Skill {name: skill})
