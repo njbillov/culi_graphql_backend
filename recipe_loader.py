@@ -114,6 +114,7 @@ def update_recipe(json_string, is_dict=True):
         j = json.loads(json_string)
     else:
         j = json_string
+        json_string = json.dumps(json_string)
 
     params = {'recipe_id': int(j["recipe_id"])}
     equality_query = "MATCH (r:Recipe {recipeId: $recipe_id}) return r as previous_r, r.json as recipe_json"
