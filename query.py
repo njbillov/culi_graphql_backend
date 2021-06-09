@@ -361,7 +361,37 @@ class Account(graphene.ObjectType):
     @staticmethod
     def resolve_skills(parent, info):
         session = parent['session']
-        skills = get_db().get_user_skills(session)
+        params = {'session': session}
+        query = 'MATCH (a:Account {session: $session}),(s:Skill) OPTIONAL MATCH (a)-[c:HasSkill]->(s) RETURN ' \
+                'COALESCE(c.progress, 0) as progress, s.name as name'
+        results = get_db().run(query, parameters=params)
+        skills = {}
+        for record in results:
+            d = {"progress": record.get("progress") if not None else 0, "name": record.get("name")}
+            if "progress" not in d:
+                d['progress'] = 0
+            skills[d['name']] = d
+
+        get_completed_recipe_skills = '''MATCH (a:Account {session: $session}),
+            (a)-[c:Made]->(r: Recipe)
+            WITH a, c, r CALL {
+                WITH a, c, r
+                UNWIND r.skills as skill
+                RETURN skill
+            }
+            RETURN skill , count(skill) as skill_count
+        '''
+
+        results = get_db().run(get_completed_recipe_skills, parameters=params)
+        for record in results:
+            count = record.get("skill_count")
+            # print(record)
+            skill_name = record.get("skill")
+            # print(f"count: {count}, skill: {skill_name}")
+            if count is not None:
+                skills[skill_name]["progress"] = min(count / 7, 1)
+
+        skills = list(skills.values())
         return skills
 
     @staticmethod
