@@ -113,8 +113,8 @@ def merge_recipe(recipe_id):
     query = '''MATCH (r:Recipe {recipeId: $recipe_id}) 
         WITH collect(r) AS nodes, count(r) as before_count
         CALL apoc.refactor.mergeNodes(nodes)
-        YIELD r
-        RETURN before_count, count(r) as after_count
+        YIELD node
+        RETURN before_count, count(node) as after_count
     '''
 
     with get_session() as session:
