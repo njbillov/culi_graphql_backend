@@ -121,14 +121,16 @@ def update_recipe(json_string, is_dict=True):
 
     recipe_json = None
     previous_r = None
+    existing_versions = 0
     with get_session() as session:
         results = session.run(equality_query, parameters=params)
 
         for record in results:
             recipe_json = record.get("recipe_json")
             previous_r = record.get("previous_r")
+            existing_versions += 1
 
-    if json_string == recipe_json:
+    if json_string == recipe_json and existing_versions == 1:
         print(f"{j['recipe_name']} in database is already up-to-date")
         return
     elif previous_r is None:
@@ -150,7 +152,7 @@ def update_recipe(json_string, is_dict=True):
                 skills.add(skill['name'].lower())
     skills = list(skills)
     params = {"recipe_id": int(recipe_id), "recipe_name": recipe_name, "json": json_string, "skills": skills, **tags}
-    query = '''MATCH (r:Recipe {recipeId: $recipe_id})
+    query = '''MERGE (r:Recipe {recipeId: $recipe_id})
                 SET r = {recipeId: $recipe_id, recipeName: $recipe_name, skills: $skills, json: $json,
             '''\
             + tag_string +\
@@ -329,7 +331,7 @@ def main():
             print(f'Updating {"".join(os.path.splitext(directory)[-2:])}')
             with open(directory, 'r') as file:
                 json_string = file.read()
-                update_recipe(json_string)
+                update_recipe(json_string, is_dict=False)
             return
 
         else:
@@ -340,7 +342,7 @@ def main():
             for filename in filenames:
                 with open(os.path.join(directory, filename), 'r') as file:
                     json_string = file.read()
-                    update_recipe(json_string)
+                    update_recipe(json_string, is_dict=False)
     elif command.lower() == 'check':
         if os.path.isfile(directory):
             print(f'Checking {"".join(os.path.splitext(directory)[-2:])}')
