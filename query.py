@@ -578,6 +578,23 @@ class CompleteRecipe(graphene.Mutation):
         return CompleteRecipe(ok=ok)
 
 
+class DietaryRestrictions:
+    restrictions = ['pescatarian', 'vegetarian']
+
+    @staticmethod
+    def query_tag_variables(input_restrictions):
+        user_restrictions_set = set(input_restrictions)
+        restriction_tags = dict()
+        for restriction in DietaryRestrictions.restrictions:
+            restriction_tags[f'tag_{restriction}'] = restriction in user_restrictions_set
+
+        return restriction_tags
+
+    @staticmethod
+    def query_tag_text():
+        return ', '.join([f'{r} = $r' for r in DietaryRestrictions.restrictions])
+
+
 class CreateAccount(graphene.Mutation):
     class Arguments:
         password_form = PasswordForm(required=True)
@@ -600,16 +617,12 @@ class CreateAccount(graphene.Mutation):
         if not password_valid(password_form['password_input']):
             return CreateAccount(ok=False, code="Error: Invalid password format")
         password_hash = create_password(password_input)
-        # print(f'Name: {name}, Email: {email}, Password: {password}')
-        tag_string = ', '.join(f'tag_{tag}: true' for tag in restrictions)
 
-        if len(tag_string) > 0:
-            tag_string = f', {tag_string}'
 
         session = uuid.uuid4().hex
-        params = {'email': email, 'name': name, 'password_hash': password_hash, 'session': session, 'dietary_tags': tag_string}
+        params = {'email': email, 'name': name, 'password_hash': password_hash, 'session': session, **DietaryRestrictions.query_tag_variables(restrictions)}
         create_account_query = 'CREATE (a:Account {email: $email, name: $name, password: $password_hash, ' \
-                               'session: $session, verified: false, completedOrientation: false $dietary_tags}), (f:Flags),' \
+                               'session: $session, verified: false, completedOrientation: false, ' + DietaryRestrictions.query_tag_text() + '}), (f:Flags),' \
                                '(a)-[c:HasFlags]->(f) return a, c, f'
 
         results = get_db().run(create_account_query, parameters=params)
