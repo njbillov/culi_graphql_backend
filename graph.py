@@ -64,6 +64,10 @@ def close_db(error):
     if hasattr(g, 'neo4j_db'):
         g.neo4j_db.close()
 
+@app.route("/")
+def server_is_up():
+    return "The server is up"
+
 # @app.before_request
 # def log_request_info():
 #     print('Headers: %s', request.headers)
