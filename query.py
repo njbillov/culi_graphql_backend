@@ -622,7 +622,7 @@ class DietaryRestrictions:
 
     @staticmethod
     def query_tag_text():
-        return ', '.join([f'{r} = $r' for r in DietaryRestrictions.restrictions])
+        return ', '.join([f'tag_{r}: $tag_{r}' for r in DietaryRestrictions.restrictions])
 
 
 class CreateAccount(graphene.Mutation):
