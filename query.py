@@ -603,10 +603,13 @@ class CreateAccount(graphene.Mutation):
         # print(f'Name: {name}, Email: {email}, Password: {password}')
         tag_string = ', '.join(f'tag_{tag}: true' for tag in restrictions)
 
+        if len(tag_string) > 0:
+            tag_string = f', {tag_string}'
+
         session = uuid.uuid4().hex
-        params = {'email': email, 'name': name, 'password_hash': password_hash, 'session': session}
+        params = {'email': email, 'name': name, 'password_hash': password_hash, 'session': session, 'dietary_tags': tag_string}
         create_account_query = 'CREATE (a:Account {email: $email, name: $name, password: $password_hash, ' \
-                               'session: $session, verified: false, completedOrientation: false, ' + tag_string + '}), (f:Flags),' \
+                               'session: $session, verified: false, completedOrientation: false $dietary_tags}), (f:Flags),' \
                                '(a)-[c:HasFlags]->(f) return a, c, f'
 
         results = get_db().run(create_account_query, parameters=params)
