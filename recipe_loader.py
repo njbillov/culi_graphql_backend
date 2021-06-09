@@ -108,6 +108,26 @@ def load_recipe(json_string: str, is_dict=False):
         print(results.data())
         session.close()
 
+def merge_recipe(recipe_id):
+    params = {'recipe_id': recipe_id}
+    query = '''MATCH (r:Recipe {recipeId: $recipe_id}) 
+        WITH collect(r) AS nodes, count(r) as before_count
+        apoc.refactor.mergeNodes(nodes)
+        YIELD r
+        RETURN before_count, count(r) as after_count
+    '''
+
+    with get_session() as session:
+        results = session.run(query, parameters=params)
+
+        record = results.single()
+        before_count = record.get("before_count")
+        after_count = record.get("after_count")
+
+        print(f'When updating recipe {recipe_id} before merge instances: {before_count} and now {after_count}')
+
+    return
+
 
 def update_recipe(json_string, is_dict=True):
     if not is_dict:
@@ -130,7 +150,10 @@ def update_recipe(json_string, is_dict=True):
             previous_r = record.get("previous_r")
             existing_versions += 1
 
-    if json_string == recipe_json and existing_versions == 1:
+    if existing_versions > 1:
+        merge_recipe(params['recipe_id'])
+
+    if json_string == recipe_json:
         print(f"{j['recipe_name']} in database is already up-to-date")
         return
     elif previous_r is None:
@@ -152,7 +175,7 @@ def update_recipe(json_string, is_dict=True):
                 skills.add(skill['name'].lower())
     skills = list(skills)
     params = {"recipe_id": int(recipe_id), "recipe_name": recipe_name, "json": json_string, "skills": skills, **tags}
-    query = '''MERGE (r:Recipe {recipeId: $recipe_id})
+    query = '''MATCH (r:Recipe {recipeId: $recipe_id})
                 SET r = {recipeId: $recipe_id, recipeName: $recipe_name, skills: $skills, json: $json,
             '''\
             + tag_string +\
